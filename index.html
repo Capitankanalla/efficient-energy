@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessor Energètic - Alex</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Optimitzo el consum energètic de la teva empresa</h1>
+            <p>Assessorament independent per reduir costos i millorar l’eficiència amb dades i tecnologia.</p>
+            <a href="#contacte" class="cta">Sol·licita una auditoria inicial</a>
+        </div>
+    </header>
+
+    <!-- SELECTOR DE SUBMINISTRAMENT -->
+    <section id="selector" class="section selector-suministre visible">
+        <h2>Quin tipus de subministrament vols analitzar?</h2>
+
+        <div class="opcions">
+            <div class="opcio llar">
+                 <img src="data/llar.svg" alt="Llar">
+                <span>Llar</span>
+            </div>
+
+            <div class="opcio negoci">
+                <img src="data/negoci.svg" alt="Negoci">
+                <span>Negoci</span>
+            </div>
+
+            <div class="opcio industria">
+                <img src="data/industria.svg" alt="Indústria">
+                <span>Indústria</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTE -->
+    <section id="contacte" class="section">
+        <h2>Contacte</h2>
+        <p>Vols reduir costos i millorar l’eficiència energètica? Parlem-ne.</p>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Correu electrònic" required>
+            <textarea placeholder="Explica’m breument què necessites" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; <span id="any"></span> Dissenyat per Efficient Energy ⚡</p>
+        <script>
+            document.getElementById('any').textContent = new Date().getFullYear();
+        </script>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

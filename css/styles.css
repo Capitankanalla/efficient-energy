@@ -1,0 +1,160 @@
+/* Tipografia i base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #212422;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    background: url('/data/provesPlantilla.avif') center/cover no-repeat;
+    /* aspect-ratio: 5 / 2.3; */
+    /* background: linear-gradient(to bottom right, #0a5c36, #0f8f4d);
+    color: white; */
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    /* ajusta entre 0.15 i 0.35 */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/*Call to action button*/
+
+.cta {
+    background: #0f8f4d;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.cta:hover {
+    background: #0a5c36;
+}
+
+/* Seccions */
+.section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.card h3 {
+    margin-top: 0;
+} 
+
+/* Formulari */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.contact-form button {
+    background: #0a5c36;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Selector de subministrament */
+.selector-suministre h2 {
+    margin-bottom: 40px;
+}
+
+.opcions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.opcio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(81, 248, 137);
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.opcio img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.opcio span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+/* Efecte hover */
+.opcio:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+} 
+
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #181717;
+    color: #43f09f;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
