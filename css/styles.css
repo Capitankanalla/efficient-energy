@@ -9,7 +9,7 @@ body {
 /* HERO */
 .hero {
     position: relative;
-    background: url('/data/provesPlantilla.avif') center/cover no-repeat;
+    background: url('./data/provesPlantilla.avif') center/cover no-repeat;
     /* aspect-ratio: 5 / 2.3; */
     /* background: linear-gradient(to bottom right, #0a5c36, #0f8f4d);
     color: white; */
