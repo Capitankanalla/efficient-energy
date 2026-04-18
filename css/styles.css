@@ -6,40 +6,6 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER FIX */
-.topbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(6px);
-    z-index: 1000;
-}
-
-.topbar .logo img {
-    height: 48px;
-    width: auto;
-}
-
-.topbar .menu a {
-    margin-left: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: 0.2s ease;
-}
-
-.topbar .menu a:hover {
-    color: #43f09f;
-}
-
-
 /* HERO */
 .hero {
     position: relative;
