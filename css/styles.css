@@ -23,59 +23,6 @@ body {
     z-index: 0;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-
-    display: flex;                /* Dues columnes */
-    align-items: center;          /* Centra verticalment logo i text */
-    gap: 100px;                    /* Separació entre logo i text */
-}
-
-.hero-left .hero-logo {
-    width: 140px;                 /* Mida equilibrada */
-    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.45));
-}
-
-.hero-right {
-    text-align: center;             /* Text alineat a l’esquerra */
-    max-width: 900px;
-}
-
-.hero-right h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
-.hero-right p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
-.hero-right .cta {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #43f09f;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: 0.2s ease;
-}
-
-.hero-right .cta:hover {
-    background: #2bcf82;
-}
-
-/*Call to action button*/
 
 .cta {
     background: #0f8f4d;
