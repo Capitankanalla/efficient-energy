@@ -1,0 +1,77 @@
+Arbre jsons:
+
+/data
+   footer.json
+   textos.json
+   legals.json
+   serveis.json
+   about.json
+   
+   
+Arbre js:
+
+
+/js
+   menu.js
+   loader.js
+   router.js  --> El que fa aquest js es activar cada element en que el ead clica.
+   
+Exemple js de router.js:
+
+document.querySelectorAll('[data-section]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const id = btn.dataset.section;
+    const data = await loadJSON('./data/textos.json');
+    const item = data[id];
+
+    document.querySelector('#content').innerHTML = `
+      <h2>${item.titol}</h2>
+      <p>${item.contingut}</p>
+    `;
+  });
+});
+
+******************************************************************************************
+
+estructura final recomenada:
+
+/projecte
+│
+├── index.html
+│
+├── /html
+│     ├── footer.html
+│     ├── modal.html
+│     ├── components.html
+│     └── (futures seccions)
+│
+├── /css
+│     ├── styles.css
+│     ├── footer.css
+│     ├── modal.css
+│     └── components.css
+│
+├── /js
+│     ├── main.js
+│     ├── footer.js
+│     ├── modal.js
+│     ├── router.js
+│     ├── loader.js
+│     └── menu.js
+│
+├── /data
+│     ├── footer.json
+│     ├── legals.json
+│     ├── textos.json
+│     ├── serveis.json
+│     └── about.json
+│
+└── /data/img
+      ├── logo.svg
+      ├── llar.svg
+      ├── negoci.svg
+      ├── industria.svg
+      └── (altres)
+
+
+   
