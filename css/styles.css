@@ -7,12 +7,13 @@ body {
 }
 
 /* HERO */
-.hero {
+/* .hero {
     position: relative;
     margin-top: 10px;
     background: url('../data/provesPlantilla.avif') center/cover no-repeat;
     padding: 100px 20px;
     color: white;
+    
 }
 
 .hero::before {
@@ -21,11 +22,48 @@ body {
     inset: 0;
     background: rgba(0, 0, 0, 0.35);
     z-index: 0;
+} */
+/* HERO */
+.hero {
+    position: relative;
+    background: url('/data/provesPlantilla.avif') center/cover no-repeat;
+    /* aspect-ratio: 5 / 2.3; */
+    /* background: linear-gradient(to bottom right, #0a5c36, #0f8f4d);
+    color: white; */
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    /* ajusta entre 0.15 i 0.35 */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
 
 .cta {
-    background: #0f8f4d;
+    background: rgb(60, 219, 145);
     color: white;
     padding: 14px 28px;
     border-radius: 6px;
@@ -93,7 +131,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: rgb(81, 248, 137);
+    background-color:  rgb(60, 219, 145);
     justify-content: center;
     padding: 20px;
     border: 2px solid #000;
