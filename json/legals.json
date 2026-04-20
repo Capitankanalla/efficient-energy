@@ -1,0 +1,37 @@
+{
+    "privacitat": {
+        "titol": "Política de privacitat",
+        "contingut": [
+            "Responsable del tractament: Efficient Energy, Carrer Exemple 123, Barcelona, info@efficientenergy.com.",
+            "Finalitat: gestionar consultes, oferir informació sobre serveis i mantenir relacions comercials.",
+            "Legitimació: consentiment de l’usuari i interès legítim.",
+            "Conservació: mentre existeixi relació comercial o fins que l’usuari sol·liciti la supressió.",
+            "Destinataris: no es cedeixen dades a tercers excepte obligació legal.",
+            "Drets: accés, rectificació, supressió, oposició i portabilitat enviant un correu a info@efficientenergy.com.",
+            "Seguretat: mesures tècniques i organitzatives per garantir la confidencialitat i integritat."
+        ]
+    },
+
+    "cookies": {
+        "titol": "Política de cookies",
+        "contingut": [
+            "Aquest lloc web utilitza cookies pròpies i de tercers amb finalitats tècniques i analítiques.",
+            "Les cookies són fitxers que milloren l’experiència de navegació i permeten obtenir estadístiques d’ús.",
+            "Tipus: tècniques (necessàries) i analítiques (estadístiques).",
+            "Pots configurar o eliminar les cookies des del navegador.",
+            "En continuar navegant, acceptes l’ús de cookies."
+        ]
+    },
+
+    "avis": {
+        "titol": "Avís legal",
+        "contingut": [
+            "Aquest lloc web és propietat d’Efficient Energy, Carrer Exemple 123, Barcelona.",
+            "Objecte: oferir informació sobre serveis d’eficiència energètica i consultoria.",
+            "Propietat intel·lectual: tots els continguts són propietat d’Efficient Energy o de tercers autoritzats.",
+            "Responsabilitat: no ens fem responsables de l’ús indegut del web ni de continguts de tercers.",
+            "Enllaços externs: no ens responsabilitzem del contingut de webs de tercers.",
+            "Legislació aplicable: normativa espanyola i europea vigent."
+        ]
+    }
+}

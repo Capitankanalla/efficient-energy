@@ -7,6 +7,8 @@
     <title>Assessor Energètic - Alex</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/modal.css">
+
 </head>
 
 <body>
@@ -58,9 +60,20 @@
     <footer>
         <link rel="stylesheet" href="./css/footer.css">
     </footer>
-    <script src="script.js"></script>
+    <!-- MODAL (carregat dinàmicament) -->
+    <div id="modal-container"></div>
+
+    <script>
+        fetch('./html/modal.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('modal-container').innerHTML = html;
+            });
+    </script>
+
+    <script src="./js/scripts.js"></script>
     <!-- FOOTER DINÀMIC -->
-    <script src="./js/footer.js"></script>
+    <script type="module" src="./js/footer.js"></script>
 
 </body>
 
