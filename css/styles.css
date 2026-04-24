@@ -117,6 +117,9 @@ body {
 .accordion-item.open .accordion-content {
   max-height: 1000px;
   padding: 1.5rem; /* només quan està obert */
+  background-color: rgba(255, 255, 255, 0.55); /* semitransparent */
+  backdrop-filter: blur(4px); /* opcional */
+  border-radius: 8px;
 }
 
 /* Icona */
