@@ -20,6 +20,9 @@ document.addEventListener('mousemove', (e) => {
     hero.style.backgroundPosition = `${x}% ${y}%`;
 });
 
+document.getElementById("wc-title").textContent = "Per què necessito un assessor energètic?";
+document.getElementById("wc-summary").textContent = "Un assessor energètic t’ajuda a optimitzar costos, evitar errors i prendre decisions informades.";
+
 
 // Validació bàsica del formulari
 const form = document.querySelector('.contact-form');
