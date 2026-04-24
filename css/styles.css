@@ -1,5 +1,6 @@
 /* Tipografia i base */
 body {
+    background: #e8f3aa;
     margin: 0;
     font-family: Arial, sans-serif;
     color: #212422;
@@ -93,53 +94,70 @@ body {
     margin-top: 0;
 }
 
-/* Contenidor de dues columnes */
-#wc-columns, .wc-columns {
+/* Secció acordió */
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Botons de l’acordió */
+.accordion-header {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background: #f0f0f0;
+  border-color: #bbb;
+}
+
+.accordion-item.open .accordion-header {
+  background: #eaeaea;
+  border-color: #aaa;
+}
+
+/* Contingut plegable */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0; /* ← important per evitar que es vegi res tancat */
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 1000px;
+  padding: 1.5rem; /* només quan està obert */
+}
+
+/* Icona */
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+/* Columnes imatge + text */
+.wc-columns {
   display: flex;
   gap: 2rem;
-  align-items: center;
-}
-.wc-right {
-  text-align: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-/* Centrar tota la secció */
-#why-consultant {
-  display: flex;
-  justify-content: center;
-}
-
-/* Limitar amplada i centrar el contingut intern */
-.wc-columns {
-  max-width: 900px; /* pots ajustar-ho */
-  margin: 0 auto;
-}
-
-/* Columna esquerra (imatge) */
 .wc-left img {
   width: 100%;
-  max-width: 420px;
-  border-radius: 10px;
-  object-fit: cover;
+  max-width: 350px;
+  border-radius: 8px;
 }
 
-/* Columna dreta (text) */
 .wc-right {
   flex: 1;
 }
 
-/* Responsiu per mòbil */
-@media (max-width: 768px) {
-  .wc-columns {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .wc-left img {
-    max-width: 200px;
-  }
-}
 
 /* Formulari */
 .contact-form {

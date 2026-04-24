@@ -1,0 +1,72 @@
+<!-- PER QUÈ NECESSITO UN ASSESSOR ENERGÈTIC? -->
+    <section id="why-consultant" class="info-box">
+        <div class="wc-columns">
+
+            <!-- Columna esquerra: imatge -->
+            <div class="wc-left">
+                <img src="./data/assessoresEnergeticos.avif" alt="Assessor energètic">
+            </div>
+
+            <!-- Columna dreta: text -->
+            <div class="wc-right">
+                <h2 id="wc-title"></h2>
+                <p id="wc-summary"></p>
+                <button id="wc-readmore" class="cta">Llegir més</button>
+            </div>
+
+        </div>
+    </section>
+    
+    //========================================================================================0
+    
+    css de la secció:
+    
+    /* Contenidor de dues columnes */
+#wc-columns, .wc-columns {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.wc-right {
+  text-align: center;
+  align-items: center;
+}
+
+/* Centrar tota la secció */
+#why-consultant {
+  display: flex;
+  justify-content: center;
+}
+
+/* Limitar amplada i centrar el contingut intern */
+.wc-columns {
+  max-width: 900px; /* pots ajustar-ho */
+  margin: 0 auto;
+}
+
+/* Columna esquerra (imatge) */
+.wc-left img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Columna dreta (text) */
+.wc-right {
+  flex: 1;
+}
+
+/* Responsiu per mòbil */
+@media (max-width: 768px) {
+  .wc-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wc-left img {
+    max-width: 200px;
+  }
+}
+
+

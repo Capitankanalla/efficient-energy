@@ -20,8 +20,23 @@ document.addEventListener('mousemove', (e) => {
     hero.style.backgroundPosition = `${x}% ${y}%`;
 });
 
-document.getElementById("wc-title").textContent = "Per què necessito un assessor energètic?";
-document.getElementById("wc-summary").textContent = "Un assessor energètic t’ajuda a optimitzar costos, evitar errors i prendre decisions informades.";
+// Acordió
+const items = document.querySelectorAll("#info-sections .accordion-item");
+
+items.forEach(item => {
+  const header = item.querySelector(".accordion-header");
+
+  header.addEventListener("click", () => {
+
+    // Tancar tots els altres
+    items.forEach(i => {
+      if (i !== item) i.classList.remove("open");
+    });
+
+    // Obrir/tancar aquest
+    item.classList.toggle("open");
+  });
+});
 
 
 // Validació bàsica del formulari
