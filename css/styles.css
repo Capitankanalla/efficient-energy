@@ -99,6 +99,10 @@ body {
   gap: 2rem;
   align-items: center;
 }
+.wc-right {
+  text-align: center;
+  align-items: center;
+}
 
 /* Centrar tota la secció */
 #why-consultant {
@@ -115,7 +119,7 @@ body {
 /* Columna esquerra (imatge) */
 .wc-left img {
   width: 100%;
-  max-width: 300px;
+  max-width: 420px;
   border-radius: 10px;
   object-fit: cover;
 }
