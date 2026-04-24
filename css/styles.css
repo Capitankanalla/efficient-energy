@@ -8,23 +8,6 @@ body {
 }
 
 /* HERO */
-/* .hero {
-    position: relative;
-    margin-top: 10px;
-    background: url('../data/provesPlantilla.avif') center/cover no-repeat;
-    padding: 100px 20px;
-    color: white;
-    
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 0;
-} */
-/* HERO */
 .hero {
     position: relative;
     background: url('../data/provesPlantilla.avif') center/cover no-repeat;
