@@ -106,3 +106,14 @@
 .wc-button:hover {
     background: #005fa3;
 }
+.modal-close-btn {
+    margin-top: 1rem;
+    padding: 0.7rem 1.2rem;
+    background: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+

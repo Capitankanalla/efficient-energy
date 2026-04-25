@@ -91,4 +91,9 @@ function prepararModalConsultor(info) {
     modal.addEventListener("click", e => {
         if (e.target === modal) modal.classList.remove("open");
     });
+
+    modalBody.addEventListener("click", () => {
+    modal.classList.remove("open");
+});
+
 }
