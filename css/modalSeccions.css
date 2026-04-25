@@ -1,0 +1,60 @@
+/* Contenidor de secció. */
+
+#info-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 9999;
+}
+
+#info-modal.open {
+    display: flex;
+}
+
+/*Estil del quadre del modal de la secció*/
+
+#info-modal .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+/*Botó per tancar o x */
+
+#info-modal .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/*Imatge del modal*/
+
+#info-modal .modal-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/*Cos del text*/
+
+#info-modal .modal-body {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
