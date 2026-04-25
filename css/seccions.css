@@ -49,6 +49,47 @@
     }
 }
 
+/* Layout general */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+/* Contenidor 2 columnes (el teu) */
+.wc-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+/* Text */
+.wc-text {
+    flex: 1;
+}
+
+/* Imatge */
+.wc-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wc-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wc-image img {
+        max-width: 100%;
+    }
+}
+
+
 /* Botó llegir més. */
 
 .wc-button {
