@@ -3,9 +3,9 @@
     "title": "Per què tenir un consultor energètic?",
     "subtitle": "Energy consultant",
     "shortText": "El sector energètic viu una evolució constant, amb canvis legislatius i variacions en els mercats d’electricitat i gas que poden afectar directament els teus costos.",
-    "fullText": "El sector energètic viu una evolució constant, amb canvis legislatius i variacions en els mercats d’electricitat i gas que poden afectar directament els teus costos.\n\nComptar amb un consultor energètic especialitzat, o amb una consultoria amb experiència contrastada, et permet anticipar-te a les fluctuacions del mercat, aprofitar tarifes competitives i complir amb cada nou marc regulador sense complicacions.\n\nEfficient Energy t’acompanya amb una consultoria energètica contínua, assegurant que els teus contractes, potències i condicions estiguin sempre optimitzats per reduir la factura i augmentar l’eficiència del teu consum energètic.\n\nLa diferència entre reaccionar i planificar està en l’estratègia d’una bona assessoria energètica. Deixa la teva gestió energètica en mans expertes.",
     "button": "Llegir més",
-    "modalImage": "img/sections/why-consultant.jpg"
+    "modalImage": "data/sections/why-consultant.jpg",
+    "fullTextFile": "consultor.html"
   },
   
   "howWeWork": {

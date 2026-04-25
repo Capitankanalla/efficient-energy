@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/head.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/seccions.css">
+
 
 </head>
 
@@ -56,79 +58,42 @@
         ...
     </section>
 
-    <section id="info-sections" class="accordion info-box">
+    <!-- Seccións on expliquem que fem, com treballem i per que ens han de contractar -->
 
-  <!-- ÍTEM 1: Per què necessito un assessor energètic? -->
-  <div class="accordion-item">
-    <button class="accordion-header">
-      <h2>Per què necessito un assessor energètic?</h2>
-      <span class="accordion-icon">+</span>
-    </button>
+    <!-- Secció consultor. -->
+    <section id="why-consultant" class="section">
+        <div class="wc-container">
+            <div class="wc-text">
+                <h2 id="wc-title"></h2>
+                <h3 id="wc-subtitle"></h3>
+                <p id="wc-short"></p>
+                <button id="wc-button" class="wc-button">Llegir més</button>
+            </div>
 
-    <div class="accordion-content">
-      <div class="wc-columns">
-        <div class="wc-left">
-          <img src="data/assessoresEnergeticos.avif" alt="Assessor energètic">
+            <div class="wc-image">
+                <img id="wc-img" alt="Consultor energètic">
+            </div>
         </div>
-        <div class="wc-right">
-          <p id="wc-summary"></p>
-          <p id="wc-fulltext"></p>
+    </section>
+
+    <!-- Secció com treballem. -->
+    <section id="how-we-work" class="section">
+        <h2 id="hww-title"></h2>
+
+        <ul id="hww-list" class="hww-list">
+            <!-- El JS injectarà els <li> -->
+        </ul>
+    </section>
+    <!-- Secció testimonis. -->
+
+    <section id="clients" class="section">
+        <h2 id="clients-title"></h2>
+        <p id="clients-intro"></p>
+
+        <div id="clients-carousel" class="clients-carousel">
+            <!-- El JS injectarà les frases -->
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ÍTEM 2: Com treballem -->
-  <div class="accordion-item">
-    <button class="accordion-header">
-      <h2>Com treballem</h2>
-      <span class="accordion-icon">+</span>
-    </button>
-
-    <div class="accordion-content">
-      <div class="hww-steps">
-        <div class="hww-step">
-          <img src="icons/analisi.svg" alt="Anàlisi">
-          <h3>Anàlisi inicial</h3>
-          <p>Avaluem el teu consum i necessitats.</p>
-        </div>
-
-        <div class="hww-step">
-          <img src="icons/proposta.svg" alt="Proposta">
-          <h3>Proposta personalitzada</h3>
-          <p>Preparem opcions òptimes i t’expliquem els avantatges.</p>
-        </div>
-
-        <div class="hww-step">
-          <img src="icons/implementacio.svg" alt="Implementació">
-          <h3>Implementació i seguiment</h3>
-          <p>T’acompanyem en la decisió i fem seguiment.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ÍTEM 3: Clients satisfets -->
-  <div class="accordion-item">
-    <button class="accordion-header">
-      <h2>Clients satisfets</h2>
-      <span class="accordion-icon">+</span>
-    </button>
-
-    <div class="accordion-content">
-      <p class="clients-intro">Empreses que han confiat en nosaltres.</p>
-      <div class="clients-logos">
-        <img src="logos/empresa1.svg" alt="Empresa 1">
-        <img src="logos/empresa2.svg" alt="Empresa 2">
-        <img src="logos/empresa3.svg" alt="Empresa 3">
-        <img src="logos/empresa4.svg" alt="Empresa 4">
-      </div>
-    </div>
-  </div>
-
-</section>
-
-
+    </section>
 
     <footer>
         <link rel="stylesheet" href="./css/footer.css">
@@ -165,6 +130,18 @@
     <script src="./js/scripts.js"></script>
     <!-- FOOTER DINÀMIC -->
     <script type="module" src="./js/footer.js"></script>
+
+    <!-- Modal per carregar el text llarg del per que contractar-nos. -->
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span id="info-modal-close" class="modal-close">&times;</span>
+            <img id="info-modal-image" alt="" class="modal-img">
+            <div id="info-modal-body" class="modal-body"></div>
+        </div>
+    </div>
+    <script src="./js/seccions.js"></script>
+
 
 </body>
 

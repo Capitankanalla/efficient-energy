@@ -82,56 +82,6 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-/* Botons de l’acordió */
-.accordion-header {
-  width: 60%;
-  margin: auto;
-  background: transparent;
-  border: 2px solid #0b6fab; /* blau corporatiu del teu CV */
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  color: #0b6fab;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
-}
-
-.accordion-header:hover {
-  background: #0b6fab;
-  color: #ffffff;
-}
-
-.accordion-item.open .accordion-header {
-  background: #0b6fab;
-  color: #ffffff;
-  border-color: #0b6fab;
-}
-
-/* Contingut plegable */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  padding: 0; /* ← important per evitar que es vegi res tancat */
-}
-
-.accordion-item.open .accordion-content {
-  max-height: 1000px;
-  padding: 1.5rem; /* només quan està obert */
-  background-color: rgba(255, 255, 255, 0.55); /* semitransparent */
-  backdrop-filter: blur(4px); /* opcional */
-  border-radius: 8px;
-}
-
-/* Icona */
-.accordion-item.open .accordion-icon {
-  transform: rotate(45deg);
-}
-
 /* Columnes imatge + text */
 .wc-columns {
   display: flex;
