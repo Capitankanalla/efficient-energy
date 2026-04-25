@@ -1,0 +1,36 @@
+{
+  "whyConsultant": {
+    "title": "Per què tenir un consultor energètic?",
+    "subtitle": "Energy consultant",
+    "shortText": "El sector energètic viu una evolució constant, amb canvis legislatius i variacions en els mercats d’electricitat i gas que poden afectar directament els teus costos.",
+    "fullText": "El sector energètic viu una evolució constant, amb canvis legislatius i variacions en els mercats d’electricitat i gas que poden afectar directament els teus costos.\n\nComptar amb un consultor energètic especialitzat, o amb una consultoria amb experiència contrastada, et permet anticipar-te a les fluctuacions del mercat, aprofitar tarifes competitives i complir amb cada nou marc regulador sense complicacions.\n\nEfficient Energy t’acompanya amb una consultoria energètica contínua, assegurant que els teus contractes, potències i condicions estiguin sempre optimitzats per reduir la factura i augmentar l’eficiència del teu consum energètic.\n\nLa diferència entre reaccionar i planificar està en l’estratègia d’una bona assessoria energètica. Deixa la teva gestió energètica en mans expertes.",
+    "button": "Llegir més",
+    "modalImage": "img/sections/why-consultant.jpg"
+  },
+  
+  "howWeWork": {
+    "title": "Com treballem",
+    "steps": [
+      "Analitzem el tipus de contractació més adequat segons el perfil de consum de la teva pime.",
+      "Estudiem detalladament les diferents opcions de contractació.",
+      "Revisem mensualment la facturació i gestionem reclamacions si cal.",
+      "Fem un seguiment continuat de la teva gestió energètica.",
+      "Elaborem informes per establir millores i optimitzar la facturació.",
+      "Gestionem un canvi de comercialitzadora, si és necessari."
+    ]
+  },
+
+  "clients": {
+    "title": "Què diuen els nostres clients",
+    "logosIntro": "Opinions reals de clients que confien en nosaltres",
+    "quotes": [
+      "el teu assessorament i gestió perquè em dona estabilitat i tranquil·litat i aixó no té preu.",
+      "El que més m’agrada de treballar amb tú és que sempre hi ets.",
+      "Aquests darrers 12 mesos han estat molt estables i vull renovar amb tu.",
+      "Sempre que he tingut algún dubte o cap problema l'Alex m'ha ajudat a resodre'l."
+    ],
+    "logos": []
+  } 
+
+  
+}

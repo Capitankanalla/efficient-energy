@@ -84,7 +84,8 @@ body {
 
 /* Botons de l’acordió */
 .accordion-header {
-  width: 100%;
+  width: 60%;
+  margin: auto;
   background: transparent;
   border: 2px solid #0b6fab; /* blau corporatiu del teu CV */
   border-radius: 8px;

@@ -1,0 +1,36 @@
+/html
+│
+├── /css
+│     style.css
+│     modal.css
+│     sections.css   ← opcional
+│
+├── /js
+│     scripts.js     ← principal
+│     modal.js       ← modal legal (ja existeix)
+│     infoModal.js   ← modal de la secció “consultor energètic”
+│     lang.js        ← càrrega d’idioma
+│     sections.js    ← injectar contingut
+│
+├── /json
+│     cat.json
+│     es.json
+│     eng.json
+│     legals.json
+│
+├── /texts
+│     /cat
+│         why-consultant.html
+│     /es
+│         why-consultant.html
+│     /eng
+│         why-consultant.html
+│
+├── /data
+│     /sections
+│         why-consultant.jpg
+│         how-we-work.jpg
+│     /clients
+│     /icons
+│
+└── index.html
