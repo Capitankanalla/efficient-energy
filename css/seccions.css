@@ -106,6 +106,7 @@
 .wc-button:hover {
     background: #005fa3;
 }
+
 .modal-close-btn {
     margin-top: 1rem;
     padding: 0.7rem 1.2rem;
@@ -117,3 +118,67 @@
     font-size: 1rem;
 }
 
+/* SECCIÓ 2 — COM TREBALLEM */
+#how-we-work {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.hww-columns {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hww-left {
+    flex: 1 1 40%;
+}
+
+.hww-left img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.hww-right {
+    flex: 1 1 55%;
+}
+
+.hww-right h2 {
+    margin-bottom: 1.5rem;
+}
+
+.hww-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hww-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.hww-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color, #0077ff);
+    font-size: 1.2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hww-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hww-right {
+        text-align: left;
+    }
+}

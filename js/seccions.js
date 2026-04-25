@@ -28,6 +28,8 @@ function carregarSeccioConsultor(info) {
 // -----------------------------
 function carregarSeccioComTreballem(info) {
     document.getElementById("hww-title").textContent = info.title;
+    document.getElementById("hww-img").src = info.image;
+
 
     const ul = document.getElementById("hww-list");
     ul.innerHTML = "";

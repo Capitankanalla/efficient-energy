@@ -4,12 +4,13 @@
     "subtitle": "Energy consultant",
     "shortText": "El sector energètic viu una evolució constant, amb canvis legislatius i variacions en els mercats d’electricitat i gas que poden afectar directament els teus costos.",
     "button": "Llegir més",
-    "modalImage": "data/assessoresEnergeticos.avif",
+    "modalImage": "data/assessors.avif",
     "fullTextFile": "consultor.html"
   },
   
   "howWeWork": {
     "title": "Com treballem",
+    "image": "data/analisis.avif",
     "steps": [
       "Analitzem el tipus de contractació més adequat segons el perfil de consum de la teva pime.",
       "Estudiem detalladament les diferents opcions de contractació.",
