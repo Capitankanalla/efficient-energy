@@ -31,9 +31,13 @@
         "data/logos/logoInnoenvas1.png"
     ],
     "quotes": [
-        "Prefereixo pagar una mica més i comptar amb el teu assessorament que estalviar aquesta petita diferència sense el teu servei.",
-        "El que més m’agrada de la teva gestió és que sempre hi ets.",
-        "Aquests darrers 12 mesos han estat molt estables i vull renovar amb tu."
+        [
+  "“El teu assessorament em dona estabilitat i tranquil·litat, i això per mi té molt valor.”C.T.",
+  "“El que més valoro de la teva gestió és que sempre hi ets.”R.I.",
+  "“Aquest darrer any ha estat molt estable i per això vull renovar amb tu.”L.P.",
+  "“12 mesos després: ’Fes el que consideris, ja saps que confio en tu.’”F.G."
+]
+
     ]
 }
 
