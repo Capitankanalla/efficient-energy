@@ -194,7 +194,7 @@
 
 .carousel-track {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
     animation: scroll 20s linear infinite;
 }
@@ -218,6 +218,6 @@
     100% { transform: translateX(-50%); }
 }
 
-.carousel-container:hover .carousel-track {
+/* .carousel-container:hover .carousel-track {
     animation-play-state: paused;
-}
+} */
