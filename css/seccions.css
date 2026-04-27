@@ -185,17 +185,39 @@
 
 /* Secció 3: Testimonis */
 
-.clients-testimonials {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* CARRUSEL DE LOGOS */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 2rem 0;
 }
 
-.client-quote {
-    background: rgba(0,0,0,0.05);
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    font-style: italic;
-    color: #333;
+.carousel-track {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    /* filter: grayscale(100%);  Aixó fa que el scroll sigui en b/n*/    
+    opacity: 0.8;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-track img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
 }

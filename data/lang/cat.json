@@ -22,16 +22,19 @@
   },
 
   "clients": {
-    "title": "Què diuen els nostres clients",
-    "logosIntro": "Opinions reals de clients que confien en nosaltres",
-    "quotes": [
-      "el teu assessorament i gestió perquè em dona estabilitat i tranquil·litat i aixó no té preu.",
-      "El que més m’agrada de treballar amb tú és que sempre hi ets.",
-      "Aquests darrers 12 mesos han estat molt estables i vull renovar amb tu.",
-      "Sempre que he tingut algún dubte o cap problema l'Alex m'ha ajudat a resodre'l."
+    "title": "Empreses que confien en nosaltres",
+    "intro": "Alguns dels nostres clients i el que destaquen del nostre servei.",
+    "logos": [
+        "data/logos/FVHlogo.png",
+        "data/logos/logo-gubern.png",
+        "data/logos/logoCryogas.png",
+        "data/logos/logoInnoenvas.png"
     ],
-    "logos": []
-  } 
+    "quotes": [
+        "Prefereixo pagar una mica més i comptar amb el teu assessorament que estalviar aquesta petita diferència sense el teu servei.",
+        "El que més m’agrada de la teva gestió és que sempre hi ets.",
+        "Aquests darrers 12 mesos han estat molt estables i vull renovar amb tu."
+    ]
+}
 
-  
 }
