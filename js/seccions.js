@@ -41,24 +41,45 @@ function carregarSeccioComTreballem(info) {
     });
 }
 
-
 // -----------------------------
-// SECCIÓ 3: CLIENTS
+// SECCIÓ 3: CLIENTS (LOGOS + TESTIMONIS)
 // -----------------------------
 function carregarSeccioClients(info) {
     document.getElementById("clients-title").textContent = info.title;
     document.getElementById("clients-intro").textContent = info.intro;
 
-    const carousel = document.getElementById("clients-carousel");
-    carousel.innerHTML = "";
+    // --- CARRUSEL DE LOGOS ---
+    const track = document.getElementById("carousel-track");
+    track.innerHTML = "";
+
+    // Logos originals
+    info.logos.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "Logo client";
+        track.appendChild(img);
+    });
+
+    // Duplicats per scroll infinit
+    info.logos.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "Logo client";
+        track.appendChild(img);
+    });
+
+    // --- TESTIMONIS ---
+    const testimonials = document.getElementById("clients-testimonials");
+    testimonials.innerHTML = "";
 
     info.quotes.forEach(q => {
         const div = document.createElement("div");
         div.classList.add("client-quote");
         div.textContent = q;
-        carousel.appendChild(div);
+        testimonials.appendChild(div);
     });
 }
+
 
 
 // -----------------------------
