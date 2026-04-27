@@ -182,3 +182,20 @@
         text-align: left;
     }
 }
+
+/* Secció 3: Testimonis */
+
+.clients-testimonials {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.client-quote {
+    background: rgba(0,0,0,0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-style: italic;
+    color: #333;
+}
