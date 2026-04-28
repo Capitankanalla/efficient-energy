@@ -7,7 +7,7 @@
     "modalImage": "data/assessors.avif",
     "fullTextFile": "consultor.html"
   },
-
+  
   "howWeWork": {
     "title": "Com treballem",
     "image": "data/analisis.avif",
@@ -25,29 +25,20 @@
     "title": "Empreses que confien en nosaltres",
     "intro": "Alguns dels nostres clients i el que destaquen del nostre servei.",
     "logos": [
-      "data/logos/FVHlogo2.png",
-      "data/logos/logo-gubern.png",
-      "data/logos/logoCryogas.png",
-      "data/logos/logoInnoenvas1.png"
+        "data/logos/FVHlogo2.png",
+        "data/logos/logo-gubern.png",
+        "data/logos/logoCryogas.png",
+        "data/logos/logoInnoenvas1.png"
     ],
     "quotes": [
-      "“El teu assessorament em dona estabilitat i tranquil·litat, i això per mi té molt valor.” C.T.",
-      "“El que més valoro de la teva gestió és que sempre hi ets.” R.I.",
-      "“Aquest darrer any ha estat molt estable i per això vull renovar amb tu.” L.P.",
-      "“12 mesos després: ‘Fes el que consideris, ja saps que confio en tu.’” F.G."
+        
+  "“El teu assessorament em dona estabilitat i tranquil·litat, i això per mi té molt valor.”C.T.",
+  "“El que més valoro de la teva gestió és que sempre hi ets.”R.I.",
+  "“Aquest darrer any ha estat molt estable i per això vull renovar amb tu.”L.P.",
+  "“12 mesos després: ’Fes el que consideris, ja saps que confio en tu.’”F.G."
+
+
     ]
-  },
+}
 
-  "hero": {
-    "title": "Optimitzo el consum energètic de la teva empresa",
-    "subtitle": "Assessorament independent per reduir costos i millorar l’eficiència amb dades i tecnologia.",
-    "cta": "Sol·licita una auditoria inicial"
-  },
-
-  "selector": {
-    "title": "Quin tipus de subministrament vols analitzar?",
-    "llar": "Llar",
-    "negoci": "Negoci",
-    "industria": "Indústria"
-  }
 }
