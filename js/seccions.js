@@ -115,8 +115,4 @@ function prepararModalConsultor(info) {
         if (e.target === modal) modal.classList.remove("open");
     });
 
-    modalBody.addEventListener("click", () => {
-    modal.classList.remove("open");
-});
-
 }

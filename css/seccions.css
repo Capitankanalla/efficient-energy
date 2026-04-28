@@ -93,30 +93,26 @@
 /* Botó llegir més. */
 
 .wc-button {
+    display: inline-block;
     margin-top: 1rem;
     padding: 0.8rem 1.4rem;
-    background: #0077cc;
-    color: white;
+    background-color: #3cdb91; /* verd corporatiu */
+    color: #111;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
 }
 
+/* Hover modern i coherent amb les targetes */
 .wc-button:hover {
-    background: #005fa3;
+    transform: translateY(-3px);
+    background-color: #2fc27d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.modal-close-btn {
-    margin-top: 1rem;
-    padding: 0.7rem 1.2rem;
-    background: #0077cc;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-}
 
 /* SECCIÓ 2 — COM TREBALLEM */
 #how-we-work {
