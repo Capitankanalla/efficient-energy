@@ -1,0 +1,53 @@
+{
+  "whyConsultant": {
+    "title": "Why work with an energy consultant?",
+    "subtitle": "Energy consultant",
+    "shortText": "The energy sector is constantly evolving, with legislative changes and fluctuations in electricity and gas markets that can directly affect your costs.",
+    "button": "Read more",
+    "modalImage": "data/assessors.avif",
+    "fullTextFile": "consultor.html"
+  },
+
+  "howWeWork": {
+    "title": "How we work",
+    "image": "data/analisis.avif",
+    "steps": [
+      "We analyse the most suitable type of contract according to your SME’s consumption profile.",
+      "We study in detail the different contracting options.",
+      "We review your billing every month and handle claims if necessary.",
+      "We provide continuous monitoring of your energy management.",
+      "We prepare reports to identify improvements and optimise your billing.",
+      "We manage a change of supplier if needed."
+    ]
+  },
+
+  "clients": {
+    "title": "Companies that trust us",
+    "intro": "Some of our clients and what they highlight about our service.",
+    "logos": [
+      "data/logos/FVHlogo2.png",
+      "data/logos/logo-gubern.png",
+      "data/logos/logoCryogas.png",
+      "data/logos/logoInnoenvas1.png"
+    ],
+    "quotes": [
+      "“Your advice gives me stability and peace of mind, and that has great value for me.” C.T.",
+      "“What I value most about your work is that you’re always there.” R.I.",
+      "“This past year has been very stable, and that’s why I want to renew with you.” L.P.",
+      "“12 months later: ‘Do whatever you think is best, you know I trust you.’” F.G."
+    ]
+  },
+
+  "hero": {
+    "title": "I optimise your company’s energy consumption",
+    "subtitle": "Independent consultancy to reduce costs and improve efficiency through data and technology.",
+    "cta": "Request an initial audit"
+  },
+
+  "selector": {
+    "title": "What type of supply do you want to analyse?",
+    "llar": "Home",
+    "negoci": "Business",
+    "industria": "Industry"
+  }
+}

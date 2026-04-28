@@ -1,0 +1,53 @@
+{
+  "whyConsultant": {
+    "title": "¿Por qué contar con un consultor energético?",
+    "subtitle": "Energy consultant",
+    "shortText": "El sector energético vive una evolución constante, con cambios legislativos y variaciones en los mercados de electricidad y gas que pueden afectar directamente a tus costes.",
+    "button": "Leer más",
+    "modalImage": "data/assessors.avif",
+    "fullTextFile": "consultor.html"
+  },
+
+  "howWeWork": {
+    "title": "Cómo trabajamos",
+    "image": "data/analisis.avif",
+    "steps": [
+      "Analizamos el tipo de contratación más adecuado según el perfil de consumo de tu pyme.",
+      "Estudiamos detalladamente las diferentes opciones de contratación.",
+      "Revisamos mensualmente la facturación y gestionamos reclamaciones si es necesario.",
+      "Hacemos un seguimiento continuado de tu gestión energética.",
+      "Elaboramos informes para establecer mejoras y optimizar la facturación.",
+      "Gestionamos un cambio de comercializadora, si es necesario."
+    ]
+  },
+
+  "clients": {
+    "title": "Empresas que confían en nosotros",
+    "intro": "Algunos de nuestros clientes y lo que destacan de nuestro servicio.",
+    "logos": [
+      "data/logos/FVHlogo2.png",
+      "data/logos/logo-gubern.png",
+      "data/logos/logoCryogas.png",
+      "data/logos/logoInnoenvas1.png"
+    ],
+    "quotes": [
+      "“Tu asesoramiento me da estabilidad y tranquilidad, y eso para mí tiene mucho valor.” C.T.",
+      "“Lo que más valoro de tu gestión es que siempre estás ahí.” R.I.",
+      "“Este último año ha sido muy estable y por eso quiero renovar contigo.” L.P.",
+      "“12 meses después: ‘Haz lo que consideres, ya sabes que confío en ti.’” F.G."
+    ]
+  },
+
+  "hero": {
+    "title": "Optimizo el consumo energético de tu empresa",
+    "subtitle": "Asesoramiento independiente para reducir costes y mejorar la eficiencia con datos y tecnología.",
+    "cta": "Solicita una auditoría inicial"
+  },
+
+  "selector": {
+    "title": "¿Qué tipo de suministro quieres analizar?",
+    "llar": "Hogar",
+    "negoci": "Negocio",
+    "industria": "Industria"
+  }
+}
