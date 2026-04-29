@@ -1,11 +1,11 @@
 {
   "whyConsultant": {
-    "title": "Why work with an energy consultant?",
+    "title": "Why hire an energy consultant?",
     "subtitle": "Energy consultant",
     "shortText": "The energy sector is constantly evolving, with legislative changes and fluctuations in electricity and gas markets that can directly affect your costs.",
     "button": "Read more",
-    "modalImage": "data/assessors.avif",
-    "fullTextFile": "consultor.html"
+    "modalImage": "./data/assessors.avif",
+    "fullTextFile": "consultor.en.html"
   },
 
   "howWeWork": {
@@ -16,8 +16,8 @@
       "We study in detail the different contracting options.",
       "We review your billing every month and handle claims if necessary.",
       "We provide continuous monitoring of your energy management.",
-      "We prepare reports to identify improvements and optimise your billing.",
-      "We manage a change of supplier if needed."
+      "We prepare reports to identify improvements and optimise billing.",
+      "We manage a supplier change if needed."
     ]
   },
 
@@ -32,8 +32,8 @@
     ],
     "quotes": [
       "“Your advice gives me stability and peace of mind, and that has great value for me.” C.T.",
-      "“What I value most about your work is that you’re always there.” R.I.",
-      "“This past year has been very stable, and that’s why I want to renew with you.” L.P.",
+      "“What I value most about your work is that you are always there.” R.I.",
+      "“This past year has been very stable and that’s why I want to renew with you.” L.P.",
       "“12 months later: ‘Do whatever you think is best, you know I trust you.’” F.G."
     ]
   },

@@ -1,11 +1,11 @@
 {
   "whyConsultant": {
-    "title": "¿Por qué contar con un consultor energético?",
-    "subtitle": "Energy consultant",
-    "shortText": "El sector energético vive una evolución constante, con cambios legislativos y variaciones en los mercados de electricidad y gas que pueden afectar directamente a tus costes.",
+    "title": "¿Por qué tener un consultor energético?",
+    "subtitle": "Consultor energético",
+    "shortText": "El sector energético vive una evolución constante, con cambios legislativos y variaciones en los mercados de electricidad y gas que pueden afectar directamente tus costes.",
     "button": "Leer más",
-    "modalImage": "data/assessors.avif",
-    "fullTextFile": "consultor.html"
+    "modalImage": "./data/assessors.avif",
+    "fullTextFile": "consultor.es.html"
   },
 
   "howWeWork": {
@@ -17,7 +17,7 @@
       "Revisamos mensualmente la facturación y gestionamos reclamaciones si es necesario.",
       "Hacemos un seguimiento continuado de tu gestión energética.",
       "Elaboramos informes para establecer mejoras y optimizar la facturación.",
-      "Gestionamos un cambio de comercializadora, si es necesario."
+      "Gestionamos un cambio de comercializadora si es necesario."
     ]
   },
 
