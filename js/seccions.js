@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // 1) Carregar JSON d'idioma
-    fetch("./data/lang/cat.json")
+    fetch("lang/ca.json")
         .then(r => r.json())
         .then(data => {
             carregarSeccioConsultor(data.whyConsultant);
