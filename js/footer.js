@@ -15,7 +15,9 @@ fetch('./html/footer.html')
     });
 
 function carregarFooterJSON() {
-    fetch('./json/footer.json')
+    const lang = localStorage.getItem("lang") || "ca";
+    const langFile = lang.charAt(0).toUpperCase() + lang.slice(1);
+    fetch(`./json/lang/footer${langFile}.json`)
         .then(res => res.json())
         .then(data => {
 
