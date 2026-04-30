@@ -1,7 +1,7 @@
 // ------------------------------------------------------
 // IDIOMA PER DEFECTE
 // ------------------------------------------------------
-let currentLang = "es";   // La web ha de carregar en castellà
+let currentLang = "es";   
 
 // ------------------------------------------------------
 // CARREGA UN IDIOMA
