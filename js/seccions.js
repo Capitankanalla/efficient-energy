@@ -1,17 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-    // 1) Carregar JSON d'idioma
-    fetch("json/lang/${lang}.json")
-        .then(r => r.json())
-        .then(data => {
-            carregarSeccioConsultor(data.whyConsultant);
-            carregarSeccioComTreballem(data.howWeWork);
-            carregarSeccioClients(data.clients);
-            prepararModalConsultor(data.whyConsultant);
-        });
-});
-
-
 // -----------------------------
 // SECCIÓ 1: CONSULTOR
 // -----------------------------

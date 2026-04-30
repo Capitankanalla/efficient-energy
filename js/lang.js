@@ -97,6 +97,11 @@ function applyTranslations(data) {
             testimonials.appendChild(p);
         });
     }
+    carregarSeccioConsultor(data.whyConsultant);
+    carregarSeccioComTreballem(data.howWeWork);
+    carregarSeccioClients(data.clients);
+    prepararModalConsultor(data.whyConsultant);
+
 }
 
 // ------------------------------------------------------
