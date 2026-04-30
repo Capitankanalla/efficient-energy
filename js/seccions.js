@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // 1) Carregar JSON d'idioma
-    fetch("json/lang/ca.json")
+    fetch("json/lang/${lang}.json")
         .then(r => r.json())
         .then(data => {
             carregarSeccioConsultor(data.whyConsultant);
@@ -116,3 +116,4 @@ function prepararModalConsultor(info) {
     });
 
 }
+
