@@ -20,24 +20,6 @@ document.addEventListener('mousemove', (e) => {
     hero.style.backgroundPosition = `${x}% ${y}%`;
 });
 
-// Acordió
-const items = document.querySelectorAll("#info-sections .accordion-item");
-
-items.forEach(item => {
-  const header = item.querySelector(".accordion-header");
-
-  header.addEventListener("click", () => {
-
-    // Tancar tots els altres
-    items.forEach(i => {
-      if (i !== item) i.classList.remove("open");
-    });
-
-    // Obrir/tancar aquest
-    item.classList.toggle("open");
-  });
-});
-
 
 // Validació bàsica del formulari
 const form = document.querySelector('.contact-form');
@@ -57,14 +39,3 @@ if (form) {
     });
 }
 
-// Selecció de subministrament (fase beta)
-document.querySelectorAll('.opcio').forEach(opcio => {
-    opcio.addEventListener('click', () => {
-        const tipus = opcio.classList.contains('llar') ? 'llar'
-                    : opcio.classList.contains('negoci') ? 'negoci'
-                    : 'industria';
-
-        console.log("Has seleccionat:", tipus);
-        // Aquí després afegirem el pas 2 (llum/gas)
-    });
-});

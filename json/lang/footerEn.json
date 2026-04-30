@@ -1,0 +1,13 @@
+{
+    "empresa": "Efficient Energy",
+    "frase": "We optimise your savings, we maximise your energy.",
+    "adreca": "Carrer Exemple 123, Barcelona",
+    "email": "info@efficientenergy.com",
+    "telefon": "+34 600 000 000",
+    "logo": "data/logoefficient.png",
+    "legal": [
+        { "id": "privacitat", "text": "Privacy Policy" },
+        { "id": "cookies", "text": "Cookie Policy" },
+        { "id": "avis", "text": "Legal Notice" }
+    ]
+}
