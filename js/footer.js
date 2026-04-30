@@ -6,16 +6,17 @@ fetch('./html/footer.html')
     .then(html => {
         document.body.insertAdjacentHTML('beforeend', html);
 
+        // Ara carreguem el JSON del footer
+        carregarFooterJSON();
+
         // Any automàtic
         const any = document.getElementById('any');
         if (any) any.textContent = new Date().getFullYear();
-
-        // Ara carreguem el JSON del footer
-        carregarFooterJSON();
     });
 
 function carregarFooterJSON() {
-    const lang = localStorage.getItem("lang") || "ca";
+    const lang = window.currentLang || "ca";
+    //const lang = localStorage.getItem("lang") || "ca";
     const langFile = lang.charAt(0).toUpperCase() + lang.slice(1);
     fetch(`./json/lang/footer${langFile}.json`)
         .then(res => res.json())
