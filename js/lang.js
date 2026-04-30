@@ -1,15 +1,13 @@
 // ------------------------------------------------------
 // IDIOMA PER DEFECTE
 // ------------------------------------------------------
-// let currentLang = "es";
-window.currentLang = "es";
-
+let currentLang = "es";   // La web ha de carregar en castellà
 
 // ------------------------------------------------------
 // CARREGA UN IDIOMA
 // ------------------------------------------------------
 async function loadLanguage(lang) {
-    window.currentLang = lang;
+    currentLang = lang;
 
     try {
         const response = await fetch(`json/lang/${lang}.json`);
@@ -121,7 +119,6 @@ function updateActiveButton(lang) {
 document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
         loadLanguage(btn.dataset.lang);
-        carregarFooterJSON();
     });
 });
 
