@@ -5,6 +5,7 @@ fetch('./html/footer.html')
     .then(res => res.text())
     .then(html => {
         document.body.insertAdjacentHTML('beforeend', html);
+        window.carregarFooterJSON();
         // Any automàtic
         const any = document.getElementById('any');
         if (any) any.textContent = new Date().getFullYear();
