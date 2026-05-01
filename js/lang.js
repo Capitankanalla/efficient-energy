@@ -16,6 +16,7 @@ async function loadLanguage(lang) {
 
         applyTranslations(data);
         updateActiveButton(lang);
+        carregarFooterJSON();
 
         // 🔥 AIXÒ ÉS EL QUE ET FALTA
         // if (typeof carregarFooterJSON === "function") {
