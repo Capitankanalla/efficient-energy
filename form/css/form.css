@@ -13,32 +13,32 @@ body {
 /* =========================
    HEADER
 ========================= */
-.hero {
+.hero-header {
     position: relative;
     width: 100%;
-    height: 300px;
-    overflow: hidden;
+    height: 300px; /* ajusta a la mida desitjada */
+    background: #333; /* fons alternatiu per si no es carrega la imatge */
 }
 
-.hero .hero-img {
+.hero-header .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fa que cobreixi tot l'espai sense distorsionar-se */
-    opacity: 0.8; /* Afegim una mica de transparència per no sobrecarregar el contingut que ve després */
+    object-fit: cover; /* Això fa que cobreixi tot l'espai sense distorsionar-se */
+    opacity: 0.8; /* afegim una mica de transparència per no sobrecarregar el contingut que ve després */
 }
 
-.hero .logo-box {
-    display: flex;
-    justify-content: center;
-    margin-top: -40px;
-    margin-bottom: 20px;
+.hero-header .logo-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Per assegurar que el logo està per sobre de la imatge */
+    width: 120px; /* O la mida que consideris adequada */
 }
 
-.hero .logo-box img {
-    max-width: 140px;
+.hero-header .logo-box img {
+    width: 100%;
     height: auto;
 }
-
 .form-header {
     padding: 20px;
 }
@@ -58,23 +58,17 @@ body {
     margin: auto;
     padding: 40px 20px;
     display: flex;
-    gap: 40px;
+    gap: 50px;
     align-items: flex-start;
-}
-
-.form-col {
-    flex: 1.6;
-    min-width: 320px;
-}
-
-.info-col {
-    flex: 1;
-    min-width: 280px;
 }
 
 /* =========================
    COLUMNA FORM (PRIORITAT)
 ========================= */
+
+.form-col {
+    flex: 2;
+}
 
 .form-col h1 {
     font-size: 2rem;
@@ -157,6 +151,11 @@ button:hover {
    COLUMNA INFO
 ========================= */
 
+.info-col {
+    flex: 1;
+    padding-top: 10px;
+}
+
 .info-col h2 {
     font-size: 1.3rem;
     margin-bottom: 15px;
@@ -196,6 +195,8 @@ button:hover {
     opacity: 0.9;
 }
 
+
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -203,14 +204,9 @@ button:hover {
 @media (max-width: 900px) {
     .form-wrapper {
         flex-direction: column;
-        gap: 30px;
     }
 
     .info-col {
         order: -1;
-    }
-
-    .hero {
-        height: 200px;
     }
 }
