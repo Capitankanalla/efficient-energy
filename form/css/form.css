@@ -13,6 +13,31 @@ body {
 /* =========================
    HEADER
 ========================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fa que cobreixi tot l'espai sense distorsionar-se */
+    opacity: 0.8; /* Afegim una mica de transparència per no sobrecarregar el contingut que ve després */
+}
+
+.hero .logo-box {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+.hero .logo-box img {
+    max-width: 140px;
+    height: auto;
+}
 
 .form-header {
     padding: 20px;
@@ -33,17 +58,23 @@ body {
     margin: auto;
     padding: 40px 20px;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     align-items: flex-start;
+}
+
+.form-col {
+    flex: 1.6;
+    min-width: 320px;
+}
+
+.info-col {
+    flex: 1;
+    min-width: 280px;
 }
 
 /* =========================
    COLUMNA FORM (PRIORITAT)
 ========================= */
-
-.form-col {
-    flex: 2;
-}
 
 .form-col h1 {
     font-size: 2rem;
@@ -126,11 +157,6 @@ button:hover {
    COLUMNA INFO
 ========================= */
 
-.info-col {
-    flex: 1;
-    padding-top: 10px;
-}
-
 .info-col h2 {
     font-size: 1.3rem;
     margin-bottom: 15px;
@@ -177,9 +203,14 @@ button:hover {
 @media (max-width: 900px) {
     .form-wrapper {
         flex-direction: column;
+        gap: 30px;
     }
 
     .info-col {
         order: -1;
+    }
+
+    .hero {
+        height: 200px;
     }
 }
