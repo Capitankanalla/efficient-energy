@@ -1,0 +1,185 @@
+/* =========================
+   BASE
+========================= */
+
+body {
+    background: #e9eae8;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #212422;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.form-header {
+    padding: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #0a5c36;
+    font-weight: 600;
+}
+
+/* =========================
+   LAYOUT GENERAL
+========================= */
+
+.form-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* =========================
+   COLUMNA FORM (PRIORITAT)
+========================= */
+
+.form-col {
+    flex: 2;
+}
+
+.form-col h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background: #fff;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* =========================
+   LEGAL
+========================= */
+
+.legal {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+}
+
+/* =========================
+   BOTÓ
+========================= */
+
+button {
+    background: rgb(60, 219, 145);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #0a5c36;
+}
+
+/* =========================
+   NOTE FINAL
+========================= */
+
+.note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* =========================
+   COLUMNA INFO
+========================= */
+
+.info-col {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.info-col h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.info-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-col li {
+    margin-bottom: 10px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.info-col li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #0a5c36;
+}
+
+/* =========================
+   IMATGE
+========================= */
+
+.info-image {
+    margin-top: 30px;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .form-wrapper {
+        flex-direction: column;
+    }
+
+    .info-col {
+        order: -1;
+    }
+}

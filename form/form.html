@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditoría energética</title>
+
+  <link rel="stylesheet" href="./css/form.css">
+</head>
+
+<body>
+
+  <header class="form-header">
+    <a href="/form/form.html" class="back-link">← Volver</a>
+  </header>
+
+  <main class="form-wrapper">
+
+    <!-- COL 1: FORM -->
+    <section class="form-col">
+
+      <h1>Solicita tu auditoría energética</h1>
+
+      <p class="subtitle">
+        Analizamos tu consumo y detectamos oportunidades reales de ahorro.
+      </p>
+
+      <form id="leadForm">
+
+        <input type="text" name="name" placeholder="Nombre" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <input type="tel" name="phone" placeholder="Teléfono">
+
+        <select name="type" required>
+          <option value="">Tipo de cliente</option>
+          <option value="home">Llar</option>
+          <option value="business">Negocio</option>
+          <option value="industry">Industria</option>
+        </select>
+
+        <textarea name="message" placeholder="Cuéntanos tu situación (opcional)"></textarea>
+
+        <label class="legal">
+          <input type="checkbox" required>
+          Acepto la política de privacidad
+        </label>
+
+        <button type="submit">
+          Solicitar auditoría
+        </button>
+
+      </form>
+
+      <p class="note">
+        Te contactaremos en menos de 24h.
+      </p>
+
+    </section>
+
+    <!-- COL 2: INFO + VISUAL -->
+    <aside class="info-col">
+
+      <div class="info-text">
+        <h2>¿Qué recibirás?</h2>
+
+        <ul>
+          <li>Análisis gratuito sin compromiso</li>
+          <li>Optimización de costes energéticos</li>
+          <li>Estudio personalizado</li>
+          <li>Respuesta en menos de 24h</li>
+        </ul>
+      </div>
+
+      <div class="info-image">
+        <img src="./assets/energy.avif" alt="Energía">
+      </div>
+
+    </aside>
+
+  </main>
+
+  <script src="./form.js"></script>
+
+</body>
+</html>
