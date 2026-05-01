@@ -1,46 +1,26 @@
 // ------------------------------------------------------
 // IDIOMA PER DEFECTE
 // ------------------------------------------------------
-let currentLang = "es";   // La web ha de carregar en castellà
+let currentLang = "es";   // Idioma predeterminat
 
 // ------------------------------------------------------
 // CARREGA UN IDIOMA
 // ------------------------------------------------------
 async function loadLanguage(lang) {
     window.currentLang = lang;
-    //window.currentLang = lang; // opcional però recomanat
-
     try {
         const response = await fetch(`json/lang/${lang}.json`);
         const data = await response.json();
 
         applyTranslations(data);
         updateActiveButton(lang);
-        carregarFooterJSON();
-
-        // 🔥 AIXÒ ÉS EL QUE ET FALTA
-        // if (typeof carregarFooterJSON === "function") {
-        //     carregarFooterJSON();
-        // }
-
+        if (window.carregarFooterJSON) {
+    window.carregarFooterJSON();
+}
     } catch (error) {
         console.error("Error carregant l'idioma:", error);
     }
 }
-// async function loadLanguage(lang) {
-//     currentLang = lang;
-
-//     try {
-//         const response = await fetch(`json/lang/${lang}.json`);
-//         const data = await response.json();
-
-//         applyTranslations(data);
-//         updateActiveButton(lang);
-
-//     } catch (error) {
-//         console.error("Error carregant l'idioma:", error);
-//     }
-// }
 
 // ------------------------------------------------------
 // APLICA LES TRADUCCIONS AL DOM
