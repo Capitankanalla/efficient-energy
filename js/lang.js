@@ -127,3 +127,12 @@ document.querySelectorAll(".lang-btn").forEach(btn => {
 // CARREGA L'IDIOMA PER DEFECTE
 // ------------------------------------------------------
 loadLanguage(currentLang);
+
+// ------------------------------------------------------
+// ACTUALITZA EL CTA AMB L'IDIOMA ACTUAL
+// ------------------------------------------------------
+const cta = document.getElementById("cta");
+if (cta) {
+    cta.href = `./form/form.html?lang=${currentLang}`;
+}
+
