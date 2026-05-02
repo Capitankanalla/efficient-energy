@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang="pageTitle">Auditoría energética</title>
 
-  <link rel="stylesheet" href="./css/form.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="pageTitle">Auditoría energética</title>
+
+    <link rel="stylesheet" href="./css/form.css">
 </head>
 
 <body>
-<header class="hero-header">
-  <img src="./data/Torres_sortida_sol.avif" alt="Hero Image" class="hero-img">
-</header>
+    <header class="hero-header">
+        <img src="./data/Torres_sortida_sol.avif" alt="Hero Image" class="hero-img">
+    </header>
 
-<header class="form-header">
-  <a href="../index.html" class="back-link" data-lang="backLink">← Volver</a>
-</header>
+    <header class="form-header">
+        <a href="../index.html" class="back-link" data-lang="backLink">← Volver</a>
+    </header>
 
-<main class="form-wrapper">
+    <main class="form-wrapper">
 
-  <!-- COL 1: FORM -->
-  <section class="form-col">
+        <!-- COL 1: FORM -->
+        <section class="form-col">
 
-    <h1 data-lang="formTitle">Solicita tu auditoría energética</h1>
+            <h1 data-lang="formTitle">Solicita tu auditoría energética</h1>
 
-    <p class="subtitle" data-lang="formSubtitle">
-      Analizamos tu consumo y detectamos oportunidades reales de ahorro.
-    </p>
+            <p class="subtitle" data-lang="formSubtitle">
+                Analizamos tu consumo y detectamos oportunidades reales de ahorro.
+            </p>
 
-    <form id="leadForm">
+            <form id="leadForm">
 
-      <input type="text" name="name" required 
-             placeholder="Nombre" 
-             data-lang-placeholder="namePlaceholder">
+                <input type="text" name="name" required placeholder="Nombre" data-lang-placeholder="namePlaceholder">
 
-      <input type="email" name="email" required 
-             placeholder="Email" 
-             data-lang-placeholder="emailPlaceholder">
+                <input type="email" name="email" required placeholder="Email" data-lang-placeholder="emailPlaceholder">
 
-      <input type="tel" name="phone" 
-             placeholder="Teléfono"
-             data-lang-placeholder="phonePlaceholder">
+                <input type="tel" name="phone" placeholder="Teléfono" data-lang-placeholder="phonePlaceholder">
 
-      <!-- CUPS -->
-      <input 
-        type="text" 
-        name="cups" 
-        maxlength="22"
-        pattern="ES[0-9A-Z]{18,20}"
-        placeholder="CUPS (si lo conoces)"
-        data-lang-placeholder="cupsPlaceholder"
-      >
+                <!-- CUPS -->
+                <input type="text" name="cups" maxlength="22" pattern="ES[0-9A-Z]{18,20}"
+                    placeholder="CUPS (si lo conoces)" data-lang-placeholder="cupsPlaceholder">
 
-      <p class="cups-help" data-lang="cupsHelp">
-        El CUPS aparece en tu factura de luz. Suele empezar por <strong>ES</strong> y tener 20–22 caracteres.
-      </p>
+                <p class="cups-help" data-lang="cupsHelp">
+                    El CUPS aparece en tu factura de luz. Suele empezar por <strong>ES</strong> y tener 20–22
+                    caracteres.
+                </p>
 
-      <select name="type" required data-lang-select="typeSelect">
-        <option value="" data-lang="typeDefault">Tipo de cliente</option>
-        <option value="home" data-lang="typeHome">Hogar</option>
-        <option value="business" data-lang="typeBusiness">Negocio</option>
-        <option value="industry" data-lang="typeIndustry">Industria</option>
-      </select>
+                <select name="type" required data-lang-select="typeSelect">
+                    <option value="" data-lang="typeDefault">Tipo de cliente</option>
+                    <option value="home" data-lang="typeHome">Hogar</option>
+                    <option value="business" data-lang="typeBusiness">Negocio</option>
+                    <option value="industry" data-lang="typeIndustry">Industria</option>
+                </select>
 
-      <textarea name="message" 
-                placeholder="Cuéntanos tu situación (opcional)"
-                data-lang-placeholder="messagePlaceholder"></textarea>
+                <textarea name="message" placeholder="Cuéntanos tu situación (opcional)"
+                    data-lang-placeholder="messagePlaceholder"></textarea>
 
-      <label class="legal">
-        <input type="checkbox" required>
-        <span data-lang="legalText">Acepto la política de privacidad</span>
-      </label>
+                <label class="legal">
+                    <input type="checkbox" required>
+                    <span data-lang="legalText">Acepto la política de privacidad</span>
+                </label>
 
-      <button type="submit" data-lang="submitBtn">
-        Solicitar auditoría
-      </button>
+                <button type="submit" data-lang="submitBtn">
+                    Solicitar auditoría
+                </button>
 
-    </form>
+            </form>
 
-    <p class="note" data-lang="noteText">
-      Te contactaremos en menos de 24h.
-    </p>
+            <p class="note" data-lang="noteText">
+                Te contactaremos en menos de 24h.
+            </p>
 
-  </section>
+        </section>
 
-  <!-- COL 2: INFO + VISUAL -->
-  <aside class="info-col">
+        <!-- COL 2: INFO + VISUAL -->
+        <aside class="info-col">
 
-    <div class="info-text">
-      <h2 data-lang="infoTitle">¿Qué recibirás?</h2>
+            <div class="info-text">
+                <h2 data-lang="infoTitle">¿Qué recibirás?</h2>
 
-      <ul>
-        <li data-lang="info1">Análisis gratuito sin compromiso</li>
-        <li data-lang="info2">Optimización de costes energéticos</li>
-        <li data-lang="info3">Estudio personalizado</li>
-        <li data-lang="info4">Respuesta en menos de 24h</li>
-      </ul>
+                <ul>
+                    <li data-lang="info1">Análisis gratuito sin compromiso</li>
+                    <li data-lang="info2">Optimización de costes energéticos</li>
+                    <li data-lang="info3">Estudio personalizado</li>
+                    <li data-lang="info4">Respuesta en menos de 24h</li>
+                </ul>
+            </div>
+
+            <div class="info-image">
+                <img src="./data/logoefficient.webp" alt="logoefficient">
+            </div>
+
+        </aside>
+
+    </main>
+    <script src="./js/translations.js"></script>
+    <script src="./js/form.js"></script>
+    <div id="privacyPopup" class="popup hidden">
+        <div class="popup-content">
+            <h2 data-lang="privacyTitle">Tractament de les dades</h2>
+            <p data-lang="privacyText">
+                Aquí va el text curt explicant la finalitat i el tractament de les dades.
+            </p>
+
+            <div class="popup-buttons">
+                <button id="acceptPrivacy" data-lang="acceptBtn">Accepto</button>
+                <button id="rejectPrivacy" data-lang="rejectBtn">Rebutjo</button>
+            </div>
+        </div>
     </div>
 
-    <div class="info-image">
-      <img src="./data/logoefficient.webp" alt="logoefficient">
-    </div>
-
-  </aside>
-
-</main>
-<script src="./js/translations.js"></script>
-<script src="./js/form.js"></script>
 
 </body>
+
 </html>
