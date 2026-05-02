@@ -4,7 +4,7 @@
     "adreca": "Carrer Exemple 123, Barcelona",
     "email": "info@efficientenergy.com",
     "telefon": "+34 600 000 000",
-    "logo": "data/logoefficient.png",
+    "logo": "data/logoefficient.webp",
     "legal": [
         { "id": "privacitat", "text": "Política de privacitat" },
         { "id": "cookies", "text": "Política de cookies" },
