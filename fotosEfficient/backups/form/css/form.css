@@ -16,18 +16,29 @@ body {
 .hero-header {
     position: relative;
     width: 100%;
-    height: 300px;
-    background: #333;
+    height: 300px; /* ajusta a la mida desitjada */
+    background: #333; /* fons alternatiu per si no es carrega la imatge */
 }
 
 .hero-header .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.8;
+    object-fit: cover; /* Això fa que cobreixi tot l'espai sense distorsionar-se */
+    opacity: 0.8; /* afegim una mica de transparència per no sobrecarregar el contingut que ve després */
 }
 
+.hero-header .logo-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Per assegurar que el logo està per sobre de la imatge */
+    width: 120px; /* O la mida que consideris adequada */
+}
+
+.hero-header .logo-box img {
+    width: 100%;
+    height: auto;
+}
 .form-header {
     padding: 20px;
 }
@@ -43,16 +54,16 @@ body {
 ========================= */
 
 .form-wrapper {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 40px 20px;
     display: flex;
     gap: 50px;
     align-items: flex-start;
 }
 
 /* =========================
-   COLUMNA FORM
+   COLUMNA FORM (PRIORITAT)
 ========================= */
 
 .form-col {
@@ -61,11 +72,11 @@ body {
 
 .form-col h1 {
     font-size: 2rem;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     opacity: 0.8;
 }
 
@@ -76,10 +87,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    max-width: 600px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
+    gap: 15px;
 }
 
 input,
@@ -99,17 +107,6 @@ textarea {
 }
 
 /* =========================
-   CUPS HELP
-========================= */
-
-.cups-help {
-    font-size: 0.85rem;
-    opacity: 0.7;
-    margin-top: -10px;
-    margin-bottom: 10px;
-}
-
-/* =========================
    LEGAL
 ========================= */
 
@@ -126,19 +123,18 @@ textarea {
 ========================= */
 
 button {
-    background: #0a5c36;
+    background: rgb(60, 219, 145);
     color: white;
-    padding: 16px;
+    padding: 14px;
     border: none;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
 button:hover {
-    background: #064d2c;
+    background: #0a5c36;
 }
 
 /* =========================
@@ -193,13 +189,14 @@ button:hover {
 }
 
 .info-image img {
-    background: transparent;
     width: 80%;
     border-radius: 8px;
     display: block;
     opacity: 0.9;
     align-items: center;
 }
+
+
 
 /* =========================
    RESPONSIVE
