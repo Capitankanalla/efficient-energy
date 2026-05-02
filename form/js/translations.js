@@ -89,3 +89,26 @@ const translations = {
     info4: "Response within 24h"
   }
 };
+
+function applyTranslations(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  // Traducció de text (títols, paràgrafs, botons, etc.)
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    const key = el.dataset.lang;
+    if (t[key]) el.textContent = t[key];
+  });
+
+  // Traducció de placeholders (inputs i textarea)
+  document.querySelectorAll("[data-lang-placeholder]").forEach(el => {
+    const key = el.dataset.langPlaceholder;
+    if (t[key]) el.placeholder = t[key];
+  });
+
+  // Traducció d'opcions de SELECT
+  document.querySelectorAll("option[data-lang]").forEach(el => {
+    const key = el.dataset.lang;
+    if (t[key]) el.textContent = t[key];
+  });
+}
