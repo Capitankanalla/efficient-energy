@@ -1,13 +1,18 @@
 // ------------------------------------------------------
 // IDIOMA PER DEFECTE
 // ------------------------------------------------------
-let currentLang = "es";   // Idioma predeterminat
-
+//let currentLang = "es";   // Idioma predeterminat
+// Passem la selecció del idioma a localStorage per fer ho persistent.
+let currentLang = localStorage.getItem("lang") || "es";
+// Mantenim el la variable global per respectar el footer que depen d'ella
+window.currentLang = currentLang; // ← Manté el footer funcionant
 // ------------------------------------------------------
 // CARREGA UN IDIOMA
 // ------------------------------------------------------
 async function loadLanguage(lang) {
     window.currentLang = lang;
+     window.currentLang = lang; // ← Compatibilitat amb el footer
+    localStorage.setItem("lang", lang);
     try {
         const response = await fetch(`json/lang/${lang}.json`);
         const data = await response.json();

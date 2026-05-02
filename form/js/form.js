@@ -1,11 +1,11 @@
 // Detectar idioma de l'URL
 const urlParams = new URLSearchParams(window.location.search);
+// Llegeix idioma guardat o es
 const currentLang = urlParams.get("lang") || "es";
 
-console.log("Idioma detectat:", currentLang);
 
-
-
+// Carrega traduccions del formulari
+applyTranslations(currentLang);
 // Aplicar traduccions
 function applyTranslations(lang) {
   // Textos normals
