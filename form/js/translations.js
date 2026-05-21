@@ -9,7 +9,7 @@ const translations = {
     emailPlaceholder: "Email",
     phonePlaceholder: "Teléfono",
     cupsPlaceholder: "Codigo CUPS",
-    messagePlaceholder: "Cuéntanos tu situación (opcional)",
+    messagePlaceholder: "Coméntanos tu situación",
 
     cupsHelp: "El CUPS aparece en tu factura de luz y tiene el formato ES0031...",
 
@@ -38,10 +38,10 @@ const translations = {
     namePlaceholder: "Nom",
     emailPlaceholder: "Correu electrònic",
     phonePlaceholder: "Telèfon",
-    cupsPlaceholder: "CUPS (si el coneixes)",
+    cupsPlaceholder: "Códi CUPS",
     messagePlaceholder: "Explica'ns la teva situació (opcional)",
 
-    cupsHelp: "El CUPS apareix a la factura de la llum. Sol començar per ES i tenir 20–22 caràcters.",
+    cupsHelp: "El CUPS apareix a la factura de la llum i té el format ES0031...",
 
     typeDefault: "Tipus de client",
     typeHome: "Llar",
@@ -50,7 +50,7 @@ const translations = {
 
     legalText: "Accepto la política de privacitat",
     submitBtn: "Sol·licitar auditoria",
-    noteText: "Et contactarem en menys de 24h.",
+    noteText: "El nostre equip d'experts et respondrà en menys de 24h.",
 
     infoTitle: "Què rebràs?",
     info1: "Anàlisi gratuït sense compromís",
@@ -69,9 +69,9 @@ const translations = {
     emailPlaceholder: "Email",
     phonePlaceholder: "Phone",
     cupsPlaceholder: "CUPS (if you know it)",
-    messagePlaceholder: "Tell us your situation (optional)",
+    messagePlaceholder: "Tell us your situation",
 
-    cupsHelp: "The CUPS appears on your electricity bill. It usually starts with ES and has 20–22 characters.",
+    cupsHelp: "The CUPS appears on your electricity bill it has the format ES0031...",
 
     typeDefault: "Customer type",
     typeHome: "Home",
@@ -80,7 +80,7 @@ const translations = {
 
     legalText: "I accept the privacy policy",
     submitBtn: "Request audit",
-    noteText: "We will contact you within 24h.",
+    noteText: "Our experts will contact you within 24h.", 
 
     infoTitle: "What will you receive?",
     info1: "Free analysis with no commitment",
