@@ -38,28 +38,27 @@
                 <input type="tel" name="phone" placeholder="Teléfono" data-lang-placeholder="phonePlaceholder">
 
                 <!-- CUPS -->
-                <input type="text" name="cups" maxlength="22" pattern="ES[0-9A-Z]{18,20}"
-                    placeholder="CUPS (si lo conoces)" data-lang-placeholder="cupsPlaceholder">
+                <input type="text" name="cups" maxlength="22" pattern="ES[0-9A-Z]{18,20}" placeholder="Codgo CUPS"
+                    data-lang-placeholder="cupsPlaceholder">
 
                 <p class="cups-help" data-lang="cupsHelp">
-                    El CUPS aparece en tu factura de luz. Suele empezar por <strong>ES</strong> y tener 20–22
-                    caracteres.
+                    El CUPS aparece en tu factura de luz y tiene el formato <strong>ES0031</strong>
                 </p>
 
                 <select name="type" required data-lang-select="typeSelect">
-                    <option value="" data-lang="typeDefault">Tipo de cliente</option>
+                    <option value="" data-lang="typeDefault">Suministro a analizar</option>
                     <option value="home" data-lang="typeHome">Hogar</option>
                     <option value="business" data-lang="typeBusiness">Negocio</option>
                     <option value="industry" data-lang="typeIndustry">Industria</option>
                 </select>
 
-                <textarea name="message" placeholder="Cuéntanos tu situación (opcional)"
+                <textarea name="message" placeholder="Comentanos tu inquietud"
                     data-lang-placeholder="messagePlaceholder"></textarea>
 
                 <label class="legal">
                     <input type="checkbox" id="legalCheck" required>
-                    <span data-lang="legalText">Acepto la 
-                    <span><a href="#" id="openPolicy" class="legal-link">política de privacidad</a></span>
+                    <span data-lang="legalText">Acepto la
+                        <span><a href="#" id="openPolicy" class="legal-link">política de privacidad</a></span>
                     </span>
                 </label>
 
@@ -70,7 +69,7 @@
             </form>
 
             <p class="note" data-lang="noteText">
-                Te contactaremos en menos de 24h.
+                Nuestro equipo de expertos te responderá en menos de 24h.
             </p>
 
         </section>
@@ -96,11 +95,10 @@
         </aside>
 
     </main>
-    <script src="./js/translations.js"></script>
-    <script src="./js/form.js"></script>
     <div id="privacyPopup" class="popup hidden">
         <div class="popup-content">
             <h2 data-lang="privacyTitle">Tractament de les dades</h2>
+            <a id="openPolicy">política de privacitat</a>
             <p data-lang="privacyText">
                 Aquí va el text curt explicant la finalitat i el tractament de les dades.
             </p>
@@ -111,7 +109,8 @@
             </div>
         </div>
     </div>
-
+    <script src="./js/translations.js"></script>
+    <script src="./js/form.js"></script>
 
 </body>
 
