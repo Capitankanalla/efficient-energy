@@ -8,19 +8,19 @@ const translations = {
     namePlaceholder: "Nombre",
     emailPlaceholder: "Email",
     phonePlaceholder: "Teléfono",
-    cupsPlaceholder: "CUPS (si lo conoces)",
+    cupsPlaceholder: "Codigo CUPS",
     messagePlaceholder: "Cuéntanos tu situación (opcional)",
 
-    cupsHelp: "El CUPS aparece en tu factura de luz. Suele empezar por ES y tener 20–22 caracteres.",
+    cupsHelp: "El CUPS aparece en tu factura de luz y tiene el formato ES0031...",
 
-    typeDefault: "Tipo de cliente",
+    typeDefault: "Tipo de sumnistro",
     typeHome: "Hogar",
     typeBusiness: "Negocio",
     typeIndustry: "Industria",
 
     legalText: "Acepto la política de privacidad",
     submitBtn: "Solicitar auditoría",
-    noteText: "Te contactaremos en menos de 24h.",
+    noteText: "Nuestro equipo de expertos te responderá en menos de 24h.",
 
     infoTitle: "¿Qué recibirás?",
     info1: "Análisis gratuito sin compromiso",
