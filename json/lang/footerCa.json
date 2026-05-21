@@ -1,9 +1,9 @@
 {
     "empresa": "Efficient Energy",
     "frase": "Optimitzem el teu estalvi, maximitzem la teva energía.",
-    "adreca": "Carrer Exemple 123, Barcelona",
+    "adreca": "Carrer Torrent d'en Grau 56, Badalona",
     "email": "info@efficientenergy.com",
-    "telefon": "+34 600 000 000",
+    "telefon": "+34 644 549 730",
     "logo": "data/logoefficient.png",
     "legal": [
         { "id": "privacitat", "text": "Política de privacitat" },
