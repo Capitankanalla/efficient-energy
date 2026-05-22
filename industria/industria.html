@@ -4,55 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indústria</title>
+    <title>Subministrament industrial - Efficient Energy</title>
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./industriaCss/industriaStyles.css">
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <header class="hero-header">
-        <img src="../data/empresa.avif" alt="Indústria" class="hero-img">
+    <!-- HERO INDÚSTRIA -->
+    <header class="hero hero-industria">
+        <div class="hero-content">
+            <h1>Optimitzem el subministrament industrial</h1>
+            <p>Reduïm costos energètics en processos, maquinària i instal·lacions amb una visió global del consum.</p>
+            <a href="../form/form.html" class="cta cta-industria">Sol·licita una auditoria industrial</a>
+        </div>
     </header>
 
-    <!-- BOTÓ TORNAR -->
-    <header class="section-header">
-        <a href="../index.html" class="back-link">← Tornar</a>
-    </header>
+    <!-- SECCIÓ INTRODUCTÒRIA -->
+    <section class="section section-intro">
+        <h2>Subministrament industrial</h2>
+        <p class="section-lead">
+            Aquí anirà una explicació breu del tipus de subministrament, particularitats i per què requereix una anàlisi específica.
+        </p>
+    </section>
 
-    <!-- CONTINGUT PRINCIPAL -->
-    <main class="section-wrapper">
+    <!-- BLOC: CARACTERÍSTIQUES DEL SUBMINISTRAMENT -->
+    <section class="section section-caracteristiques">
+        <h2>Característiques del subministrament</h2>
 
-        <!-- COLUMNA PRINCIPAL -->
-        <section class="section-col">
-            <h1>Indústria</h1>
-            <p class="subtitle">
-                Aquí pots afegir la introducció o el contingut principal de la secció d’indústria.
-            </p>
+        <div class="cards-grid">
+            <article class="card">
+                <h3>Potències contractades</h3>
+                <p>Aquí anirà un text breu sobre potències, períodes, etc.</p>
+            </article>
 
-            <!-- Aquí aniran les seccions que tu decideixis -->
-        </section>
+            <article class="card">
+                <h3>Corba de càrrega</h3>
+                <p>Aquí anirà un text breu sobre perfils de consum i horaris.</p>
+            </article>
 
-        <!-- COLUMNA LATERAL -->
-        <aside class="info-col">
-            <div class="info-text">
-                <h2>Informació rellevant</h2>
-                <ul>
-                    <li>Punt clau 1</li>
-                    <li>Punt clau 2</li>
-                    <li>Punt clau 3</li>
-                </ul>
-            </div>
+            <article class="card">
+                <h3>Energia reactiva</h3>
+                <p>Aquí anirà un text breu sobre penalitzacions i compensació.</p>
+            </article>
+        </div>
+    </section>
 
-            <div class="info-image">
-                <img src="../data/logoefficient.webp" alt="logoefficient">
-            </div>
-        </aside>
+    <!-- BLOC: CALCULADORA / ESTALVI (ESPAI RESERVAT) -->
+    <section class="section section-calculadora">
+        <h2>Estimació d’estalvi</h2>
+        <p class="section-lead">
+            Aquí reservem espai per a la futura calculadora d’estalvi adaptada al subministrament industrial.
+        </p>
 
-    </main>
+        <div class="calculadora-placeholder">
+            <p>Aquí anirà la calculadora d’estalvi amb les característiques del subministrament.</p>
+        </div>
+    </section>
 
-    <script src="./scripts.js"></script>
+    <!-- BLOC: CTA + AFEGIR FACTURA -->
+    <section class="section section-cta-final">
+        <h2>Vols que analitzem el teu subministrament?</h2>
+        <p class="section-lead">
+            Aquí anirà un text breu que convidi a enviar factura o sol·licitar un estudi detallat.
+        </p>
+
+        <div class="cta-group">
+            <a href="../form/form.html" class="cta cta-industria">Sol·licita estudi industrial</a>
+            <button class="cta-secundari">Afegir factura</button>
+        </div>
+    </section>
+
+    <script src="./industriaJs/scriptIndustria.js"></script>
 </body>
 
 </html>
