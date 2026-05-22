@@ -20,6 +20,11 @@ const translations = {
 
     legalText: "Acepto la ",
     legalLink: "política de privacidad",
+    privacyTitle: "Tratamiento de datos",
+    acceptBtn: "Acepto",
+    rejectBtn: "Rechazo",
+    rejectAlert: "Sin aceptar el tratamiento de datos no podemos continuar.",
+
     submitBtn: "Solicitar auditoría",
     noteText: "Nuestro equipo de expertos te responderá en menos de 24h.",
 
@@ -51,6 +56,11 @@ const translations = {
 
     legalText: "Accepto la ",
     legalLink: "política de privacitat",
+    privacyTitle: "Tractament de les dades",
+    acceptBtn: "Accepto",
+    rejectBtn: "Rebutjo",
+    rejectAlert: "Sense acceptar el tractament de dades no podem continuar.",
+
     submitBtn: "Sol·licitar auditoria",
     noteText: "El nostre equip d'experts et respondrà en menys de 24h.",
 
@@ -82,8 +92,12 @@ const translations = {
 
     legalText: "I accept the ",
     legalLink: "privacy policy",
+    privacyTitle: "Data processing",
+    acceptBtn: "Accept",
+    rejectBtn: "Decline",
+    rejectAlert: "Without accepting data processing we cannot continue.",
     submitBtn: "Request audit",
-    noteText: "Our experts will contact you within 24h.", 
+    noteText: "Our experts will contact you within 24h.",
 
     infoTitle: "What will you receive?",
     info1: "Free analysis with no commitment",

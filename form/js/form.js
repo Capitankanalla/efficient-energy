@@ -59,6 +59,7 @@ acceptBtn.addEventListener("click", () => {
 
 // Rebutjar
 rejectBtn.addEventListener("click", () => {
-  alert("Sense acceptar el tractament de dades no podem continuar.");
+  alert(translations[currentLang].rejectAlert);
+  // alert("Sense acceptar el tractament de dades no podem continuar.");
   window.location.href = "../index.html";
 });
