@@ -10,7 +10,7 @@ body {
 /* HERO INDÚSTRIA */
 .hero-industria {
     position: relative;
-    background: url('/data/fabrica.webp') center 80%/cover no-repeat;
+    background: url('/data/fabrica.webp') center / cover no-repeat;
     padding: 80px 20px;
     text-align: center;
     color: white;
