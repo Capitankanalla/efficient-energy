@@ -19,6 +19,7 @@ const translations = {
     typeIndustry: "Industria",
 
     legalText: "Acepto la ",
+    legalLink: "política de privacidad",
     submitBtn: "Solicitar auditoría",
     noteText: "Nuestro equipo de expertos te responderá en menos de 24h.",
 
@@ -49,6 +50,7 @@ const translations = {
     typeIndustry: "Indústria",
 
     legalText: "Accepto la ",
+    legalLink: "política de privacitat",
     submitBtn: "Sol·licitar auditoria",
     noteText: "El nostre equip d'experts et respondrà en menys de 24h.",
 
@@ -79,6 +81,7 @@ const translations = {
     typeIndustry: "Industry",
 
     legalText: "I accept the ",
+    legalLink: "privacy policy",
     submitBtn: "Request audit",
     noteText: "Our experts will contact you within 24h.", 
 
