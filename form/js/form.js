@@ -13,7 +13,7 @@ if (backLink) {
 // Lógica del popup legal de LOPD
 const legalCheck = document.getElementById("legalCheck");
 const submitBtn = document.querySelector("button[type='submit']");
-const openPolicy = document.getElementById("openPolicy");
+const openPolicy = document.getElementById("openPolicyPopup");
 
 const popup = document.getElementById("privacyPopup");
 const acceptBtn = document.getElementById("acceptPrivacy");
@@ -30,25 +30,22 @@ fetch("../json/legals.json")
 legalCheck.disabled = true;
 submitBtn.disabled = true;
 
-// openPolicy.addEventListener("click", (e) => {
-//   e.preventDefault();
-
-//   if (!legalData) return;
-
-//   const title = document.querySelector("#privacyPopup h2");
-//   const text = document.querySelector("#privacyPopup p");
-
-//   title.textContent = legalData.privacitat.titol;
-//   text.innerHTML = legalData.privacitat.contingut
-//     .map(line => `<p>${line}</p>`)
-//     .join("");
-
-//   popup.classList.remove("hidden");
-// });
-
 // Obrir popup
 openPolicy.addEventListener("click", (e) => {
   e.preventDefault();
+  if (legalData) {
+    const info = legalData[currentLang]?.["privacitat"] ?? legalData["privacitat"];
+    if (info) {
+      document.querySelector('#privacyPopup [data-lang="privacyTitle"]').textContent = info.titol;
+      const body = document.getElementById("privacyBody");
+      body.innerHTML = "";
+      info.contingut.forEach(paragraf => {
+        const p = document.createElement("p");
+        p.textContent = paragraf;
+        body.appendChild(p);
+      });
+    }
+  }
   popup.classList.remove("hidden");
 });
 

@@ -1,37 +1,109 @@
 {
+  "ca": {
     "privacitat": {
-        "titol": "Política de privacitat",
-        "contingut": [
-            "Responsable del tractament: Efficient Energy, Carrer Torrent d'en Grau 56, Badalona, info@efficientenergy.com.",
-            "Finalitat: gestionar consultes, oferir informació sobre serveis i mantenir relacions comercials.",
-            "Legitimació: consentiment de l’usuari i interès legítim.",
-            "Conservació: mentre existeixi relació comercial o fins que l’usuari sol·liciti la supressió.",
-            "Destinataris: no es cedeixen dades a tercers excepte obligació legal.",
-            "Drets: accés, rectificació, supressió, oposició i portabilitat enviant un correu a info@efficientenergy.com.",
-            "Seguretat: mesures tècniques i organitzatives per garantir la confidencialitat i integritat."
-        ]
+      "titol": "Política de privacitat",
+      "contingut": [
+        "Responsable del tractament: Efficient Energy, Carrer Torrent d'en Grau 56, Badalona, info@efficientenergy.com.",
+        "Finalitat: gestionar consultes, oferir informació sobre serveis i mantenir relacions comercials.",
+        "Legitimació: consentiment de l'usuari i interès legítim.",
+        "Conservació: mentre existeixi relació comercial o fins que l'usuari sol·liciti la supressió.",
+        "Destinataris: no es cedeixen dades a tercers excepte obligació legal.",
+        "Drets: accés, rectificació, supressió, oposició i portabilitat enviant un correu a info@efficientenergy.com.",
+        "Seguretat: mesures tècniques i organitzatives per garantir la confidencialitat i integritat."
+      ]
     },
-
     "cookies": {
-        "titol": "Política de cookies",
-        "contingut": [
-            "Aquest lloc web utilitza cookies pròpies i de tercers amb finalitats tècniques i analítiques.",
-            "Les cookies són fitxers que milloren l’experiència de navegació i permeten obtenir estadístiques d’ús.",
-            "Tipus: tècniques (necessàries) i analítiques (estadístiques).",
-            "Pots configurar o eliminar les cookies des del navegador.",
-            "En continuar navegant, acceptes l’ús de cookies."
-        ]
+      "titol": "Política de cookies",
+      "contingut": [
+        "Aquest lloc web utilitza cookies pròpies i de tercers amb finalitats tècniques i analítiques.",
+        "Les cookies són fitxers que milloren l'experiència de navegació i permeten obtenir estadístiques d'ús.",
+        "Tipus: tècniques (necessàries) i analítiques (estadístiques).",
+        "Pots configurar o eliminar les cookies des del navegador.",
+        "En continuar navegant, acceptes l'ús de cookies."
+      ]
     },
-
     "avis": {
-        "titol": "Avís legal",
-        "contingut": [
-            "Aquest lloc web és propietat d’Efficient Energy, Carrer Torrent d'en Grau 56, Badalona.",
-            "Objecte: oferir informació sobre serveis d’eficiència energètica i consultoria.",
-            "Propietat intel·lectual: tots els continguts són propietat d’Efficient Energy o de tercers autoritzats.",
-            "Responsabilitat: no ens fem responsables de l’ús indegut del web ni de continguts de tercers.",
-            "Enllaços externs: no ens responsabilitzem del contingut de webs de tercers.",
-            "Legislació aplicable: normativa espanyola i europea vigent."
-        ]
+      "titol": "Avís legal",
+      "contingut": [
+        "Aquest lloc web és propietat d'Efficient Energy, Carrer Torrent d'en Grau 56, Badalona.",
+        "Objecte: oferir informació sobre serveis d'eficiència energètica i consultoria.",
+        "Propietat intel·lectual: tots els continguts són propietat d'Efficient Energy o de tercers autoritzats.",
+        "Responsabilitat: no ens fem responsables de l'ús indegut del web ni de continguts de tercers.",
+        "Enllaços externs: no ens responsabilitzem del contingut de webs de tercers.",
+        "Legislació aplicable: normativa espanyola i europea vigent."
+      ]
     }
+  },
+
+  "es": {
+    "privacitat": {
+      "titol": "Política de privacidad",
+      "contingut": [
+        "Responsable del tratamiento: Efficient Energy, Carrer Torrent d'en Grau 56, Badalona, info@efficientenergy.com.",
+        "Finalidad: gestionar consultas, ofrecer información sobre servicios y mantener relaciones comerciales.",
+        "Legitimación: consentimiento del usuario e interés legítimo.",
+        "Conservación: mientras exista relación comercial o hasta que el usuario solicite la supresión.",
+        "Destinatarios: no se ceden datos a terceros excepto obligación legal.",
+        "Derechos: acceso, rectificación, supresión, oposición y portabilidad enviando un correo a info@efficientenergy.com.",
+        "Seguridad: medidas técnicas y organizativas para garantizar la confidencialidad e integridad."
+      ]
+    },
+    "cookies": {
+      "titol": "Política de cookies",
+      "contingut": [
+        "Este sitio web utiliza cookies propias y de terceros con fines técnicos y analíticos.",
+        "Las cookies son archivos que mejoran la experiencia de navegación y permiten obtener estadísticas de uso.",
+        "Tipos: técnicas (necesarias) y analíticas (estadísticas).",
+        "Puedes configurar o eliminar las cookies desde el navegador.",
+        "Al continuar navegando, aceptas el uso de cookies."
+      ]
+    },
+    "avis": {
+      "titol": "Aviso legal",
+      "contingut": [
+        "Este sitio web es propiedad de Efficient Energy, Carrer Torrent d'en Grau 56, Badalona.",
+        "Objeto: ofrecer información sobre servicios de eficiencia energética y consultoría.",
+        "Propiedad intelectual: todos los contenidos son propiedad de Efficient Energy o de terceros autorizados.",
+        "Responsabilidad: no nos hacemos responsables del uso indebido del sitio web ni de contenidos de terceros.",
+        "Enlaces externos: no nos responsabilizamos del contenido de sitios web de terceros.",
+        "Legislación aplicable: normativa española y europea vigente."
+      ]
+    }
+  },
+
+  "en": {
+    "privacitat": {
+      "titol": "Privacy policy",
+      "contingut": [
+        "Data controller: Efficient Energy, Carrer Torrent d'en Grau 56, Badalona, info@efficientenergy.com.",
+        "Purpose: managing enquiries, providing information about services and maintaining commercial relationships.",
+        "Legal basis: user consent and legitimate interest.",
+        "Retention: for as long as a commercial relationship exists or until the user requests deletion.",
+        "Recipients: data is not shared with third parties except when required by law.",
+        "Rights: access, rectification, erasure, objection and portability by emailing info@efficientenergy.com.",
+        "Security: technical and organisational measures to ensure confidentiality and integrity."
+      ]
+    },
+    "cookies": {
+      "titol": "Cookie policy",
+      "contingut": [
+        "This website uses its own and third-party cookies for technical and analytical purposes.",
+        "Cookies are files that improve the browsing experience and allow usage statistics to be gathered.",
+        "Types: technical (necessary) and analytical (statistics).",
+        "You can configure or delete cookies from your browser.",
+        "By continuing to browse, you accept the use of cookies."
+      ]
+    },
+    "avis": {
+      "titol": "Legal notice",
+      "contingut": [
+        "This website is owned by Efficient Energy, Carrer Torrent d'en Grau 56, Badalona.",
+        "Purpose: to provide information about energy efficiency services and consultancy.",
+        "Intellectual property: all content is the property of Efficient Energy or authorised third parties.",
+        "Liability: we are not responsible for misuse of the website or third-party content.",
+        "External links: we are not responsible for the content of third-party websites.",
+        "Applicable law: current Spanish and European regulations."
+      ]
+    }
+  }
 }

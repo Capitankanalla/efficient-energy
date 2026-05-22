@@ -57,9 +57,8 @@
 
                 <label class="legal">
                     <input type="checkbox" id="legalCheck" required>
-                    <span data-lang="legalText">Acepto la
-                        <span><a href="#" id="openPolicy" class="legal-link">política de privacidad</a></span>
-                    </span>
+                    <span data-lang="legalText">Acepto la</span>
+                        <a href="#" id="openPolicyPopup" class="legal-link">política de privacidad</a>
                 </label>
 
                 <button type="submit" data-lang="submitBtn">
@@ -98,10 +97,7 @@
     <div id="privacyPopup" class="popup hidden">
         <div class="popup-content">
             <h2 data-lang="privacyTitle">Tractament de les dades</h2>
-            <a id="openPolicy">política de privacitat</a>
-            <p data-lang="privacyText">
-                Aquí va el text curt explicant la finalitat i el tractament de les dades.
-            </p>
+            <div id="privacyBody"></div>
 
             <div class="popup-buttons">
                 <button id="acceptPrivacy" data-lang="acceptBtn">Accepto</button>

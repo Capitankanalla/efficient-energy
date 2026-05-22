@@ -18,7 +18,7 @@ const translations = {
     typeBusiness: "Negocio",
     typeIndustry: "Industria",
 
-    legalText: "Acepto la política de privacidad",
+    legalText: "Acepto la ",
     submitBtn: "Solicitar auditoría",
     noteText: "Nuestro equipo de expertos te responderá en menos de 24h.",
 
@@ -48,7 +48,7 @@ const translations = {
     typeBusiness: "Negoci",
     typeIndustry: "Indústria",
 
-    legalText: "Accepto la política de privacitat",
+    legalText: "Accepto la ",
     submitBtn: "Sol·licitar auditoria",
     noteText: "El nostre equip d'experts et respondrà en menys de 24h.",
 
@@ -68,7 +68,7 @@ const translations = {
     namePlaceholder: "Name",
     emailPlaceholder: "Email",
     phonePlaceholder: "Phone",
-    cupsPlaceholder: "CUPS (if you know it)",
+    cupsPlaceholder: "CUPS code",
     messagePlaceholder: "Tell us your situation",
 
     cupsHelp: "The CUPS appears on your electricity bill it has the format ES0031...",
@@ -78,7 +78,7 @@ const translations = {
     typeBusiness: "Business",
     typeIndustry: "Industry",
 
-    legalText: "I accept the privacy policy",
+    legalText: "I accept the ",
     submitBtn: "Request audit",
     noteText: "Our experts will contact you within 24h.", 
 
