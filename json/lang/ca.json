@@ -49,5 +49,22 @@
     "llar": "Llar",
     "negoci": "Negoci",
     "industria": "Indústria"
+  },
+
+  "industria": {
+  "energia": {
+    "title": "Energia",
+    "text": "Aquí va el contingut complet que vols mostrar al modal sobre energia."
+  },
+  "calendari": {
+    "title": "Calendari",
+    "text": "Aquí va el contingut complet sobre períodes, temporades i horaris."
+  },
+  "reactiva": {
+    "title": "Reactiva",
+    "text": "Aquí va el contingut sobre penalitzacions, compensacions i FV."
   }
 }
+}
+
+
