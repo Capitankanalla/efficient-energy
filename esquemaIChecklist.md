@@ -40,17 +40,17 @@ Prioritza disseny → contingut → funcionalitat
 
 [ ] Crear menú (superior o lateral)
 
-[ ] Dissenyar hero amb CTA
+[X] Dissenyar hero amb CTA
 
-[ ] Crear secció de serveis
+[X] Crear secció de serveis
 
-[ ] Crear secció “Per què confiar en mi?”
+[X] Crear secció “Per què confiar en mi?”
 
-[ ] Crear formulari de contacte (frontend)
+[X] Crear formulari de contacte (frontend)
 
-[ ] Afegir imatges optimitzades
+[X] Afegir imatges optimitzades
 
-[ ] Preparar estructura multiidioma
+[X] Preparar estructura multiidioma
 
 [ ] Crear backend per formularis
 
