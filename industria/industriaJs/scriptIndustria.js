@@ -1,3 +1,4 @@
+import { openContentModal } from '../../js/modalSeccions.js'; // revisa el path si cal
 // Animació d'aparició en scroll per a seccions d'Indústria
 const sections = document.querySelectorAll('.section');
 
@@ -18,4 +19,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 sections.forEach(sec => observer.observe(sec));
+
+// Cards clicables → obrir modal
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        openContentModal(card.dataset.id, card.dataset.section);
+    });
+});
 
