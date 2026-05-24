@@ -43,19 +43,9 @@ export async function openContentModal(id, section) {
 
    // contentModalBody.innerHTML = info.text || "<p>Contingut no disponible.</p>";
 
+  
    /* ------------------------------------------------------
-      2.2. Carregar HTML extern (contingut llarg)
-           Exemple: "potencia.ca.html" desetimat massa arxius
-   --------------------------------------------------------- */
-   // if (info.file) {
-   //    const html = await fetch(`./html/${section}/${info.file}`).then(r => r.text());
-   //    contentModalBody.innerHTML = html;
-   // } else {
-   //    contentModalBody.innerHTML = "<p>Error: falta el fitxer HTML.</p>";
-   // }
-
-   /* ------------------------------------------------------
-      2.3. Obrir modal
+      2.2. Obrir modal
    --------------------------------------------------------- */
    contentModal.classList.add("open");
 }
