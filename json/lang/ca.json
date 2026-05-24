@@ -7,7 +7,6 @@
     "modalImage": "data/assessors.avif",
     "fullTextFile": "consultor.html"
   },
-
   "howWeWork": {
     "title": "Com treballem",
     "image": "data/analisis.avif",
@@ -20,7 +19,6 @@
       "Gestionem un canvi de comercialitzadora, si és necessari."
     ]
   },
-
   "clients": {
     "title": "Empreses que confien en nosaltres",
     "intro": "Alguns dels nostres clients i el que destaquen del nostre servei.",
@@ -37,39 +35,113 @@
       "“12 mesos després: ‘Fes el que consideris, ja saps que confio en tu.’” F.G."
     ]
   },
-
   "hero": {
     "title": "Optimitzo el consum energètic de la teva empresa",
     "subtitle": "Assessorament independent per reduir costos i millorar l’eficiència amb dades i tecnologia.",
     "cta": "Sol·licita una auditoria inicial"
   },
-
   "selector": {
     "title": "Quin tipus de subministrament vols analitzar?",
     "llar": "Llar",
     "negoci": "Negoci",
     "industria": "Indústria"
   },
-
   "industria": {
-  "energia": {
-    "title": "Energia",
+    "energia": {
+      "title": "Energia",
       "text": [
-      "La tarifa 6.1TD està dissenyada per a empreses amb una potència contractada superior a 450 kW en almenys un dels sis períodes horaris.",
-      "Els subministraments han d’estar connectats en alta tensió, habitualment entre 1 kV i 30 kV.",
-      "A diferència de tarifes anteriors, la normativa actual permet contractar qualsevol valor de potència per sobre de zero, sempre que es respecti la regla de potències creixents (P1 ≤ P2 ≤ P3 ≤ P4 ≤ P5 ≤ P6).",
-      "El període P6, el més econòmic, és on se sol recomanar contractar la potència màxima."
-    ]
-  },
-  "calendari": {
-    "title": "Calendari",
-    "text": "Aquí va el contingut complet sobre períodes, temporades i horaris."
-  },
-  "reactiva": {
-    "title": "Reactiva",
-    "text": "Aquí va el contingut sobre penalitzacions, compensacions i FV."
+        "En tot subministrament cal distingir dos conceptes clau: POTÈNCIA i ENERGIA.\n",
+        "Això ens ajudarà a entendre millor què representa cada concepte dins la factura de la llum.\n",
+        "POTÈNCIA CONTRACTADA (PC)\n",
+        "Què és?\n",
+        "És el terme fix de la factura.\n",
+        "En subministraments superiors als 15 kW, la potència contractada és trifàsica.\n",
+        "Representa la capacitat màxima d’energia elèctrica que es pot sol·licitar en un moment donat.\n",
+        "És a dir: la quantitat de maquinària que pot funcionar simultàniament.\n",
+        "Afecta sobretot instal·lacions amb tarifes d’accés 3.0TD i 6.1TD:\n",
+        "— 3.0TD: potències superiors a 15 kW.\n",
+        "— 6.1TD: potències superiors a 450 kW.\n",
+        "En un sistema trifàsic, la potència total (kW) es divideix entre les tres fases.\n",
+        "Això permet gestionar càrregues més elevades.\n",
+        "És essencial per a indústries, grans empreses o habitatges amb equips com ascensors,\n",
+        "piscines o portes de garatge.\n",
+        "ENERGIA CONSUMIDA (EC)\n",
+        "Què és?\n",
+        "És el terme variable de la factura.\n",
+        "Representa el cost de l’electricitat realment consumida durant el període de facturació.\n",
+        "Depèn del temps que els aparells estan en funcionament.\n",
+        "Es calcula multiplicant els kWh consumits pel preu del kWh de la tarifa.\n",
+        "CARACTERÍSTIQUES PRINCIPALS\n",
+        "Distribució de càrrega:\n",
+        "La potència es reparteix entre les tres fases.\n",
+        "Amb comptadors digitals, aquesta distribució pot ser desigual segons les necessitats.\n",
+        "Períodes horaris i temporades:\n",
+        "Des del juny de 2021 hi ha 6 períodes de potència (P1–P6) i 4 temporades d’energia.\n",
+        "Els períodes i temporades depenen del mes i del tipus de tarifa.\n",
+        "Tensions habituals:\n",
+        "— Mitja tensió (MT): 380–400 V.\n",
+        "— Alta tensió (AT): 1 kV a 30 kV.\n",
+        "Depèn de la tipologia del negoci.\n",
+        "",
+        "(clica fora del quadre o a la X superior per sortir)"
+      ]
+    },
+    "calendari": {
+      "title": "Calendari",
+      "text": [
+  "PERÍODES HORARIS I TEMPORADES\n",
+  "Els subministraments superiors als 15 kW (3.0TD, 6.1TD, MT i AT) utilitzen una estructura\n",
+  "de facturació basada en 6 períodes horaris i 4 temporades energètiques.\n",
+
+  "PERÍODES HORARIS (P1 A P6)\n",
+  "Cada període té un preu diferent i unes hores d’aplicació concretes.\n",
+  "— P1: període més car (hores punta).\n",
+  "— P2: període car.\n",
+  "— P3: període mitjà.\n",
+  "— P4: període mitjà-baix.\n",
+  "— P5: període econòmic.\n",
+  "— P6: període més econòmic (hores vall).\n",
+
+  "HORES DELS PERÍODES (HORARI PENINSULAR)\n",
+  "P1: 10:00–14:00 i 18:00–22:00.\n",
+  "P2: 08:00–10:00 i 14:00–18:00.\n",
+  "P3: 22:00–00:00.\n",
+  "P4: 00:00–08:00.\n",
+  "P5: caps de setmana i festius (tot el dia).\n",
+  "P6: període supervall aplicat a MT i AT segons normativa.\n",
+
+  "TEMPORADES ENERGÈTIQUES (ENERGIA CONSUMIDA)\n",
+  "La temporada determina el preu aplicat als períodes P1 a P6.\n",
+  "Hi ha 4 temporades: alta, mitjana-alta, mitjana i baixa.\n",
+
+  "MESOS PER TEMPORADA\n",
+  "Temporada alta: gener, febrer, juliol, desembre.\n",
+  "Temporada mitjana-alta: març, juny, octubre.\n",
+  "Temporada mitjana: abril, maig, novembre.\n",
+  "Temporada baixa: agost, setembre.\n",
+
+  "COM S’APLICA A MT I AT\n",
+  "A MT i AT, els períodes P1 a P6 s’apliquen igual, però amb preus específics.\n",
+  "El període P6 és especialment rellevant en MT i AT per la seva tarifa reduïda.\n",
+  "Les empreses poden optimitzar costos desplaçant consum a P5 i P6.\n",
+
+  "EXEMPLES D’ÚS\n",
+  "— Una indústria pot programar processos intensius en P5 i P6.\n",
+  "— Un negoci amb pics puntuals pot ajustar la potència per evitar excessos en P1.\n",
+  "— Instal·lacions 24/7 poden aprofitar la temporada baixa (agost-setembre).\n",
+
+  "RESUM\n",
+  "PC: 6 períodes horaris fixes cada mes.\n",
+  "EC: 4 temporades que varien segons el mes.\n",
+  "Cada període té hores concretes i un preu diferent.\n",
+  "A MT i AT, la gestió dels períodes és clau per reduir la factura.\n",
+
+  "(clica fora del quadre o a la X superior per sortir)"
+]
+    },
+    "reactiva": {
+      "title": "Reactiva",
+      "text": "Aquí va el contingut sobre penalitzacions, compensacions i FV."
+    }
   }
 }
-}
-
-

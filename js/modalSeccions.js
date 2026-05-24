@@ -37,7 +37,11 @@ export async function openContentModal(id, section) {
       2.1. Títol i text curt (del JSON)
    --------------------------------------------------------- */
    contentModalTitle.textContent = info.title || "";
-   contentModalBody.innerHTML = info.text || "<p>Contingut no disponible.</p>";
+   contentModalBody.innerHTML = Array.isArray(info.text)
+   ? info.text.join("<br>")
+   : info.text || "<p>Contingut no disponible.</p>";
+
+   // contentModalBody.innerHTML = info.text || "<p>Contingut no disponible.</p>";
 
    /* ------------------------------------------------------
       2.2. Carregar HTML extern (contingut llarg)
