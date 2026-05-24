@@ -98,7 +98,7 @@ body {
 }
 
 .card {
-    background: white;
+    background: #00C2CB;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
@@ -140,4 +140,52 @@ body {
     .cta-secundari {
         margin-left: 0;
     }
+}
+
+/* ── MODAL PEDAGÒGIC ── */
+.content-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-modal.open {
+    display: flex;
+}
+
+.content-modal-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.content-modal-box h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    font-size: 1.8rem;
+    line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-btn:hover {
+    color: #000;
 }

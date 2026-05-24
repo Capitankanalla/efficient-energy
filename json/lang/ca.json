@@ -54,7 +54,12 @@
   "industria": {
   "energia": {
     "title": "Energia",
-    "text": "Aquí va el contingut complet que vols mostrar al modal sobre energia."
+      "text": [
+      "La tarifa 6.1TD està dissenyada per a empreses amb una potència contractada superior a 450 kW en almenys un dels sis períodes horaris.",
+      "Els subministraments han d’estar connectats en alta tensió, habitualment entre 1 kV i 30 kV.",
+      "A diferència de tarifes anteriors, la normativa actual permet contractar qualsevol valor de potència per sobre de zero, sempre que es respecti la regla de potències creixents (P1 ≤ P2 ≤ P3 ≤ P4 ≤ P5 ≤ P6).",
+      "El període P6, el més econòmic, és on se sol recomanar contractar la potència màxima."
+    ]
   },
   "calendari": {
     "title": "Calendari",

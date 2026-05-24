@@ -22,7 +22,7 @@ export async function openContentModal(id, section) {
    const lang = window.currentLang || "ca";
 
    // Carreguem el JSON idiomàtic
-   const json = await fetch(`./json/lang/${lang}.json`).then(r => r.json());
+   const json = await fetch(`/json/lang/${lang}.json`).then(r => r.json());
 
    // Accedim a la secció (industria / negoci / llar)
    const sectionData = json[section];
