@@ -7,6 +7,18 @@ body {
     line-height: 1.6;
 }
 
+/* BOTÒ TORNAR AL INICI     */
+.form-header {
+    padding: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #0a5c36;
+    font-weight: 600;
+}
+
+
 /* HERO INDÚSTRIA */
 .hero-industria {
     position: relative;
@@ -15,7 +27,6 @@ body {
     text-align: center;
     color: white;
 }
-
 
 .hero-industria::before {
     content: "";
