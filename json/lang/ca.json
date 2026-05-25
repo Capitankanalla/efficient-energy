@@ -92,6 +92,9 @@
   "PERÍODES HORARIS I TEMPORADES\n",
   "Els subministraments superiors als 15 kW (3.0TD, 6.1TD, MT i AT) utilitzen una estructura\n",
   "de facturació basada en 6 períodes horaris i 4 temporades energètiques.\n",
+  "La potència  es facturen els 6 períodes independentment de la temporada però la energía\n",
+  "es facturen segons la temporada en la que es consumeix. Va ser el principal canvi normatiu\n",
+  "recollit a la circular 3/2020, de 15 de enero, de la CNMC i entrada en vigor el juny de 2021.\n",
 
   "PERÍODES HORARIS (P1 A P6)\n",
   "Cada període té un preu diferent i unes hores d’aplicació concretes.\n",
@@ -123,17 +126,16 @@
   "Temporada mitjana: abril, maig, novembre.\n",
   "Temporada baixa: agost, setembre.\n",
 
-  "COM S’APLICA A MT I AT\n",
-  "A MT i AT, els períodes P1 a P6 s’apliquen igual, però amb preus específics.\n",
+  "COM S’APLICA AIXÓ?\n",
+  "Doncs a les tarífes 3.0TD i 6.1TD, els períodes P1 a P6 s’apliquen igual, però amb preus específics.\n",
   "El període P6 és especialment rellevant en MT i AT per la seva tarifa reduïda.\n",
   "Les empreses poden optimitzar costos desplaçant consum a P5 i P6.\n",
 
   "RESUM\n",
   "PC: 6 períodes horaris fixes cada mes.\n",
-  "EC: 4 temporades que varien segons el mes.\n",
+  "Energía: O consum. 4 temporades que varien segons el mes.\n",
   "Cada període té hores concretes i un preu diferent.\n",
-  "A MT i AT, la gestió dels períodes és clau per reduir la factura.\n",
-
+  "",
   "(clica fora del quadre o a la X superior per sortir)"
 ]
     },
