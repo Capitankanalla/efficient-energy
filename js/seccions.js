@@ -79,7 +79,9 @@ function prepararModalConsultor(info) {
     const modalBody = document.getElementById("info-modal-body");
     const modalImg = document.getElementById("info-modal-image");
 
-    btn.addEventListener("click", () => {
+    const nouBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(nouBtn, btn);
+    nouBtn.addEventListener("click", () => {
 
         // Carregar imatge
         modalImg.src = info.modalImage;
@@ -99,6 +101,20 @@ function prepararModalConsultor(info) {
 
     modal.addEventListener("click", e => {
         if (e.target === modal) modal.classList.remove("open");
+    });
+
+    // --------------------------------------
+    //  Navegació opcions de subministrament
+    // --------------------------------------
+
+    document.querySelector('.opcio.llar').addEventListener('click', () => {
+        window.location.href = './llar/llar.html';
+    });
+    document.querySelector('.opcio.negoci').addEventListener('click', () => {
+        window.location.href = './negoci/negoci.html';
+    });
+    document.querySelector('.opcio.industria').addEventListener('click', () => {
+        window.location.href = './industria/industria.html';
     });
 
 }
