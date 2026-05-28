@@ -1,33 +1,98 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Pàgina no trobada</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            font-size: 50px;
-        }
-        p {
-            font-size: 20px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-    </style>
+    <title>Subministrament negoci - Efficient Energy</title>
+    <link rel="stylesheet" href="./negociCss/negociStyles.css">
 </head>
+
 <body>
-    <h1>404</h1>
-    <p>Vaja! No s'ha trobat la pàgina</p>
-    <p>Estem acavant de dissenyar i implementar les funcionalitats però encara no hem
-        arribat a aquesta. En breu estarà disponible.</p>
-    <a href="/">Torna a la pàgina d'inici</a>
+
+    <!-- HERO NEGOCI -->
+    <header class="hero hero-negoci">
+        <div class="hero-content">
+            <h1>Eficiència energètica per al teu negoci</h1>
+            <p>Reduïm la factura elèctrica del teu negoci optimitzant la contractació i el consum.</p>
+            <a href="../form/form.html" class="cta cta-negoci">Sol·licita una auditoria de negoci</a>
+        </div>
+    </header>
+    <header class="form-header">
+        <a href="../index.html" class="back-link">← Tornar a l'inici</a>
+    </header>
+
+    <!-- SECCIÓ INTRODUCTÒRIA -->
+    <section class="section section-intro">
+        <h2>Que cal saber del subministrament</h2>
+        <p class="section-lead">
+            El subministrament d'un negoci té particularitats pròpies, diferents de la llar o la indústria.
+            Els distingim pels següents punts:
+        </p>
+        <ul>
+            <li>Tarifa: Les tarifes habituals per a negocis són la 2.0TD i la 3.0TD.</li>
+            <li>Potència contractada: La capacitat màxima de consum simultani. En la 2.0TD fins a 15 kW, en la 3.0TD per sobre.</li>
+            <li>Períodes d'energia: Distribuïts en 3 períodes (punta, pla i vall) per a la 2.0TD i 6 per a la 3.0TD.</li>
+            <li>Discriminació horària: Permet pagar menys en hores vall consumint en les hores de menor demanda.</li>
+            <li>Lectura de factura: Entendre els termes fixos i variables per detectar oportunitats d'estalvi.</li>
+        </ul>
+    </section>
+
+    <!-- BLOC: CARACTERÍSTIQUES DEL SUBMINISTRAMENT -->
+    <section class="section section-caracteristiques">
+        <h2>Característiques del subministrament</h2>
+        <div class="cards-grid">
+            <article class="card" data-id="tarifa" data-section="negoci">
+                <h3>Tarifes d'accés</h3>
+                <p>Les diferències entre la 2.0TD i la 3.0TD i com afecten la teva factura.</p>
+            </article>
+
+            <article class="card" data-id="calendari" data-section="negoci">
+                <h3>Períodes i horaris</h3>
+                <p>Com funcionen els períodes horaris i quan és més barat consumir energia.</p>
+            </article>
+
+            <article class="card" data-id="factura" data-section="negoci">
+                <h3>Lectura de la factura</h3>
+                <p>Entén els termes fixos i variables per detectar on pots estalviar.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- BLOC: CALCULADORA / ESTALVI (ESPAI RESERVAT) -->
+    <section class="section section-calculadora">
+        <h2>Estimació d'estalvi</h2>
+        <p class="section-lead">
+            Aquí reservem espai per a la futura calculadora d'estalvi adaptada al subministrament de negoci.
+        </p>
+        <div class="calculadora-placeholder">
+            <p>Aquí anirà la calculadora d'estalvi amb les característiques del subministrament.</p>
+        </div>
+    </section>
+
+    <!-- BLOC: CTA + AFEGIR FACTURA -->
+    <section class="section section-cta-final">
+        <h2>Vols que analitzem el teu subministrament?</h2>
+        <p class="section-lead">
+            Envia'ns la teva factura o sol·licita un estudi detallat del teu negoci.
+        </p>
+        <div class="cta-group">
+            <a href="../form/form.html" class="cta cta-negoci">Sol·licita estudi de negoci</a>
+            <button class="cta-secundari">Afegir factura</button>
+        </div>
+    </section>
+
+    <!-- MODAL GLOBAL -->
+    <div id="content-modal" class="content-modal">
+        <div class="content-modal-box">
+            <button id="content-modal-close" class="close-btn">×</button>
+            <h2 id="content-modal-title"></h2>
+            <div id="content-modal-body"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./negociJs/scriptNegoci.js"></script>
+    <script src="./negociJs/langNegoci.js"></script>
 </body>
-</html>   
+
+</html>
