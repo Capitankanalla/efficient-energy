@@ -3,7 +3,8 @@ export function openLegalModal(id) {
     fetch('./json/legals.json')
         .then(res => res.json())
         .then(data => {
-            const info = data[id];
+            const lang = localStorage.getItem("lang") || window.currentLang || "ca";
+            const info = data[lang][id]; //const info = data[id];
 
             if (!info) return;
 
@@ -26,14 +27,23 @@ export function openLegalModal(id) {
 export function closeLegalModal() {
     document.getElementById("legal-modal").classList.remove("open");
 }
-
-// Assignar tancament al botó X
-document.addEventListener("DOMContentLoaded", () => {
-    const closeBtn = document.getElementById("modal-close");
-    if (closeBtn) closeBtn.addEventListener("click", closeLegalModal);
-
-    // Tancar clicant fora
-    window.addEventListener("click", e => {
-        if (e.target.id === "legal-modal") closeLegalModal();
-    });
+// Assignar tancament al botó X i clicant fora
+document.addEventListener("click", e => {
+    if (e.target.id === "modal-close") closeLegalModal();
+    if (e.target.id === "legal-modal") closeLegalModal();
 });
+// // Tancar modal
+// export function closeLegalModal() {
+//     document.getElementById("legal-modal").classList.remove("open");
+// }
+
+// // Assignar tancament al botó X
+// document.addEventListener("DOMContentLoaded", () => {
+//     const closeBtn = document.getElementById("modal-close");
+//     if (closeBtn) closeBtn.addEventListener("click", closeLegalModal);
+
+//     // Tancar clicant fora
+//     window.addEventListener("click", e => {
+//         if (e.target.id === "legal-modal") closeLegalModal();
+//     });
+// });
