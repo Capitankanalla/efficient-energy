@@ -37,17 +37,17 @@
         <div class="opcions">
             <div class="opcio llar">
                 <img src="data/llar1.avif" alt="Llar">
-                 <div class="titol">Llar</div>
+                <div class="titol">Llar</div>
             </div>
 
             <div class="opcio negoci">
                 <img src="data/tienda1.avif" alt="Negoci">
-                 <div class="titol">Negoci</div>
+                <div class="titol">Negoci</div>
             </div>
 
             <div class="opcio industria">
                 <img src="data/empresa.avif" alt="Indústria">
-                 <div class="titol">Indústria</div>
+                <div class="titol">Indústria</div>
             </div>
         </div>
     </section>
@@ -122,7 +122,11 @@
 
     <script src="./js/scripts.js"></script>
     <!-- FOOTER DINÀMIC -->
-    <script type="module" src="./js/footer.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            import('./js/footer.js');
+        });
+    </script>
 
     <!-- Modal per carregar el text llarg del per que contractar-nos. -->
 
