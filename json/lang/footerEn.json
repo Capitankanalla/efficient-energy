@@ -4,7 +4,7 @@
     "adreca": "Carrer Torrent d'en Grau 56, Badalona",
     "email": "info@efficientenergy.com",
     "telefon": "+34 644 549 730",
-    "logo": "data/logoefficient.png",
+    "logo": "data/logoefficient.webp",
     "legal": [
         { "id": "privacitat", "text": "Privacy Policy" },
         { "id": "cookies", "text": "Cookie Policy" },
