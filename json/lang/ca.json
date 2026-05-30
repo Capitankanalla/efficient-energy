@@ -186,5 +186,108 @@
         "(clica fora del quadre o a la X superior per sortir)"
       ]
     }
+  },
+
+  "negoci": {
+  "heroTitle": "Eficiència energètica per al teu negoci",
+  "heroSubtitle": "Reduïm la factura elèctrica del teu negoci optimitzant la contractació i el consum.",
+  "heroCta": "Sol·licita una auditoria de negoci",
+  "backLink": "← Tornar a l'inici",
+  "introTitle": "Que cal saber del subministrament",
+  "introLead": "El subministrament d'un negoci té particularitats pròpies, diferents de la llar o la indústria. Els distingim pels següents punts:",
+  "introItems": [
+    "Tarifa: Les tarifes habituals per a negocis són la 2.0TD i la 3.0TD.",
+    "Potència contractada: La capacitat màxima de consum simultani. En la 2.0TD fins a 15 kW, en la 3.0TD per sobre.",
+    "Períodes d'energia: Distribuïts en 3 períodes (punta, pla i vall) per a la 2.0TD i 6 per a la 3.0TD.",
+    "Discriminació horària: Permet pagar menys en hores vall consumint en les hores de menor demanda.",
+    "Lectura de factura: Entendre els termes fixos i variables per detectar oportunitats d'estalvi."
+  ],
+  "cardsTitle": "Característiques del subministrament",
+  "cardTarifaTitle": "Tarifes d'accés (fes clic per més info)",
+  "cardTarifaText": "Les diferències entre la 2.0TD i la 3.0TD i com afecten la teva factura.",
+  "cardCalendariTitle": "Períodes i horaris",
+  "cardCalendariText": "Com funcionen els períodes horaris i quan és més barat consumir energia.",
+  "cardFacturaTitle": "Lectura de la factura",
+  "cardFacturaText": "Entén els termes fixos i variables per detectar on pots estalviar.",
+  "calcTitle": "Estimació d'estalvi",
+  "calcLead": "Aquí reservem espai per a la futura calculadora d'estalvi adaptada al subministrament de negoci.",
+  "calcPlaceholder": "Aquí anirà la calculadora d'estalvi amb les característiques del subministrament.",
+  "ctaFinalTitle": "Vols que analitzem el teu subministrament?",
+  "ctaFinalLead": "Envia'ns la teva factura o sol·licita un estudi detallat del teu negoci.",
+  "ctaFinalBtn": "Sol·licita estudi de negoci",
+  "ctaSecundari": "Afegir factura",
+  "tarifa": {
+    "title": "Tarifes d'accés",
+    "text": [
+      "TARIFES D'ACCÉS PER A NEGOCIS\n",
+      "Els negocis treballen principalment amb dues tarifes d'accés: la 2.0TD i la 3.0TD.\n",
+      "La teva elecció depèn de la potència contractada.\n",
+      "TARIFA 2.0TD\n",
+      "Per a negocis amb potència contractada de fins a 15 kW.\n",
+      "Té 3 períodes horaris: Punta (P1), Pla (P2) i Vall (P3).\n",
+      "— Punta: hores de màxima demanda (preu més alt).\n",
+      "— Pla: hores intermèdies.\n",
+      "— Vall: nits i caps de setmana (preu més baix).\n",
+      "Ideal per a petits comerços, bars, oficines i locals.\n",
+      "TARIFA 3.0TD\n",
+      "Per a negocis amb potència contractada superior a 15 kW.\n",
+      "Té 6 períodes horaris (P1 a P6) i 4 temporades energètiques.\n",
+      "Permet una optimització més gran del consum per franja horària.\n",
+      "Habitual en supermercats, restaurants, hotels i empreses mitjanes.\n",
+      "COM AFECTA A LA FACTURA?\n",
+      "El terme de potència és fix i es paga per la potència contractada en cada període.\n",
+      "El terme d'energia és variable i depèn del consum real en cada franja horària.\n",
+      "Consumir en hores vall pot reduir significativament la factura.\n",
+      "",
+      "(clica fora del quadre o a la X superior per sortir)"
+    ]
+  },
+  "calendari": {
+    "title": "Períodes i horaris",
+    "text": [
+      "PERÍODES HORARIS EN NEGOCIS\n",
+      "El sistema de períodes horaris determina quan és més car o més barat consumir energia.\n",
+      "TARIFA 2.0TD — 3 PERÍODES\n",
+      "— P1 (Punta): de dilluns a divendres de 10:00 a 14:00 i de 18:00 a 22:00.\n",
+      "— P2 (Pla): de dilluns a divendres de 08:00 a 10:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
+      "— P3 (Vall): de 00:00 a 08:00, caps de setmana i festius nacionals.\n",
+      "TARIFA 3.0TD — 6 PERÍODES\n",
+      "Funciona igual que a la indústria: 6 períodes (P1 a P6) amb 4 temporades anuals.\n",
+      "— Temporada alta: gener, febrer, juliol, desembre.\n",
+      "— Temporada mitja-alta: març, juny, octubre.\n",
+      "— Temporada mitja: abril, maig, novembre.\n",
+      "— Temporada baixa: agost, setembre.\n",
+      "CONSELL PRÀCTIC\n",
+      "Si el teu negoci pot desplaçar consum a hores vall (P3 o P6),\n",
+      "com ara la càrrega de vehicles, la climatització nocturna o el rentat industrial,\n",
+      "el potencial d'estalvi és molt significant.\n",
+      "",
+      "(clica fora del quadre o a la X superior per sortir)"
+    ]
+  },
+  "factura": {
+    "title": "Lectura de la factura",
+    "text": [
+      "COM LLEGIR LA FACTURA D'UN NEGOCI\n",
+      "La factura elèctrica d'un negoci té dos grans blocs: termes fixos i termes variables.\n",
+      "TERME DE POTÈNCIA (FIX)\n",
+      "És el que pagues per tenir la llum connectada, independentment del que consumeixis.\n",
+      "Depèn de la potència contractada en cada període.\n",
+      "Si tens contractada més potència de la que necessites, estàs pagant de més.\n",
+      "Si sobrepasseu la potència contractada, s'aplica un recàrrec per excés de potència.\n",
+      "TERME D'ENERGIA (VARIABLE)\n",
+      "És el que pagues pel consum real en kWh.\n",
+      "El preu varia segons el període horari (P1 és el més car, P3 o P6 el més barat).\n",
+      "ALTRES CONCEPTES\n",
+      "Impostos: IVA (21%) i impost elèctric (5,11%).\n",
+      "Lloguer d'equips: Cost del comptador i equips de mesura.\n",
+      "OPORTUNITATS D'ESTALVI\n",
+      "Revisar si la potència contractada és l'adequada al consum real.\n",
+      "Detectar si hi ha consums elevats en hores punta evitables.\n",
+      "Comparar ofertes de comercialitzadores amb les mateixes condicions de xarxa.\n",
+      "",
+      "(clica fora del quadre o a la X superior per sortir)"
+    ]
   }
+}
 }

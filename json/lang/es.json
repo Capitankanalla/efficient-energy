@@ -188,5 +188,108 @@
         "(haz clic fuera del cuadro o en la X superior para salir)"
       ]
     }
+  },
+
+  "negoci": {
+  "heroTitle": "Eficiencia energética para tu negocio",
+  "heroSubtitle": "Reducimos la factura eléctrica de tu negocio optimizando la contratación y el consumo.",
+  "heroCta": "Solicita una auditoría de negocio",
+  "backLink": "← Volver al inicio",
+  "introTitle": "Qué hay que saber del suministro",
+  "introLead": "El suministro de un negocio tiene particularidades propias, diferentes al hogar o la industria. Los distinguimos por los siguientes puntos:",
+  "introItems": [
+    "Tarifa: Las tarifas habituales para negocios son la 2.0TD y la 3.0TD.",
+    "Potencia contratada: La capacidad máxima de consumo simultáneo. En la 2.0TD hasta 15 kW, en la 3.0TD por encima.",
+    "Períodos de energía: Distribuidos en 3 períodos (punta, llano y valle) para la 2.0TD y 6 para la 3.0TD.",
+    "Discriminación horaria: Permite pagar menos en horas valle consumiendo en las horas de menor demanda.",
+    "Lectura de factura: Entender los términos fijos y variables para detectar oportunidades de ahorro."
+  ],
+  "cardsTitle": "Características del suministro",
+  "cardTarifaTitle": "Tarifas de acceso (haz clic para más info)",
+  "cardTarifaText": "Las diferencias entre la 2.0TD y la 3.0TD y cómo afectan a tu factura.",
+  "cardCalendariTitle": "Períodos y horarios",
+  "cardCalendariText": "Cómo funcionan los períodos horarios y cuándo es más barato consumir energía.",
+  "cardFacturaTitle": "Lectura de la factura",
+  "cardFacturaText": "Entiende los términos fijos y variables para detectar dónde puedes ahorrar.",
+  "calcTitle": "Estimación de ahorro",
+  "calcLead": "Aquí reservamos espacio para la futura calculadora de ahorro adaptada al suministro de negocio.",
+  "calcPlaceholder": "Aquí irá la calculadora de ahorro con las características del suministro.",
+  "ctaFinalTitle": "¿Quieres que analicemos tu suministro?",
+  "ctaFinalLead": "Envíanos tu factura o solicita un estudio detallado de tu negocio.",
+  "ctaFinalBtn": "Solicita estudio de negocio",
+  "ctaSecundari": "Añadir factura",
+  "tarifa": {
+    "title": "Tarifas de acceso",
+    "text": [
+      "TARIFAS DE ACCESO PARA NEGOCIOS\n",
+      "Los negocios trabajan principalmente con dos tarifas de acceso: la 2.0TD y la 3.0TD.\n",
+      "Tu elección depende de la potencia contratada.\n",
+      "TARIFA 2.0TD\n",
+      "Para negocios con potencia contratada de hasta 15 kW.\n",
+      "Tiene 3 períodos horarios: Punta (P1), Llano (P2) y Valle (P3).\n",
+      "— Punta: horas de máxima demanda (precio más alto).\n",
+      "— Llano: horas intermedias.\n",
+      "— Valle: noches y fines de semana (precio más bajo).\n",
+      "Ideal para pequeños comercios, bares, oficinas y locales.\n",
+      "TARIFA 3.0TD\n",
+      "Para negocios con potencia contratada superior a 15 kW.\n",
+      "Tiene 6 períodos horarios (P1 a P6) y 4 temporadas energéticas.\n",
+      "Permite una mayor optimización del consumo por franja horaria.\n",
+      "Habitual en supermercados, restaurantes, hoteles y empresas medianas.\n",
+      "¿CÓMO AFECTA A LA FACTURA?\n",
+      "El término de potencia es fijo y se paga por la potencia contratada en cada período.\n",
+      "El término de energía es variable y depende del consumo real en cada franja horaria.\n",
+      "Consumir en horas valle puede reducir significativamente la factura.\n",
+      "",
+      "(haz clic fuera del cuadro o en la X para salir)"
+    ]
+  },
+  "calendari": {
+    "title": "Períodos y horarios",
+    "text": [
+      "PERÍODOS HORARIOS EN NEGOCIOS\n",
+      "El sistema de períodos horarios determina cuándo es más caro o más barato consumir energía.\n",
+      "TARIFA 2.0TD — 3 PERÍODOS\n",
+      "— P1 (Punta): de lunes a viernes de 10:00 a 14:00 y de 18:00 a 22:00.\n",
+      "— P2 (Llano): de lunes a viernes de 08:00 a 10:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
+      "— P3 (Valle): de 00:00 a 08:00, fines de semana y festivos nacionales.\n",
+      "TARIFA 3.0TD — 6 PERÍODOS\n",
+      "Funciona igual que en la industria: 6 períodos (P1 a P6) con 4 temporadas anuales.\n",
+      "— Temporada alta: enero, febrero, julio, diciembre.\n",
+      "— Temporada media-alta: marzo, junio, octubre.\n",
+      "— Temporada media: abril, mayo, noviembre.\n",
+      "— Temporada baja: agosto, septiembre.\n",
+      "CONSEJO PRÁCTICO\n",
+      "Si tu negocio puede desplazar consumo a horas valle (P3 o P6),\n",
+      "como la carga de vehículos, la climatización nocturna o el lavado industrial,\n",
+      "el potencial de ahorro es muy significativo.\n",
+      "",
+      "(haz clic fuera del cuadro o en la X para salir)"
+    ]
+  },
+  "factura": {
+    "title": "Lectura de la factura",
+    "text": [
+      "CÓMO LEER LA FACTURA DE UN NEGOCIO\n",
+      "La factura eléctrica de un negocio tiene dos grandes bloques: términos fijos y términos variables.\n",
+      "TÉRMINO DE POTENCIA (FIJO)\n",
+      "Es lo que pagas por tener la luz conectada, independientemente de lo que consumas.\n",
+      "Depende de la potencia contratada en cada período.\n",
+      "Si tienes contratada más potencia de la que necesitas, estás pagando de más.\n",
+      "Si superáis la potencia contratada, se aplica un recargo por exceso de potencia.\n",
+      "TÉRMINO DE ENERGÍA (VARIABLE)\n",
+      "Es lo que pagas por el consumo real en kWh.\n",
+      "El precio varía según el período horario (P1 es el más caro, P3 o P6 el más barato).\n",
+      "OTROS CONCEPTOS\n",
+      "Impuestos: IVA (21%) e impuesto eléctrico (5,11%).\n",
+      "Alquiler de equipos: Coste del contador y equipos de medida.\n",
+      "OPORTUNIDADES DE AHORRO\n",
+      "Revisar si la potencia contratada es la adecuada al consumo real.\n",
+      "Detectar si hay consumos elevados en horas punta evitables.\n",
+      "Comparar ofertas de comercializadoras con las mismas condiciones de red.\n",
+      "",
+      "(haz clic fuera del cuadro o en la X para salir)"
+    ]
   }
+}
 }

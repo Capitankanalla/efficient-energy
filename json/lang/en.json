@@ -186,5 +186,108 @@
         "(click outside the box or on the upper X to exit)"
       ]
     }
+  },
+
+  "negoci": {
+  "heroTitle": "Energy efficiency for your business",
+  "heroSubtitle": "We reduce your business electricity bill by optimising contracting and consumption.",
+  "heroCta": "Request a business audit",
+  "backLink": "← Back to home",
+  "introTitle": "What you need to know about your supply",
+  "introLead": "Business energy supply has its own characteristics, different from homes or industry. We distinguish them by the following points:",
+  "introItems": [
+    "Tariff: The most common tariffs for businesses are 2.0TD and 3.0TD.",
+    "Contracted power: The maximum simultaneous consumption capacity. Up to 15 kW for 2.0TD, above that for 3.0TD.",
+    "Energy periods: Split into 3 periods (peak, flat and valley) for 2.0TD and 6 for 3.0TD.",
+    "Time-of-use pricing: Allows you to pay less in off-peak hours by shifting consumption to lower-demand times.",
+    "Invoice reading: Understanding fixed and variable charges to identify savings opportunities."
+  ],
+  "cardsTitle": "Supply characteristics",
+  "cardTarifaTitle": "Access tariffs (click for more info)",
+  "cardTarifaText": "The differences between 2.0TD and 3.0TD and how they affect your bill.",
+  "cardCalendariTitle": "Periods and schedules",
+  "cardCalendariText": "How time periods work and when it is cheapest to consume energy.",
+  "cardFacturaTitle": "Reading your invoice",
+  "cardFacturaText": "Understand fixed and variable charges to find where you can save.",
+  "calcTitle": "Savings estimate",
+  "calcLead": "Space reserved for the future savings calculator adapted to business supply.",
+  "calcPlaceholder": "The savings calculator with business supply features will go here.",
+  "ctaFinalTitle": "Want us to analyse your supply?",
+  "ctaFinalLead": "Send us your invoice or request a detailed study of your business.",
+  "ctaFinalBtn": "Request business study",
+  "ctaSecundari": "Upload invoice",
+  "tarifa": {
+    "title": "Access tariffs",
+    "text": [
+      "ACCESS TARIFFS FOR BUSINESSES\n",
+      "Businesses mainly work with two access tariffs: 2.0TD and 3.0TD.\n",
+      "Your choice depends on your contracted power.\n",
+      "TARIFF 2.0TD\n",
+      "For businesses with contracted power up to 15 kW.\n",
+      "Has 3 time periods: Peak (P1), Flat (P2) and Valley (P3).\n",
+      "— Peak: hours of maximum demand (highest price).\n",
+      "— Flat: intermediate hours.\n",
+      "— Valley: nights and weekends (lowest price).\n",
+      "Ideal for small shops, bars, offices and premises.\n",
+      "TARIFF 3.0TD\n",
+      "For businesses with contracted power above 15 kW.\n",
+      "Has 6 time periods (P1 to P6) and 4 energy seasons.\n",
+      "Allows greater optimisation of consumption by time slot.\n",
+      "Common in supermarkets, restaurants, hotels and medium-sized businesses.\n",
+      "HOW DOES IT AFFECT YOUR BILL?\n",
+      "The power charge is fixed and paid for contracted power in each period.\n",
+      "The energy charge is variable and depends on actual consumption in each time slot.\n",
+      "Consuming in off-peak hours can significantly reduce your bill.\n",
+      "",
+      "(click outside the box or on X to close)"
+    ]
+  },
+  "calendari": {
+    "title": "Periods and schedules",
+    "text": [
+      "TIME PERIODS FOR BUSINESSES\n",
+      "The time period system determines when energy is more or less expensive.\n",
+      "TARIFF 2.0TD — 3 PERIODS\n",
+      "— P1 (Peak): Monday to Friday from 10:00 to 14:00 and from 18:00 to 22:00.\n",
+      "— P2 (Flat): Monday to Friday from 08:00 to 10:00, 14:00 to 18:00 and 22:00 to 00:00.\n",
+      "— P3 (Valley): from 00:00 to 08:00, weekends and national holidays.\n",
+      "TARIFF 3.0TD — 6 PERIODS\n",
+      "Works like industry: 6 periods (P1 to P6) with 4 annual seasons.\n",
+      "— High season: January, February, July, December.\n",
+      "— Medium-high season: March, June, October.\n",
+      "— Medium season: April, May, November.\n",
+      "— Low season: August, September.\n",
+      "PRACTICAL TIP\n",
+      "If your business can shift consumption to off-peak hours (P3 or P6),\n",
+      "such as vehicle charging, overnight climate control or industrial washing,\n",
+      "the savings potential is very significant.\n",
+      "",
+      "(click outside the box or on X to close)"
+    ]
+  },
+  "factura": {
+    "title": "Reading your invoice",
+    "text": [
+      "HOW TO READ A BUSINESS ELECTRICITY INVOICE\n",
+      "A business electricity invoice has two main blocks: fixed and variable charges.\n",
+      "POWER CHARGE (FIXED)\n",
+      "What you pay for having electricity connected, regardless of consumption.\n",
+      "Depends on the contracted power in each period.\n",
+      "If you have contracted more power than you need, you are overpaying.\n",
+      "If you exceed contracted power, a surcharge for excess power applies.\n",
+      "ENERGY CHARGE (VARIABLE)\n",
+      "What you pay for actual consumption in kWh.\n",
+      "The price varies by time period (P1 is the most expensive, P3 or P6 the cheapest).\n",
+      "OTHER ITEMS\n",
+      "Taxes: VAT (21%) and electricity tax (5.11%).\n",
+      "Meter rental: Cost of the meter and measuring equipment.\n",
+      "SAVINGS OPPORTUNITIES\n",
+      "Check whether contracted power matches actual consumption needs.\n",
+      "Identify avoidable high consumption during peak hours.\n",
+      "Compare supplier offers under the same network conditions.\n",
+      "",
+      "(click outside the box or on X to close)"
+    ]
   }
+}
 }
