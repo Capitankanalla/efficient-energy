@@ -199,7 +199,7 @@
     "Tarifa: Les tarifes habituals per a negocis són la 2.0TD i la 3.0TD.",
     "Potència contractada: La capacitat màxima de consum simultani. En la 2.0TD fins a 15 kW, en la 3.0TD per sobre.",
     "Períodes d'energia: Distribuïts en 3 períodes (punta, pla i vall) per a la 2.0TD i 6 per a la 3.0TD.",
-    "Discriminació horària: Permet pagar menys en hores vall consumint en les hores de menor demanda.",
+    "Temporades: Per garantir l'estabilitat del sistema, la demanda es gestiona en 4 temporades a l'any: alta, mitja-alta, mitja i baixa.",
     "Lectura de factura: Entendre els termes fixos i variables per detectar oportunitats d'estalvi."
   ],
   "cardsTitle": "Característiques del subministrament",
