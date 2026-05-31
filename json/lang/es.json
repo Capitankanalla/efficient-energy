@@ -240,8 +240,7 @@
       "El término de potencia es fijo y se paga por la potencia contratada en cada período.\n",
       "El término de energía es variable y depende del consumo real en cada franja horaria.\n",
       "Consumir en horas valle puede reducir significativamente la factura.\n",
-      "",
-      "(haz clic fuera del cuadro o en la X para salir)"
+      ""
     ]
   },
   "calendari": {
@@ -260,11 +259,8 @@
       "— Temporada media: abril, mayo, noviembre.\n",
       "— Temporada baja: agosto, septiembre.\n",
       "CONSEJO PRÁCTICO\n",
-      "Si tu negocio puede desplazar consumo a horas valle (P3 o P6),\n",
-      "como la carga de vehículos, la climatización nocturna o el lavado industrial,\n",
-      "el potencial de ahorro es muy significativo.\n",
-      "",
-      "(haz clic fuera del cuadro o en la X para salir)"
+      "Si tu negocio tiene más de 15 Kws, consulta el calendario de la sección industria para más detalles. \n",
+      ""
     ]
   },
   "factura": {
@@ -287,8 +283,7 @@
       "Revisar si la potencia contratada es la adecuada al consumo real.\n",
       "Detectar si hay consumos elevados en horas punta evitables.\n",
       "Comparar ofertas de comercializadoras con las mismas condiciones de red.\n",
-      "",
-      "(haz clic fuera del cuadro o en la X para salir)"
+      ""
     ]
   }
 }

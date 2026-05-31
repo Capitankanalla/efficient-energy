@@ -231,7 +231,7 @@
       "Ideal per a petits comerços, bars, oficines i locals.\n",
       "TARIFA 3.0TD\n",
       "Per a negocis amb potència contractada superior a 15 kW.\n",
-      "Té 6 períodes horaris (P1 a P6) i 4 temporades energètiques.\n",
+      "Té 6 períodes horaris (P1 a P6) i 4 temporades al any, com la indústria.\n",
       "Permet una optimització més gran del consum per franja horària.\n",
       "Habitual en supermercats, restaurants, hotels i empreses mitjanes.\n",
       "COM AFECTA A LA FACTURA?\n",
@@ -258,11 +258,8 @@
       "— Temporada mitja: abril, maig, novembre.\n",
       "— Temporada baixa: agost, setembre.\n",
       "CONSELL PRÀCTIC\n",
-      "Si el teu negoci pot desplaçar consum a hores vall (P3 o P6),\n",
-      "com ara la càrrega de vehicles, la climatització nocturna o el rentat industrial,\n",
-      "el potencial d'estalvi és molt significant.\n",
-      "",
-      "(clica fora del quadre o a la X superior per sortir)"
+      "Si el teu negoci té mes de 15 Kws, consulta el detall del calendari a la secció d'indústria.\n",
+      ""
     ]
   },
   "factura": {
