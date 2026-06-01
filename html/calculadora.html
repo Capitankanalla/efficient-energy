@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora d'estalvi energètic</title>
+
+  <!-- Enllaç correcte al CSS -->
+  <link rel="stylesheet" href="/css/calculadora.css">
+</head>
+
+<body>
+
+  <div class="calc">
+    <h2>Calculadora d'estalvi energètic</h2>
+
+    <label>Potència contractada (kW)</label>
+    <input type="number" id="potencia" oninput="actualitzarSegment()">
+
+    <div id="camps-llar" class="ocult">
+      <label>Consum mensual (kWh)</label>
+      <input type="number" id="consum-llar">
+    </div>
+
+    <div id="camps-negoci" class="ocult">
+      <label>Consum P1 (kWh)</label>
+      <input type="number" id="p1">
+      <label>Consum P2 (kWh)</label>
+      <input type="number" id="p2">
+      <label>Consum P3 (kWh)</label>
+      <input type="number" id="p3">
+    </div>
+
+    <div id="camps-industria" class="ocult">
+      <label>Consum P1–P6 (kWh)</label>
+      <input type="number" id="i1" placeholder="P1">
+      <input type="number" id="i2" placeholder="P2">
+      <input type="number" id="i3" placeholder="P3">
+      <input type="number" id="i4" placeholder="P4">
+      <input type="number" id="i5" placeholder="P5">
+      <input type="number" id="i6" placeholder="P6">
+    </div>
+
+    <label>Preu actual (€/kWh)</label>
+    <input type="number" id="preuActual" step="0.001">
+
+    <label>Nou preu (€/kWh)</label>
+    <input type="number" id="preuNou" step="0.001">
+
+    <button onclick="calcular()">Calcular estalvi</button>
+
+    <div id="resultat"></div>
+  </div>
+
+  <!-- Enllaç correcte al JS -->
+  <script src="/js/calculadora.js"></script>
+</body>
+</html>
