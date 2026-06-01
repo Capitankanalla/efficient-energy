@@ -199,7 +199,7 @@
     "Tariff: The most common tariffs for businesses are 2.0TD and 3.0TD.",
     "Contracted power: The maximum simultaneous consumption capacity. Up to 15 kW for 2.0TD, above that for 3.0TD.",
     "Energy periods: Split into 3 periods (peak, flat and valley) for 2.0TD and 6 for 3.0TD.",
-    "Time-of-use pricing: Allows you to pay less in off-peak hours by shifting consumption to lower-demand times.",
+    "Time-of-use pricing: To ensure system stability, demand is managed across four seasons throughout the year: high, medium‑high, medium, and low.(Onlyo for 3.0TD.)",
     "Invoice reading: Understanding fixed and variable charges to identify savings opportunities."
   ],
   "cardsTitle": "Supply characteristics",

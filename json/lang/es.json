@@ -201,7 +201,7 @@
     "Tarifa: Las tarifas habituales para negocios son la 2.0TD y la 3.0TD.",
     "Potencia contratada: La capacidad máxima de consumo simultáneo. En la 2.0TD hasta 15 kW, en la 3.0TD por encima.",
     "Períodos de energía: Distribuidos en 3 períodos (punta, llano y valle) para la 2.0TD y 6 para la 3.0TD.",
-    "Temporadas: Para garantizar la estabilidad del sistema, la demanda se gestiona en 4 temporadas al año: alta, media-alta, media y baja.",
+    "Temporadas: Para garantizar la estabilidad del sistema, la demanda se gestiona en 4 temporadas al año: alta, media-alta, media y baja. (Solo para 3.0TD).",
     "Lectura de factura: Entender los términos fijos y variables para detectar oportunidades de ahorro."
   ],
   "cardsTitle": "Características del suministro",
