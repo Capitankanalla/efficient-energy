@@ -1,0 +1,194 @@
+/* BASE */
+body {
+    background: #e9eae8;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #212422;
+    line-height: 1.6;
+}
+
+/* BOTÓ TORNAR A L'INICI */
+.form-header {
+    padding: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #0a5c36;
+    font-weight: 600;
+}
+
+/* HERO LLAR */
+.hero-llar {
+    position: relative;
+    background: url('../../data/llar1.avif') center / cover no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-llar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+
+.hero-llar h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-llar p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* CTA */
+.cta {
+    background: rgb(60, 219, 145);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.cta:hover {
+    background: #0a5c36;
+}
+
+.cta-secundari {
+    background: transparent;
+    color: #0a5c36;
+    border: 2px solid #0a5c36;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* SECCIONS GENERALS */
+.section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-lead {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    opacity: 0.9;
+}
+
+/* GRID DE CARDS */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #00C2CB;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-color: #f0a500;
+}
+
+/* CALCULADORA PLACEHOLDER */
+.calculadora-placeholder {
+    background: #dcded9;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* CTA FINAL */
+.section-cta-final .cta-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .section-cta-final .cta-group {
+        flex-direction: column;
+    }
+
+    .cta-secundari {
+        margin-left: 0;
+    }
+}
+
+/* MODAL PEDAGÒGIC */
+.content-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-modal.open {
+    display: flex;
+}
+
+.content-modal-box {
+    background: rgb(233, 234, 232);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.content-modal-box h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    font-size: 1.8rem;
+    line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-btn:hover {
+    color: #000;
+}

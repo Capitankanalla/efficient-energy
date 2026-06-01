@@ -1,33 +1,97 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Pàgina no trobada</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            font-size: 50px;
-        }
-        p {
-            font-size: 20px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-    </style>
+    <title>Subministrament llar - Efficient Energy</title>
+    <link rel="stylesheet" href="./llarCss/llarStyles.css">
 </head>
+
 <body>
-    <h1>404</h1>
-    <p>Vaja! No s'ha trobat la pàgina</p>
-    <p>Estem acavant de dissenyar i implementar les funcionalitats però encara no hem
-        arribat a aquesta. En breu estarà disponible.</p>
-    <a href="/">Torna a la pàgina d'inici</a>
+
+    <!-- HERO LLAR -->
+    <header class="hero hero-llar">
+        <div class="hero-content">
+            <h1>Eficiència energètica per a la teva llar</h1>
+            <p>T'ajudem a entendre la teva factura i a reduir el consum sense canviar els teus hàbits.</p>
+            <a href="../form/form.html" class="cta cta-llar">Sol·licita una auditoria de llar</a>
+        </div>
+    </header>
+    <header class="form-header">
+        <a href="../index.html" class="back-link">← Tornar a l'inici</a>
+    </header>
+
+    <!-- SECCIÓ INTRODUCTÒRIA -->
+    <section class="section section-intro">
+        <h2>Que cal saber del subministrament</h2>
+        <p class="section-lead">
+            El subministrament d'una llar és el més comú però també el menys conegut.
+            Entendre com funciona et permet prendre decisions i estalviar sense esforç.
+        </p>
+        <ul>
+            <li>Tarifa: Les llars estan habitualmet a la tarifa 2.0TD, l'única tarifa residencial.</li>
+            <li>Potència contractada: La capacitat màxima de consum simultani, normalment entre 3,45 kW i 10 kW a les cases.</li>
+            <li>Períodes d'energia: 3 períodes (punta, pla i vall) que determinen el preu de l'energia.</li>
+            <li>Autoconsum: Si tens plaques fotovoltaiques, pots compensar excedents a la factura. Complicat en comunitats de propietaris.</li>
+        </ul>
+    </section>
+
+    <!-- BLOC: CARACTERÍSTIQUES DEL SUBMINISTRAMENT -->
+    <section class="section section-caracteristiques">
+        <h2>Característiques del subministrament</h2>
+        <div class="cards-grid">
+            <article class="card" data-id="tarifa" data-section="llar">
+                <h3>Tarifa 2.0TD</h3>
+                <p>L'única tarifa residencial: com funciona, quins períodes té i com afecta la teva factura.</p>
+            </article>
+
+            <article class="card" data-id="discriminacio" data-section="llar">
+                <h3>Discriminació horària</h3>
+                <p>Quan és més barat consumir energia i com aprofitar les hores vall per estalviar.</p>
+            </article>
+
+            <article class="card" data-id="autoconsum" data-section="llar">
+                <h3>Autoconsum</h3>
+                <p>Plaques fotovoltaiques, compensació d'excedents i com reduir la factura amb energia pròpia.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- BLOC: CALCULADORA / ESTALVI (ESPAI RESERVAT) -->
+    <section class="section section-calculadora">
+        <h2>Estimació d'estalvi</h2>
+        <p class="section-lead">
+            Aquí reservem espai per a la futura calculadora d'estalvi adaptada al subministrament de llar.
+        </p>
+        <div class="calculadora-placeholder">
+            <p>Aquí anirà la calculadora d'estalvi amb les característiques del subministrament.</p>
+        </div>
+    </section>
+
+    <!-- BLOC: CTA + AFEGIR FACTURA -->
+    <section class="section section-cta-final">
+        <h2>Vols que analitzem el teu subministrament?</h2>
+        <p class="section-lead">
+            Envia'ns la teva factura o sol·licita un estudi detallat de la teva llar.
+        </p>
+        <div class="cta-group">
+            <a href="../form/form.html" class="cta cta-llar">Sol·licita estudi de llar</a>
+            <button class="cta-secundari">Afegir factura</button>
+        </div>
+    </section>
+
+    <!-- MODAL GLOBAL -->
+    <div id="content-modal" class="content-modal">
+        <div class="content-modal-box">
+            <button id="content-modal-close" class="close-btn">×</button>
+            <h2 id="content-modal-title"></h2>
+            <div id="content-modal-body"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./llarJs/scriptLlar.js"></script>
+    <script src="./llarJs/langLlar.js"></script>
 </body>
-</html>   
+
+</html>
