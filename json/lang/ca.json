@@ -286,5 +286,104 @@
       "(clica fora del quadre o a la X superior per sortir)"
     ]
   }
+},
+
+"llar": {
+  "heroTitle": "Eficiència energètica per a la teva llar",
+  "heroSubtitle": "T'ajudem a entendre la teva factura i a reduir el consum sense canviar els teus hàbits.",
+  "heroCta": "Sol·licita una auditoria de llar",
+  "backLink": "← Tornar a l'inici",
+  "introTitle": "Que cal saber del subministrament",
+  "introLead": "El subministrament d'una llar és el més comú però també el menys conegut. Entendre com funciona et permet prendre decisions i estalviar sense esforç.",
+  "introItems": [
+    "Tarifa: Les llars estan sempre a la tarifa 2.0TD, l'única tarifa residencial.",
+    "Potència contractada: La capacitat màxima de consum simultani. La majoria de llars treballen entre 3,45 kW i 10 kW, tot i que poden existir potències superiors.",
+    "Períodes d'energia: La 2.0TD té 3 períodes horaris amb horaris fixats per normativa. El preu de cada hora el determina l'OMIE, l'operador del mercat elèctric ibèric.",
+    "Discriminació horària: Des del juny de 2021, tots els subministraments residencials tenen discriminació horària automàtica. No és opcional — tots paguen diferent a punta, pla i vall.",
+    "Autoconsum: Pot ser individual o col·lectiu (comunitats de propietaris). La compensació d'excedents depèn del tipus d'instal·lació i de les condicions del contracte."
+  ],
+  "cardsTitle": "Característiques del subministrament",
+  "cardTarifaTitle": "Tarifa 2.0TD (fes clic per més info)",
+  "cardTarifaText": "L'única tarifa residencial: com funciona, quins períodes té i com afecta la teva factura.",
+  "cardDiscriminacioTitle": "Discriminació horària",
+  "cardDiscriminacioText": "Quan és més barat consumir energia i com aprofitar les hores vall per estalviar.",
+  "cardAutoconsumTitle": "Autoconsum",
+  "cardAutoconsumText": "Autoconsum individual o col·lectiu: com funciona la generació pròpia i la compensació d'excedents a la factura.",
+  "calcTitle": "Estimació d'estalvi",
+  "calcLead": "Aquí reservem espai per a la futura calculadora d'estalvi adaptada al subministrament de llar.",
+  "calcPlaceholder": "Aquí anirà la calculadora d'estalvi amb les característiques del subministrament.",
+  "ctaFinalTitle": "Vols que analitzem el teu subministrament?",
+  "ctaFinalLead": "Envia'ns la teva factura o sol·licita un estudi detallat de la teva llar.",
+  "ctaFinalBtn": "Sol·licita estudi de llar",
+  "ctaSecundari": "Afegir factura",
+  "tarifa": {
+    "title": "Tarifa 2.0TD",
+    "text": [
+      "LA TARIFA 2.0TD — RESIDENCIAL\n",
+      "Totes les llars a Espanya estan acollides a la tarifa d'accés 2.0TD.\n",
+      "És l'única tarifa residencial disponible des de la reforma normativa del juny de 2021.\n",
+      "QUÈ INCLOU LA 2.0TD\n",
+      "Té 3 períodes horaris: Punta (P1), Pla (P2) i Vall (P3).\n",
+      "Els horaris de cada període estan fixats per normativa i són iguals per a tothom.\n",
+      "— P1 (Punta): dilluns a divendres de 10:00 a 14:00 i de 18:00 a 22:00.\n",
+      "— P2 (Pla): dilluns a divendres de 08:00 a 10:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
+      "— P3 (Vall): de 00:00 a 08:00, caps de setmana i festius nacionals.\n",
+      "COM ES DETERMINA EL PREU\n",
+      "El preu de l'energia en cada període el fixa l'OMIE (Operador del Mercat Ibèric d'Energia).\n",
+      "Si tens PVPC (preu voluntari al petit consumidor), el teu preu varia cada hora segons el mercat.\n",
+      "Si tens tarifa fixa amb una comercialitzadora, el preu està pactat en contracte.\n",
+      "TERME DE POTÈNCIA\n",
+      "La majoria de llars treballen entre 3,45 kW i 10 kW.\n",
+      "Es important tenir ajustada la potencia per 2 motius: 1- Si necessitem més, el comptador talla el corrent, i 2- Si en tenim massa, paguem de mes.\n",
+      "Revisar si la potència contractada és adequada per no pagar de més ni patir microtalls de suministrament.\n",
+      ""
+    ]
+  },
+  "discriminacio": {
+    "title": "Períodes i horaris",
+    "text": [
+      "PERÍODES D'ENERGIA A LES LLARS\n",
+      "Des del juny de 2021, tots els subministraments residencials tenen discriminació horària automàtica.\n",
+      "No és una opció que es pugui activar o desactivar: forma part de la tarifa 2.0TD per a tothom.\n",
+      "QUÈ SIGNIFICA A LA PRÀCTICA\n",
+      "El preu de l'energia varia segons el període en què es consumeix.\n",
+      "— P1 (Punta): el més car. Dilluns a divendres de 10:00 a 14:00 i de 18:00 a 22:00.\n",
+      "— P2 (Pla): preu intermedi. Dilluns a divendres en la resta d'hores laborables.\n",
+      "— P3 (Vall): el més barat. Nits, caps de setmana i festius nacionals.\n",
+      "COM APROFITAR ELS PREUS\n",
+      "Desplaçar consums intensius (rentadora, rentaplats, càrrega de vehicle elèctric)\n",
+      "a les hores vall pot generar un estalvi real i sostingut a la factura.\n",
+      "No cal canviar els hàbits radicalment: petits ajustos d'horari tenen impacte.\n",
+      "EL PREU EL FIXA EL MERCAT\n",
+      "En el cas del PVPC, el preu exacte de cada hora el publica diàriament l'OMIE.\n",
+      "En tarifes fixes, el preu per període està pactat amb la comercialitzadora.\n",
+      ""
+    ]
+  },
+  "autoconsum": {
+    "title": "Autoconsum",
+    "text": [
+      "AUTOCONSUM A LES LLARS\n",
+      "L'autoconsum permet generar energia pròpia, principalment mitjançant plaques fotovoltaiques,\n",
+      "i reduir així l'energia que es compra a la xarxa.\n",
+      "TIPUS D'AUTOCONSUM\n",
+      "— Individual: instal·lació pròpia en una habitatge unifamiliar o pis amb coberta disponible.\n",
+      "— Col·lectiu: diverses habitatges d'una comunitat de propietaris comparteixen una instal·lació comuna.\n",
+      "La modalitat col·lectiva permet repartir la generació entre els participants segons coeficients acordats.\n",
+      "COMPENSACIÓ D'EXCEDENTS\n",
+      "Quan es genera més energia de la que es consumeix, l'excedent pot retornar a la xarxa.\n",
+      "La compensació econòmica d'aquests excedents depèn de:\n",
+      "— El tipus de contracte d'autoconsum subscrit.\n",
+      "— Les condicions pactades amb la comercialitzadora.\n",
+      "— El preu del mercat en el moment de la injecció.\n",
+      "CONSIDERACIONS IMPORTANTS\n",
+      "Sobredimensionar la instal·lació només per generar excedents acostuma a ser poc rendible.\n",
+      "El dimensionament òptim busca cobrir el consum propi, no maximitzar la venda a xarxa.\n",
+      "Hi ha limitacions tècniques i reguladores als punts de connexió que condicionen el projecte.\n",
+      "Cada cas requereix una anàlisi específica abans de prendre decisions d'inversió.\n",
+      "",
+      "(clica fora del quadre o a la X superior per sortir)"
+    ]
+  }
 }
 }

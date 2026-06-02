@@ -286,5 +286,104 @@
       ""
     ]
   }
+},
+
+"llar": {
+  "heroTitle": "Eficiencia energética para tu hogar",
+  "heroSubtitle": "Te ayudamos a entender tu factura y a reducir el consumo sin cambiar tus hábitos.",
+  "heroCta": "Solicita una auditoría de hogar",
+  "backLink": "← Volver al inicio",
+  "introTitle": "Qué hay que saber del suministro",
+  "introLead": "El suministro de un hogar es el más común pero también el menos conocido. Entender cómo funciona te permite tomar decisiones y ahorrar sin esfuerzo.",
+  "introItems": [
+    "Tarifa: Los hogares siempre están en la tarifa 2.0TD, la única tarifa residencial.",
+    "Potencia contratada: La capacidad máxima de consumo simultáneo. La mayoría de hogares trabajan entre 3,45 kW y 10 kW, aunque pueden existir potencias superiores.",
+    "Períodos de energía: La 2.0TD tiene 3 períodos horarios con horarios fijados por normativa. El precio de cada hora lo determina el OMIE, el operador del mercado eléctrico ibérico.",
+    "Discriminación horaria: Desde junio de 2021, todos los suministros residenciales tienen discriminación horaria automática. No es opcional — todos pagan diferente en punta, llano y valle.",
+    "Autoconsumo: Puede ser individual o colectivo (comunidades de propietarios). La compensación de excedentes depende del tipo de instalación y de las condiciones del contrato."
+  ],
+  "cardsTitle": "Características del suministro",
+  "cardTarifaTitle": "Tarifa 2.0TD (haz clic para más info)",
+  "cardTarifaText": "La única tarifa residencial: cómo funciona, qué períodos tiene y cómo afecta a tu factura.",
+  "cardDiscriminacioTitle": "Discriminación horaria",
+  "cardDiscriminacioText": "Cuándo es más barato consumir energía y cómo aprovechar las horas valle para ahorrar.",
+  "cardAutoconsumTitle": "Autoconsumo",
+  "cardAutoconsumText": "Autoconsumo individual o colectivo: cómo funciona la generación propia y la compensación de excedentes en la factura.",
+  "calcTitle": "Estimación de ahorro",
+  "calcLead": "Aquí reservamos espacio para la futura calculadora de ahorro adaptada al suministro del hogar.",
+  "calcPlaceholder": "Aquí irá la calculadora de ahorro con las características del suministro.",
+  "ctaFinalTitle": "¿Quieres que analicemos tu suministro?",
+  "ctaFinalLead": "Envíanos tu factura o solicita un estudio detallado de tu hogar.",
+  "ctaFinalBtn": "Solicita estudio de hogar",
+  "ctaSecundari": "Añadir factura",
+  "tarifa": {
+    "title": "Tarifa 2.0TD",
+    "text": [
+      "LA TARIFA 2.0TD — LA TARIFA RESIDENCIAL\n",
+      "Todos los hogares en España están acogidos a la tarifa de acceso 2.0TD.\n",
+      "Es la única tarifa residencial disponible desde la reforma normativa de junio de 2021.\n",
+      "QUÉ INCLUYE LA 2.0TD\n",
+      "Tiene 3 períodos horarios: Punta (P1), Llano (P2) y Valle (P3).\n",
+      "Los horarios de cada período están fijados por normativa y son iguales para todos.\n",
+      "— P1 (Punta): lunes a viernes de 10:00 a 14:00 y de 18:00 a 22:00.\n",
+      "— P2 (Llano): lunes a viernes de 08:00 a 10:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
+      "— P3 (Valle): de 00:00 a 08:00, fines de semana y festivos nacionales.\n",
+      "CÓMO SE DETERMINA EL PRECIO\n",
+      "El precio de la energía en cada período lo fija el OMIE (Operador del Mercado Ibérico de Energía).\n",
+      "Si tienes PVPC (precio voluntario al pequeño consumidor), tu precio varía cada hora según el mercado.\n",
+      "Si tienes tarifa fija con una comercializadora, el precio está pactado en contrato.\n",
+      "TÉRMINO DE POTENCIA\n",
+      "La mayoría de hogares trabajan entre 3,45 kW y 10 kW.\n",
+      "Es importante tener ajustada la potencia por 2 motivos: 1- Si demandamos más, el contador corta la corriente, y 2- Si tenemos demasiada, pagamos de màs.\n",
+      "Revisar si la potència contratada es adecuada para no pagar de más ni sufrir microcortes de suministro.\n",
+      ""
+    ]
+  },
+  "discriminacio": {
+    "title": "Períodos y horarios",
+    "text": [
+      "PERÍODOS HORARIOS EN HOGARES\n",
+      "Desde junio de 2021, todos los suministros residenciales tienen discriminación horaria automática.\n",
+      "No es una opción que se pueda activar o desactivar: forma parte de la tarifa 2.0TD para todos.\n",
+      "QUÉ SIGNIFICA EN LA PRÁCTICA\n",
+      "El precio de la energía varía según el período en que se consume.\n",
+      "— P1 (Punta): el más caro. Lunes a viernes de 10:00 a 14:00 y de 18:00 a 22:00.\n",
+      "— P2 (Llano): precio intermedio. Lunes a viernes en el resto de horas laborables.\n",
+      "— P3 (Valle): el más barato. Noches, fines de semana y festivos nacionales.\n",
+      "CÓMO APROVECHAR LOS PRECIOS\n",
+      "Desplazar consumos intensivos (lavadora, lavavajillas, carga de vehículo eléctrico)\n",
+      "a las horas valle puede generar un ahorro real y sostenido en la factura.\n",
+      "No es necesario cambiar de hábitos radicalmente: pequeños ajustes de horario tienen impacto.\n",
+      "EL PRECIO LO FIJA EL MERCADO\n",
+      "En el caso del PVPC, el precio exacto de cada hora lo publica diariamente el OMIE.\n",
+      "En tarifas fijas, el precio por período está pactado con la comercializadora.\n",
+      ""
+    ]
+  },
+  "autoconsum": {
+    "title": "Autoconsumo",
+    "text": [
+      "AUTOCONSUMO EN HOGARES\n",
+      "El autoconsumo permite generar energía propia, principalmente mediante placas fotovoltaicas,\n",
+      "y reducir así la energía que se compra a la red.\n",
+      "TIPOS DE AUTOCONSUMO\n",
+      "— Individual: instalación propia en una vivienda unifamiliar o piso con cubierta disponible.\n",
+      "— Colectivo: varias viviendas de una comunidad de propietarios comparten una instalación común.\n",
+      "La modalidad colectiva permite repartir la generación entre los participantes según coeficientes acordados.\n",
+      "COMPENSACIÓN DE EXCEDENTES\n",
+      "Cuando se genera más energía de la que se consume, el excedente puede retornar a la red.\n",
+      "La compensación económica de estos excedentes depende de:\n",
+      "— El tipo de contrato de autoconsumo suscrito.\n",
+      "— Las condiciones pactadas con la comercializadora.\n",
+      "— El precio del mercado en el momento de la inyección.\n",
+      "CONSIDERACIONES IMPORTANTES\n",
+      "Sobredimensionar la instalación solo para generar excedentes acostumbra a ser poco rentable.\n",
+      "El dimensionado óptimo busca cubrir el consumo propio, no maximizar la venta a red.\n",
+      "Existen limitaciones técnicas y reguladoras en los puntos de conexión que condicionan el proyecto.\n",
+      "Cada caso requiere un análisis específico antes de tomar decisiones de inversión.\n",
+      "",
+      "(haz clic fuera del cuadro o en la X para salir)"
+    ]
+  }
 }
 }
