@@ -31,11 +31,11 @@
 
             <form id="leadForm">
 
-                <input type="text" name="name" required placeholder="Nombre" data-lang-placeholder="namePlaceholder">
+                <input type="text" name="name" autocomplete= "name" required placeholder="Nombre" data-lang-placeholder="namePlaceholder">
 
-                <input type="email" name="email" required placeholder="Email" data-lang-placeholder="emailPlaceholder">
+                <input type="email" name="email" autocomplete="email" required placeholder="Email" data-lang-placeholder="emailPlaceholder">
 
-                <input type="tel" name="phone" placeholder="Teléfono" data-lang-placeholder="phonePlaceholder">
+                <input type="tel" name="phone" autocomplete= "phone" required placeholder="Teléfono" data-lang-placeholder="phonePlaceholder">
 
                 <!-- CUPS -->
                 <input type="text" name="cups" maxlength="22" pattern="ES[0-9A-Z]{18,20}" placeholder="Codgo CUPS"
@@ -58,7 +58,7 @@
                 <label class="legal">
                     <input type="checkbox" id="legalCheck" required>
                     <span data-lang="legalText">Acepto la</span>
-                        <a href="#" id="openPolicyPopup" class="legal-link">política de privacidad</a>
+                    <a href="#" id="openPolicyPopup" class="legal-link">política de privacidad</a>
                 </label>
 
                 <button type="submit" data-lang="submitBtn">
@@ -107,6 +107,10 @@
     </div>
     <script src="./js/translations.js"></script>
     <script src="./js/form.js"></script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/148566673.js"></script>
+    <!-- End of HubSpot Embed Code -->
 
 </body>
 
