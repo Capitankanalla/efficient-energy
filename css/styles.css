@@ -174,3 +174,13 @@ body {
 .opcio:hover img {
     transform: scale(1.08);
 }
+
+#selector {
+    text-align: center;
+}
+
+#selector .cta {
+    margin-top: 20px;
+    display: inline-block;
+}
+
