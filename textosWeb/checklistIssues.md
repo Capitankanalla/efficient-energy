@@ -1,54 +1,54 @@
 📝 Checklist de tasques pendents
 🔧 Arquitectura
-[ ] Crear content-modal (HTML + CSS + JS)
+[X] Crear content-modal (HTML + CSS + JS)
 
-[ ] Crear modalContent.js
+[X] Crear modalContent.js
 
-[ ] Crear estructura d’HTML extern per contingut llarg
+[X] Crear estructura d’HTML extern per contingut llarg
 
-[ ] Afegir seccions “industria”, “negoci”, “llar” als JSON idiomàtics
+[X] Afegir seccions “industria”, “negoci”, “llar” als JSON idiomàtics
 
 🏭 Secció Indústria
-[ ] Crear scriptIndustria.js
+[X] Crear scriptIndustria.js
 
-[ ] Definir targetes (potència, energia, reactiva)
+[X] Definir targetes (potència, energia, reactiva)
 
-[ ] Crear HTML extern per cada concepte (3 idiomes)
+[X] Crear HTML extern per cada concepte (3 idiomes. Modificat al própi json)
 
-[ ] Integrar modal pedagògic
+[X] Integrar modal pedagògic (Info relativa al suministrament en format breu)
 
-[ ] Afegir “continuar” dins del modal
+[X] Afegir “continuar” dins del modal
 
 🏢 Secció Negoci
-[ ] Crear scriptNegoci.js
+[X] Crear scriptNegoci.js
 
-[ ] Definir targetes i contingut
+[X] Definir targetes i contingut
 
-[ ] Crear HTML extern per cada concepte
+[X] Crear HTML extern per cada concepte
 
-[ ] Integrar modal pedagògic
+[X] Integrar modal pedagògic
 
 🏠 Secció Llar
-[ ] Crear scriptLlar.js
+[X] Crear scriptLlar.js
 
-[ ] Definir targetes i contingut
+[X] Definir targetes i contingut
 
-[ ] Crear HTML extern per cada concepte
+[X] Crear HTML extern per cada concepte
 
-[ ] Integrar modal pedagògic
+[X] Integrar modal pedagògic
 
 🌐 Idiomes
-[ ] Afegir entrades noves als JSON
+[X] Afegir entrades noves als JSON
 
-[ ] Documentar cada secció dins del JSON
+[X] Documentar cada secció dins del JSON
 
-[ ] Verificar que window.currentLang funciona a totes les pàgines
+[X] Verificar que window.currentLang funciona a totes les pàgines
 
 🧪 Testing
-[ ] Provar navegació entre pàgines amb idioma persistent
+[X] Provar navegació entre pàgines amb idioma persistent
 
-[ ] Provar modal pedagògic en totes les seccions
+[X] Provar modal pedagògic en totes les seccions
 
-[ ] Provar càrrega d’HTML extern en tots els idiomes
+[X] Provar càrrega d’HTML extern en tots els idiomes
 
-[ ] Provar que el modal legal segueix funcionant
+[X] Provar que el modal legal segueix funcionant
