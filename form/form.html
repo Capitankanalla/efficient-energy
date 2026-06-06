@@ -31,11 +31,14 @@
 
             <form id="leadForm">
 
-                <input type="text" name="name" autocomplete= "name" required placeholder="Nombre" data-lang-placeholder="namePlaceholder">
+                <input type="text" name="name" autocomplete="name" required placeholder="Nombre"
+                    data-lang-placeholder="namePlaceholder">
 
-                <input type="email" name="email" autocomplete="email" required placeholder="Email" data-lang-placeholder="emailPlaceholder">
+                <input type="email" name="email" autocomplete="email" required placeholder="Email"
+                    data-lang-placeholder="emailPlaceholder">
 
-                <input type="tel" name="phone" autocomplete= "phone" required placeholder="Teléfono" data-lang-placeholder="phonePlaceholder">
+                <input type="tel" name="phone" autocomplete="phone" required placeholder="Teléfono"
+                    data-lang-placeholder="phonePlaceholder">
 
                 <!-- CUPS -->
                 <input type="text" name="cups" maxlength="22" pattern="ES[0-9A-Z]{18,20}" placeholder="Codgo CUPS"
@@ -103,6 +106,13 @@
                 <button id="acceptPrivacy" data-lang="acceptBtn">Accepto</button>
                 <button id="rejectPrivacy" data-lang="rejectBtn">Rebutjo</button>
             </div>
+        </div>
+    </div>
+    <div id="thankyouPopup" class="popup hidden">
+        <div class="popup-content">
+            <span id="closeThankyou" class="close-btn">×</span>
+            <h2 data-lang="thankyouTitle">¡Gracias!</h2>
+            <p data-lang="thankyouMsg">Hemos recibido tu solicitud. Te contactaremos en menos de 24h.</p>
         </div>
     </div>
     <script src="./js/translations.js"></script>

@@ -21,6 +21,7 @@ const translations = {
     legalText: "Acepto la ",
     legalLink: "política de privacidad",
     privacyTitle: "Tratamiento de datos",
+    clickPolicyAlert: "Debes leer y aceptar la política de privacidad en el enlace.",
     acceptBtn: "Acepto",
     rejectBtn: "Rechazo",
     rejectAlert: "Sin aceptar el tratamiento de datos no podemos continuar.",
@@ -32,7 +33,10 @@ const translations = {
     info1: "Análisis gratuito sin compromiso",
     info2: "Optimización de costes energéticos",
     info3: "Estudio personalizado",
-    info4: "Respuesta en menos de 24h"
+    info4: "Respuesta en menos de 24h",
+    thankyouTitle: "¡Gracias!",
+    thankyouMsg: "Hemos recibido tu solicitud. Te contactaremos en menos de 24h.",
+
   },
 
   ca: {
@@ -57,6 +61,7 @@ const translations = {
     legalText: "Accepto la ",
     legalLink: "política de privacitat",
     privacyTitle: "Tractament de les dades",
+    clickPolicyAlert: "Has de llegir i acceptar la política de privacitat a l'enllaç.",
     acceptBtn: "Accepto",
     rejectBtn: "Rebutjo",
     rejectAlert: "Sense acceptar el tractament de dades no podem continuar.",
@@ -68,7 +73,10 @@ const translations = {
     info1: "Anàlisi gratuït sense compromís",
     info2: "Optimització de costos energètics",
     info3: "Estudi personalitzat",
-    info4: "Resposta en menys de 24h"
+    info4: "Resposta en menys de 24h",
+    thankyouTitle: "Gràcies!",
+    thankyouMsg: "Hem rebut la teva sol·licitud. Et contactarem en menys de 24h.",
+
   },
 
   en: {
@@ -93,11 +101,14 @@ const translations = {
     legalText: "I accept the ",
     legalLink: "privacy policy",
     privacyTitle: "Data processing",
+    clickPolicyAlert: "You must read and accept the privacy policy in the link.",
     acceptBtn: "Accept",
     rejectBtn: "Decline",
     rejectAlert: "Without accepting data processing we cannot continue.",
     submitBtn: "Request audit",
     noteText: "Our experts will contact you within 24h.",
+    thankyouTitle: "Thank you!",
+    thankyouMsg: "We have received your request. We will contact you within 24h.",
 
     infoTitle: "What will you receive?",
     info1: "Free analysis with no commitment",

@@ -26,9 +26,17 @@ fetch("../json/legals.json")
   .then(data => legalData = data);
 
 
-// Desactivar checkbox i botó d'enviar
-legalCheck.disabled = true;
+// Desactivar botó d'enviar fins que s'accepti la política
+let policyAccepted = false;
 submitBtn.disabled = true;
+
+// Alert si clica el checkbox sense haver llegit la política
+legalCheck.addEventListener("click", (e) => {
+  if (!policyAccepted) {
+    e.preventDefault();
+    alert(translations[currentLang].clickPolicyAlert || "Primer llegeix la política de privacitat.");
+  }
+});
 
 // Obrir popup
 openPolicy.addEventListener("click", (e) => {
@@ -51,7 +59,7 @@ openPolicy.addEventListener("click", (e) => {
 
 // Acceptar
 acceptBtn.addEventListener("click", () => {
-  legalCheck.disabled = false;
+  policyAccepted = true;
   submitBtn.disabled = false;
   legalCheck.checked = true;
   popup.classList.add("hidden");
@@ -60,6 +68,45 @@ acceptBtn.addEventListener("click", () => {
 // Rebutjar
 rejectBtn.addEventListener("click", () => {
   alert(translations[currentLang].rejectAlert);
-  // alert("Sense acceptar el tractament de dades no podem continuar.");
   window.location.href = "../index.html";
 });
+// POPUP D'AGRAÏMENT
+const thankyouPopup = document.getElementById("thankyouPopup");
+const closeThankyou = document.getElementById("closeThankyou");
+
+function showThankyouPopup() {
+  thankyouPopup.classList.remove("hidden");
+
+  // Tancar automàticament als 6 segons
+  setTimeout(() => {
+    thankyouPopup.classList.add("hidden");
+    window.location.href = "../index.html";
+  }, 6000);
+}
+
+// Tancar manualment amb la X
+closeThankyou.addEventListener("click", () => {
+  thankyouPopup.classList.add("hidden");
+  window.location.href = "../index.html";
+});
+
+// Tancar clicant fora
+thankyouPopup.addEventListener("click", (e) => {
+  if (e.target === thankyouPopup) {
+    thankyouPopup.classList.add("hidden");
+    window.location.href = "../index.html";
+  }
+});
+
+// SUBMIT DEL FORMULARI → MOSTRAR POPUP D'AGRAÏMENT
+const leadForm = document.getElementById("leadForm");
+
+leadForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  leadForm.reset();
+  legalCheck.disabled = true;
+  submitBtn.disabled = true;
+  showThankyouPopup();
+});
+
+
