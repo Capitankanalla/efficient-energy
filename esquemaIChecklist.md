@@ -36,7 +36,7 @@ Simplifica abans de complicar
 Prioritza disseny → contingut → funcionalitat
 
 🧱 Roadmap (llista de tasques)
-[ ] Afegir logo al header
+[X] Afegir logo al header
 
 [ ] Crear menú (superior o lateral)
 
