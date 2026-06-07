@@ -32,11 +32,12 @@
       "“El teu assessorament em dona estabilitat i tranquil·litat, i això per mi té molt valor.” C.T.",
       "“El que més valoro de la teva gestió és que sempre hi ets.” R.I.",
       "“Aquest darrer any ha estat molt estable i per això vull renovar amb tu.” L.P.",
-      "“12 mesos després: ‘Fes el que consideris, ja saps que confio en tu.’” F.G."
+      "“12 mesos després: ‘Fes el que consideris, ja saps que confio en tu.’” F.G.",
+      "“Es realment difícil trobar a professionls com tú.“R.V."
     ]
   },
   "hero": {
-    "title": "Optimitzo el consum energètic de la teva empresa",
+    "title": "Optimitzem el consum energètic de la teva empresa",
     "subtitle": "Assessorament independent per reduir costos i millorar l’eficiència amb dades i tecnologia.",
     "cta": "Sol·licita una auditoria inicial"
   },
@@ -50,7 +51,7 @@
     "heroTitle": "Eficiència energètica per a la indústria",
     "heroSubtitle": "Reduïm costos operatius millorant el rendiment energètic de processos i instal·lacions.",
     "heroCta": "Sol·licita una auditoria industrial",
-    "backLink": "← Tornar a l'inici",
+    "backLink": "← Tornar",
     "introTitle": "Que cal saber del subministrament",
     "introLead": "Tot subministrament té les seves particularitats, l'industrial és diferent de la llar o l'oficina. Els distingim pels següents punts:",
     "introItems": [
@@ -58,10 +59,11 @@
       "Potència contractada: És la capacitat de treball simultani d'una instal·lació. En les tarifes 3.0 i 6.1 són potències superiors als 15 kW i als 450 kW respectivament.",
       "Períodes d'energia: Actualment es distribueixen en 6 períodes, P1 a P6.",
       "Temporades: Per garantir l'estabilitat del sistema, la demanda es gestiona en 4 temporades a l'any: alta, mitja-alta, mitja i baixa.",
-      "Energia reactiva: És una energia desaprofitada per alguns aparells elèctrics i que penalitza, com solen ser els pics de potència generats pels motors de les cambres frigorífiques o ascensors."
+      "Energia reactiva: És una energia desaprofitada per alguns aparells elèctrics i que penalitza, com solen ser els pics de potència generats pels motors de les cambres frigorífiques o ascensors.",
+      "Més informació clicant als botons de la seguent secció."
     ],
     "cardsTitle": "Característiques del subministrament",
-    "cardEnergiaTitle": "Potència i energia (fes clic per mes info)",
+    "cardEnergiaTitle": "Potència i energia",
     "cardEnergiaText": "La potència és la capacitat de treball simultani d'una instal·lació, i l'energia és el temps que cada aparell està en funcionament.",
     "cardCalendariTitle": "Períodes i temporades",
     "cardCalendariText": "Els 6 períodes horaris i les 4 temporades anuals que determinen el preu de l'energia.",
@@ -109,8 +111,7 @@
         "— Mitja tensió (MT): 380–400 V.\n",
         "— Alta tensió (AT): 1 kV a 30 kV.\n",
         "Depèn de la tipologia del negoci.\n",
-        "",
-        "(clica fora del quadre o a la X superior per sortir)"
+        ""
       ]
     },
     "calendari": {
@@ -134,14 +135,10 @@
         "Al Juny tenim P3, P4 i P6. I al Setembre P4, P5 i P6. El període P6 es comú a tot l'any\n",
         "I en algunes comercialitzadores es habitual anomenar-los punta, pla o vall en comptes de P1, P2, P6. ",
         "HORES DELS PERÍODES (HORARI PENINSULAR)\n",
-        "P1: 08:00 a 09:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
-        "P2: 08:00 a 09:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
-        "P3: 08:00 a 09:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
-        "P4: 08:00 a 09:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
-        "P5: 08:00 a 09:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
-        "P6: Caps de setmana i festius (tot el dia).\n",
+        "De P1 a P5 els horaris són: 08:00 a 09:00, de 14:00 a 18:00 i de 22:00 a 00:00.\n",
+        "P6: De 00:00 a 08:00 i caps de setmana i festius (tot el dia).\n",
         "TEMPORADES ENERGÈTIQUES (ENERGIA CONSUMIDA)\n",
-        "La temporada determina el preu aplicat als períodes P1 a P6.\n",
+        "La temporada determina el preu aplicat als períodes P1 a P5.\n",
         "Hi ha 4 temporades: alta, mitjana-alta, mitjana i baixa.\n",
         "MESOS PER TEMPORADA\n",
         "Temporada alta: gener, febrer, juliol, desembre.\n",
@@ -156,8 +153,7 @@
         "PC: 6 períodes fixes cada mes.\n",
         "Energía: O consum. 4 temporades que varien segons el mes.\n",
         "Cada període té hores concretes i un preu diferent.\n",
-        "",
-        "(clica fora del quadre o a la X superior per sortir)"
+        ""
       ]
     },
     "reactiva": {
@@ -182,8 +178,7 @@
         "Les instal·lacions fotovoltaiques normalment es dimensionen principalment per cobrir el consum \n",
         "propi, i sobredimensionar-les només per generar excedents acostuma a ser poc rendible \n",
         "i condicionat per limitacions tècniques i reguladores, com la capacitat dels punts de connexió.\n",
-        "",
-        "(clica fora del quadre o a la X superior per sortir)"
+        ""
       ]
     }
   },
