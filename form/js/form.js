@@ -98,15 +98,26 @@ thankyouPopup.addEventListener("click", (e) => {
   }
 });
 
-// SUBMIT DEL FORMULARI → MOSTRAR POPUP D'AGRAÏMENT
-const leadForm = document.getElementById("leadForm");
+// Esperem que HubSpot carregui i registri els seus events globals
+document.addEventListener("DOMContentLoaded", () => {
+  const interval = setInterval(() => {
+    // Quan HubSpot estigui llest, aquest event existirà
+    if (window.hsForms) {
+      clearInterval(interval);
 
-leadForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  leadForm.reset();
-  legalCheck.disabled = true;
-  submitBtn.disabled = true;
-  showThankyouPopup();
+      window.addEventListener("hs-form-event:on-form-submit", () => {
+        showThankyouPopup();
+
+        const leadForm = document.getElementById("leadForm");
+        if (leadForm) leadForm.reset();
+
+        const legalCheck = document.getElementById("legalCheck");
+        const submitBtn = document.querySelector("button[type='submit']");
+        if (legalCheck) legalCheck.disabled = true;
+        if (submitBtn) submitBtn.disabled = true;
+      });
+    }
+  }, 100);
 });
 
 
