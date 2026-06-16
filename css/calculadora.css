@@ -1,56 +1,220 @@
+/* ═══════════════════════════════════════════════════════
+   CALCULADORA D'ESTALVI ENERGÈTIC
+   Paleta base: #e9eae8 (fons) · #0077cc (accent) · #2ecc71 (èxit)
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Contenidor principal ── */
 .calc {
-  max-width: 450px;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 480px;
+  margin: 24px auto;
+  padding: 24px;
   background: #e9eae8;
   border-radius: 10px;
   font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #222;
 }
 
 .calc h2 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #111;
 }
 
+/* ── Labels i inputs ── */
 label {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+  font-size: 13px;
+  color: #333;
 }
 
-input[type="number"] {
+input[type="number"],
+input[type="date"],
+select {
   width: 100%;
-  padding: 8px;
+  padding: 8px 10px;
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
 }
 
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 2px rgba(0,119,204,0.15);
+}
+
+/* ── Botó principal ── */
 button {
   width: 100%;
-  padding: 10px;
-  margin-top: 15px;
+  padding: 11px;
+  margin-top: 18px;
   background: #0077cc;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  transition: background .15s;
 }
 
-button:hover {
-  background: #005fa3;
+button:hover  { background: #005fa3; }
+button:active { transform: scale(.98); }
+
+/* ── Toggle tarifa industrial ── */
+.toggle-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.ocult {
-  display: none;
+.toggle-btn {
+  flex: 1;
+  padding: 8px 6px;
+  font-size: 13px;
+  font-weight: normal;
+  background: #fff;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+  transition: all .15s;
 }
 
+.toggle-btn:hover  { background: #f0f4f8; }
+.toggle-btn.active { background: #0077cc; color: #fff; border-color: #0077cc; font-weight: bold; }
+
+/* ── Badge de segment actiu ── */
+.segment-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 14px;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: .03em;
+}
+
+/* ── Seccions internes ── */
+.seccio {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  border-bottom: 1px solid #c8c9c7;
+  padding-bottom: 4px;
+}
+
+/* ── Graelles ── */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.grid6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.grid6 label        { font-size: 11px; }
+.grid6 input        { font-size: 11px; padding: 6px 4px; }
+
+/* ── Info temporada ── */
+.info-box {
+  margin-top: 12px;
+  padding: 9px 13px;
+  background: #fff;
+  border-left: 4px solid #0077cc;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ── Errors ── */
+.error-box {
+  margin-top: 12px;
+  padding: 9px 13px;
+  background: #fdecea;
+  border-left: 4px solid #cc0000;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #cc0000;
+}
+
+/* ── Resultat ── */
 #resultat {
-  margin-top: 20px;
-  padding: 15px;
+  margin-top: 22px;
+  padding: 18px 15px;
   background: #e8ffe8;
   border-left: 4px solid #2ecc71;
   border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.7;
 }
+
+#resultat .estalvi-pct {
+  display: block;
+  text-align: center;
+  font-size: 52px;
+  font-weight: bold;
+  color: #1a7a1a;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+#resultat .estalvi-label {
+  display: block;
+  text-align: center;
+  color: #27ae60;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ── CTA ── */
+.cta-box {
+  margin-top: 18px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.cta-box p       { margin-bottom: 0; }
+.cta-box button  { margin-top: 14px; }
+
+/* ── Utilitat ── */
+.ocult { display: none; }

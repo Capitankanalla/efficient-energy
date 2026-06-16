@@ -3,55 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <title>Calculadora d'estalvi energètic</title>
-
-  <!-- Enllaç correcte al CSS -->
   <link rel="stylesheet" href="/css/calculadora.css">
 </head>
-
 <body>
 
-  <div class="calc">
-    <h2>Calculadora d'estalvi energètic</h2>
+<div class="calc">
+  <h2 data-i18n="titol">Calculadora d'estalvi energètic</h2>
 
-    <label>Potència contractada (kW)</label>
-    <input type="number" id="potencia" oninput="actualitzarSegment()">
-
-    <div id="camps-llar" class="ocult">
-      <label>Consum mensual (kWh)</label>
-      <input type="number" id="consum-llar">
-    </div>
-
-    <div id="camps-negoci" class="ocult">
-      <label>Consum P1 (kWh)</label>
-      <input type="number" id="p1">
-      <label>Consum P2 (kWh)</label>
-      <input type="number" id="p2">
-      <label>Consum P3 (kWh)</label>
-      <input type="number" id="p3">
-    </div>
-
-    <div id="camps-industria" class="ocult">
-      <label>Consum P1–P6 (kWh)</label>
-      <input type="number" id="i1" placeholder="P1">
-      <input type="number" id="i2" placeholder="P2">
-      <input type="number" id="i3" placeholder="P3">
-      <input type="number" id="i4" placeholder="P4">
-      <input type="number" id="i5" placeholder="P5">
-      <input type="number" id="i6" placeholder="P6">
-    </div>
-
-    <label>Preu actual (€/kWh)</label>
-    <input type="number" id="preuActual" step="0.001">
-
-    <label>Nou preu (€/kWh)</label>
-    <input type="number" id="preuNou" step="0.001">
-
-    <button onclick="calcular()">Calcular estalvi</button>
-
-    <div id="resultat"></div>
+  <!-- DROPDOWN SEGMENT (només visible sense paràmetre URL) -->
+  <div id="bloc-dropdown" class="ocult">
+    <label data-i18n="dropdown_segment">Quin tipus de subministrament tens?</label>
+    <select id="dropdown-segment" onchange="setSegmentDropdown(this.value)">
+      <option value="">—</option>
+      <option value="llar"      data-i18n="dropdown_llar">Llar / habitatge</option>
+      <option value="comunitat" data-i18n="dropdown_comunitat">Comunitat de veïns</option>
+      <option value="negoci"    data-i18n="dropdown_negoci">Negoci de no més de 15 kW</option>
+      <option value="industria" data-i18n="segment_industria">Indústria</option>
+    </select>
   </div>
 
-  
-  <script src="/js/calculadora.js"></script>
+  <!-- BADGE SEGMENT ACTIU (visible quan ve de pàgina específica) -->
+  <div id="bloc-segment-badge" class="ocult">
+    <div class="segment-badge" id="segment-badge-text"></div>
+  </div>
+
+  <!-- TOGGLE TARIFA (3.0TD vs 6.1TD, només indústria) -->
+  <div id="bloc-tarifa-industrial" class="ocult">
+    <label data-i18n="tipus_tarifa">Tipus de tarifa</label>
+    <div class="toggle-group">
+      <button type="button" class="toggle-btn active" id="btn-30" onclick="setTarifa('3.0TD')" data-i18n="tarifa_30">3.0TD — Més de 15 kW</button>
+      <button type="button" class="toggle-btn" id="btn-61" onclick="setTarifa('6.1TD')" data-i18n="tarifa_61">6.1TD — Alta tensió</button>
+    </div>
+  </div>
+
+  <!-- DATES -->
+  <div class="grid2" style="margin-top:12px">
+    <div>
+      <label data-i18n="data_inici">Data inici factura</label>
+      <input type="date" id="data-inici" onchange="updateTemporada()">
+    </div>
+    <div>
+      <label data-i18n="data_fi">Data fi factura</label>
+      <input type="date" id="data-fi">
+    </div>
+  </div>
+
+  <!-- INFO TEMPORADA -->
+  <div id="info-temporada" class="ocult info-box"></div>
+
+  <!-- ── BLOC LLAR / NEGOCI (2.0TD) ── -->
+  <div id="bloc-20" class="ocult">
+    <div class="seccio" data-i18n="potencia_contractada">Potència contractada</div>
+    <div class="grid2">
+      <div>
+        <label>P1 — <span data-i18n="punta">Punta</span> (<span data-i18n="kw">kW</span>)</label>
+        <input type="number" id="20-pot-p1" step="0.001" placeholder="3.450">
+      </div>
+      <div>
+        <label>P3 — <span data-i18n="vall">Vall</span> (<span data-i18n="kw">kW</span>)</label>
+        <input type="number" id="20-pot-p3" step="0.001" placeholder="3.450">
+      </div>
+    </div>
+
+    <div class="seccio" data-i18n="energia_consumida">Energia consumida</div>
+    <div class="grid3">
+      <div>
+        <label>P1 <span data-i18n="punta">Punta</span> (<span data-i18n="kwh">kWh</span>)</label>
+        <input type="number" id="20-e-p1" placeholder="80">
+      </div>
+      <div>
+        <label>P2 <span data-i18n="llano">Llano</span> (<span data-i18n="kwh">kWh</span>)</label>
+        <input type="number" id="20-e-p2" placeholder="120">
+      </div>
+      <div>
+        <label>P3 <span data-i18n="vall">Vall</span> (<span data-i18n="kwh">kWh</span>)</label>
+        <input type="number" id="20-e-p3" placeholder="50">
+      </div>
+    </div>
+
+    <div class="seccio" data-i18n="preu_actual_energia">Preu actual — energia (€/kWh)</div>
+    <div class="grid3">
+      <div><label>P1 (<span data-i18n="euros_kwh">€/kWh</span>)</label><input type="number" id="20-pe-p1" step="0.0001" placeholder="0.1800"></div>
+      <div><label>P2 (<span data-i18n="euros_kwh">€/kWh</span>)</label><input type="number" id="20-pe-p2" step="0.0001" placeholder="0.1400"></div>
+      <div><label>P3 (<span data-i18n="euros_kwh">€/kWh</span>)</label><input type="number" id="20-pe-p3" step="0.0001" placeholder="0.0900"></div>
+    </div>
+
+    <div class="seccio" data-i18n="preu_actual_potencia">Preu actual — potència (€/kW·dia)</div>
+    <div class="grid2">
+      <div><label>P1 (<span data-i18n="euros_kw_dia">€/kW·dia</span>)</label><input type="number" id="20-pp-p1" step="0.0001" placeholder="0.1100"></div>
+      <div><label>P3 (<span data-i18n="euros_kw_dia">€/kW·dia</span>)</label><input type="number" id="20-pp-p3" step="0.0001" placeholder="0.0500"></div>
+    </div>
+  </div>
+
+  <!-- ── BLOC INDÚSTRIA (3.0TD / 6.1TD) ── -->
+  <div id="bloc-30" class="ocult">
+    <div class="seccio" data-i18n="potencia_contractada">Potència contractada P1–P6 (kW)</div>
+    <div class="grid6">
+      <div><label>P1</label><input type="number" id="30-pot-p1" step="0.1" placeholder="15"></div>
+      <div><label>P2</label><input type="number" id="30-pot-p2" step="0.1" placeholder="15"></div>
+      <div><label>P3</label><input type="number" id="30-pot-p3" step="0.1" placeholder="15"></div>
+      <div><label>P4</label><input type="number" id="30-pot-p4" step="0.1" placeholder="15"></div>
+      <div><label>P5</label><input type="number" id="30-pot-p5" step="0.1" placeholder="15"></div>
+      <div><label>P6</label><input type="number" id="30-pot-p6" step="0.1" placeholder="15"></div>
+    </div>
+
+    <div class="seccio" data-i18n="energia_consumida">Energia consumida — períodes de la temporada (kWh)</div>
+    <div id="camps-energia-30"></div>
+
+    <div class="seccio" data-i18n="preu_actual_energia">Preu actual — energia P1–P6 (€/kWh)</div>
+    <div class="grid6">
+      <div><label>P1</label><input type="number" id="30-pe-p1" step="0.0001" placeholder="0.180"></div>
+      <div><label>P2</label><input type="number" id="30-pe-p2" step="0.0001" placeholder="0.150"></div>
+      <div><label>P3</label><input type="number" id="30-pe-p3" step="0.0001" placeholder="0.120"></div>
+      <div><label>P4</label><input type="number" id="30-pe-p4" step="0.0001" placeholder="0.090"></div>
+      <div><label>P5</label><input type="number" id="30-pe-p5" step="0.0001" placeholder="0.070"></div>
+      <div><label>P6</label><input type="number" id="30-pe-p6" step="0.0001" placeholder="0.050"></div>
+    </div>
+
+    <div class="seccio" data-i18n="preu_actual_potencia">Preu actual — potència P1–P6 (€/kW·dia)</div>
+    <div class="grid6">
+      <div><label>P1</label><input type="number" id="30-pp-p1" step="0.0001" placeholder="0.120"></div>
+      <div><label>P2</label><input type="number" id="30-pp-p2" step="0.0001" placeholder="0.090"></div>
+      <div><label>P3</label><input type="number" id="30-pp-p3" step="0.0001" placeholder="0.070"></div>
+      <div><label>P4</label><input type="number" id="30-pp-p4" step="0.0001" placeholder="0.050"></div>
+      <div><label>P5</label><input type="number" id="30-pp-p5" step="0.0001" placeholder="0.030"></div>
+      <div><label>P6</label><input type="number" id="30-pp-p6" step="0.0001" placeholder="0.010"></div>
+    </div>
+  </div>
+
+  <div id="error-msg" class="ocult error-box"></div>
+
+  <button id="btn-calcular" onclick="calcular()" data-i18n="calcular">Calcular estalvi</button>
+
+  <div id="resultat" class="ocult"></div>
+
+  <div id="bloc-cta" class="ocult cta-box">
+    <p id="cta-text" data-i18n-html="cta_text"></p>
+    <button onclick="solicitarAuditoria()" data-i18n="cta_boto">Sol·licitar auditoria gratuïta</button>
+  </div>
+</div>
+
+<script src="/js/calculadora.js"></script>
 </body>
 </html>
