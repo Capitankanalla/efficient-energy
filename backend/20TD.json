@@ -243,15 +243,6 @@
             "energia_con_descuento": { "p1": 0.118898, "p2": 0.118898, "p3": 0.118898 },
             "potencia_kw_any": { "p1": 34.390849, "p2": 34.390849 }
           }
-        },
-        "WEB": {
-          "3_preus": {
-            "codi_oferta": "0126PrecioWeb",
-            "energia_sin_descuento": { "p1": 0.255086, "p2": 0.196670, "p3": 0.129253 },
-            "descuento_percent": 12.5,
-            "energia_con_descuento": { "p1": 0.223200, "p2": 0.172086, "p3": 0.113097 },
-            "potencia_kw_any": { "p1": 27.704413, "p2": 0.725423 }
-          }
         }
       }
     }
