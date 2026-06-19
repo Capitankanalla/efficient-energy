@@ -1,0 +1,259 @@
+{
+  "tarifa": "2.0TD",
+  "segments": {
+    "negocio_menys_10kw": {
+      "descripcio": "2.0TD - NEGOCIO < 10 kW",
+      "productes": {
+        "PLUS": {
+          "3_preus": {
+            "codi_oferta": "0226PLUS",
+            "energia_sin_descuento": { "p1": 0.296136, "p2": 0.253991, "p3": 0.233982 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.216179, "p2": 0.185413, "p3": 0.170807 },
+            "potencia_kw_any": { "p1": 39.329210, "p2": 13.338133 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226PLUS1P",
+            "energia_sin_descuento": { "p1": 0.256379, "p2": 0.256379, "p3": 0.256379 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.187157, "p2": 0.187157, "p3": 0.187157 },
+            "potencia_kw_any": { "p1": 39.329210, "p2": 13.338133 }
+          }
+        },
+        "TOP": {
+          "3_preus": {
+            "codi_oferta": "0226TOP",
+            "energia_sin_descuento": { "p1": 0.271958, "p2": 0.233923, "p3": 0.215283 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.198529, "p2": 0.170763, "p3": 0.157157 },
+            "potencia_kw_any": { "p1": 39.815339, "p2": 14.227632 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226TOP1P",
+            "energia_sin_descuento": { "p1": 0.235503, "p2": 0.235503, "p3": 0.235503 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.171917, "p2": 0.171917, "p3": 0.171917 },
+            "potencia_kw_any": { "p1": 39.815339, "p2": 14.227632 }
+          }
+        },
+        "EXTRA": {
+          "3_preus": {
+            "codi_oferta": "0226EXTRA",
+            "energia_sin_descuento": { "p1": 0.244662, "p2": 0.234345, "p3": 0.230899 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.178604, "p2": 0.171072, "p3": 0.168557 },
+            "potencia_kw_any": { "p1": 34.815339, "p2": 9.227632 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226EXTRA1P",
+            "energia_sin_descuento": { "p1": 0.188697, "p2": 0.188697, "p3": 0.188697 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.137749, "p2": 0.137749, "p3": 0.137749 },
+            "potencia_kw_any": { "p1": 40.764413, "p2": 34.018385 }
+          }
+        },
+        "PROF": {
+          "3_preus": {
+            "codi_oferta": "0226PROF",
+            "energia_sin_descuento": { "p1": 0.311435, "p2": 0.213173, "p3": 0.158216 },
+            "descuento_percent": 28.0,
+            "energia_con_descuento": { "p1": 0.224234, "p2": 0.153485, "p3": 0.113916 },
+            "potencia_kw_any": { "p1": 32.496149, "p2": 6.826865 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226PROF1P",
+            "energia_sin_descuento": { "p1": 0.216571, "p2": 0.216571, "p3": 0.216571 },
+            "descuento_percent": 28.0,
+            "energia_con_descuento": { "p1": 0.155931, "p2": 0.155931, "p3": 0.155931 },
+            "potencia_kw_any": { "p1": 32.496149, "p2": 6.826865 }
+          }
+        },
+        "AHORRO": {
+          "3_preus": {
+            "codi_oferta": "0226AHORRO",
+            "energia_sin_descuento": { "p1": 0.318795, "p2": 0.219274, "p3": 0.166078 },
+            "descuento_percent": 29.0,
+            "energia_con_descuento": { "p1": 0.226345, "p2": 0.155685, "p3": 0.117916 },
+            "potencia_kw_any": { "p1": 27.704413, "p2": 0.725423 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226AHORRO1P",
+            "energia_sin_descuento": { "p1": 0.225282, "p2": 0.225282, "p3": 0.225282 },
+            "descuento_percent": 29.0,
+            "energia_con_descuento": { "p1": 0.159950, "p2": 0.159950, "p3": 0.159950 },
+            "potencia_kw_any": { "p1": 27.704413, "p2": 0.725423 }
+          }
+        },
+        "MINI": {
+          "1_preu": {
+            "codi_oferta": "0226MINI1P",
+            "energia_sin_descuento": { "p1": 0.154308, "p2": 0.154308, "p3": 0.154308 },
+            "descuento_percent": 25.5,
+            "energia_con_descuento": { "p1": 0.114960, "p2": 0.114960, "p3": 0.114960 },
+            "potencia_kw_any": { "p1": 34.390000, "p2": 34.390000 }
+          }
+        },
+        "SMART": {
+          "1_preu": {
+            "codi_oferta": "0226SMART",
+            "energia_sin_descuento": { "p1": 0.177945, "p2": 0.177945, "p3": 0.177945 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.129900, "p2": 0.129900, "p3": 0.129900 },
+            "potencia_kw_any": { "p1": 40.764413, "p2": 34.018385 }
+          }
+        }
+      }
+    },
+    "negocio_mes_10kw": {
+      "descripcio": "2.0TD - NEGOCIO > 10 kW",
+      "productes": {
+        "PLUS": {
+          "3_preus": {
+            "codi_oferta": "0226PLUS2.1",
+            "energia_sin_descuento": { "p1": 0.293396, "p2": 0.251251, "p3": 0.231242 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.214179, "p2": 0.183413, "p3": 0.168807 },
+            "potencia_kw_any": { "p1": 39.329210, "p2": 13.338133 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226PLUS1P2.1",
+            "energia_sin_descuento": { "p1": 0.253640, "p2": 0.253640, "p3": 0.253640 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.185157, "p2": 0.185157, "p3": 0.185157 },
+            "potencia_kw_any": { "p1": 39.329210, "p2": 13.338133 }
+          }
+        },
+        "TOP": {
+          "3_preus": {
+            "codi_oferta": "0226TOP2.1",
+            "energia_sin_descuento": { "p1": 0.271958, "p2": 0.233923, "p3": 0.215283 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.198529, "p2": 0.170763, "p3": 0.157157 },
+            "potencia_kw_any": { "p1": 39.815339, "p2": 14.227632 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226TOP1P2.1",
+            "energia_sin_descuento": { "p1": 0.235503, "p2": 0.235503, "p3": 0.235503 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.171917, "p2": 0.171917, "p3": 0.171917 },
+            "potencia_kw_any": { "p1": 39.815339, "p2": 14.227632 }
+          }
+        },
+        "EXTRA": {
+          "3_preus": {
+            "codi_oferta": "0226EXTRA2.1",
+            "energia_sin_descuento": { "p1": 0.244662, "p2": 0.234345, "p3": 0.230899 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.178604, "p2": 0.171072, "p3": 0.168557 },
+            "potencia_kw_any": { "p1": 34.815339, "p2": 9.227632 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226EXTRA1P2.1",
+            "energia_sin_descuento": { "p1": 0.188697, "p2": 0.188697, "p3": 0.188697 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.137749, "p2": 0.137749, "p3": 0.137749 },
+            "potencia_kw_any": { "p1": 40.764413, "p2": 34.018385 }
+          }
+        },
+        "PROF": {
+          "3_preus": {
+            "codi_oferta": "0226PROF2.1",
+            "energia_sin_descuento": { "p1": 0.311435, "p2": 0.213173, "p3": 0.158216 },
+            "descuento_percent": 28.0,
+            "energia_con_descuento": { "p1": 0.224234, "p2": 0.153485, "p3": 0.113916 },
+            "potencia_kw_any": { "p1": 32.496149, "p2": 6.826865 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226PROF1P2.1",
+            "energia_sin_descuento": { "p1": 0.216571, "p2": 0.216571, "p3": 0.216571 },
+            "descuento_percent": 28.0,
+            "energia_con_descuento": { "p1": 0.155931, "p2": 0.155931, "p3": 0.155931 },
+            "potencia_kw_any": { "p1": 32.496149, "p2": 6.826865 }
+          }
+        },
+        "AHORRO": {
+          "3_preus": {
+            "codi_oferta": "0226AHORRO2.1",
+            "energia_sin_descuento": { "p1": 0.318795, "p2": 0.219274, "p3": 0.166078 },
+            "descuento_percent": 29.0,
+            "energia_con_descuento": { "p1": 0.226345, "p2": 0.155685, "p3": 0.117916 },
+            "potencia_kw_any": { "p1": 27.704413, "p2": 0.725423 }
+          },
+          "1_preu": {
+            "codi_oferta": "0226AHORRO1P2.1",
+            "energia_sin_descuento": { "p1": 0.225282, "p2": 0.225282, "p3": 0.225282 },
+            "descuento_percent": 29.0,
+            "energia_con_descuento": { "p1": 0.159950, "p2": 0.159950, "p3": 0.159950 },
+            "potencia_kw_any": { "p1": 27.704413, "p2": 0.725423 }
+          }
+        },
+        "MINI": {
+          "1_preu": {
+            "codi_oferta": "0226MINI1P2.1",
+            "energia_sin_descuento": { "p1": 0.154308, "p2": 0.154308, "p3": 0.154308 },
+            "descuento_percent": 25.5,
+            "energia_con_descuento": { "p1": 0.114960, "p2": 0.114960, "p3": 0.114960 },
+            "potencia_kw_any": { "p1": 34.390000, "p2": 34.390000 }
+          }
+        },
+        "SMART": {
+          "1_preu": {
+            "codi_oferta": "0226SMART2.1",
+            "energia_sin_descuento": { "p1": 0.177945, "p2": 0.177945, "p3": 0.177945 },
+            "descuento_percent": 27.0,
+            "energia_con_descuento": { "p1": 0.129900, "p2": 0.129900, "p3": 0.129900 },
+            "potencia_kw_any": { "p1": 40.764413, "p2": 34.018385 }
+          }
+        }
+      }
+    },
+    "domestico": {
+      "descripcio": "2.0TD - DOMESTICO",
+      "productes": {
+        "PRIME": {
+          "1_preu": {
+            "codi_oferta": "0226DOMPRIME1P",
+            "energia_sin_descuento": { "p1": 0.257452, "p2": 0.257452, "p3": 0.257452 },
+            "descuento_percent": 25.5,
+            "energia_con_descuento": { "p1": 0.191802, "p2": 0.191802, "p3": 0.191802 },
+            "potencia_kw_any": { "p1": 39.961196, "p2": 15.646803 }
+          }
+        },
+        "EXTRA": {
+          "1_preu": {
+            "codi_oferta": "0226DOMEXTRA1P",
+            "energia_sin_descuento": { "p1": 0.248049, "p2": 0.248049, "p3": 0.248049 },
+            "descuento_percent": 25.5,
+            "energia_con_descuento": { "p1": 0.184797, "p2": 0.184797, "p3": 0.184797 },
+            "potencia_kw_any": { "p1": 34.941196, "p2": 8.532723 }
+          },
+          "3_preus": {
+            "codi_oferta": "0226DOMEXTRA3P",
+            "energia_sin_descuento": { "p1": 0.341001, "p2": 0.229457, "p3": 0.198034 },
+            "descuento_percent": 25.5,
+            "energia_con_descuento": { "p1": 0.254046, "p2": 0.170946, "p3": 0.147536 },
+            "potencia_kw_any": { "p1": 34.941196, "p2": 8.532723 }
+          }
+        },
+        "MINI": {
+          "1_preu": {
+            "codi_oferta": "0226DOMMINI1P",
+            "energia_sin_descuento": { "p1": 0.159594, "p2": 0.159594, "p3": 0.159594 },
+            "descuento_percent": 25.5,
+            "energia_con_descuento": { "p1": 0.118898, "p2": 0.118898, "p3": 0.118898 },
+            "potencia_kw_any": { "p1": 34.390849, "p2": 34.390849 }
+          }
+        },
+        "WEB": {
+          "3_preus": {
+            "codi_oferta": "0126PrecioWeb",
+            "energia_sin_descuento": { "p1": 0.255086, "p2": 0.196670, "p3": 0.129253 },
+            "descuento_percent": 12.5,
+            "energia_con_descuento": { "p1": 0.223200, "p2": 0.172086, "p3": 0.113097 },
+            "potencia_kw_any": { "p1": 27.704413, "p2": 0.725423 }
+          }
+        }
+      }
+    }
+  }
+}
