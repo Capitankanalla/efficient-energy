@@ -100,6 +100,17 @@ thankyouPopup.addEventListener("click", (e) => {
 
 // Esperem que HubSpot carregui i registri els seus events globals
 document.addEventListener("DOMContentLoaded", () => {
+    // HONEYPOT — bloqueig abans d'enviar
+  document.getElementById("leadForm").addEventListener("submit", (e) => {
+    const hp1 = document.getElementById("hp_token").value.trim();
+    const hp2 = document.getElementById("hp_extra").value.trim();
+
+    if (hp1 !== "" || hp2 !== "") {
+      e.preventDefault();
+      return; // Bot detectat → no enviem res
+    }
+  });
+
   const interval = setInterval(() => {
     // Quan HubSpot estigui llest, aquest event existirà
     if (window.hsForms) {
