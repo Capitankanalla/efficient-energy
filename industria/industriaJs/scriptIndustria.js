@@ -1,4 +1,4 @@
-import { openContentModal } from '../../js/modalSeccions.js'; // revisa el path si cal
+//import { openContentModal } from '../../js/modalSeccions.js'; // revisa el path si cal
 // Animació d'aparició en scroll per a seccions d'Indústria
 const sections = document.querySelectorAll('.section');
 window.currentLang = localStorage.getItem("lang") || "es";

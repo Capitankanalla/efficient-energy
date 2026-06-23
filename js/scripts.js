@@ -1,3 +1,4 @@
+import { initFacturaUpload } from './facturaUpload.js';
 // Animació d'aparició en scroll
 const elements = document.querySelectorAll('.section, .card');
 
@@ -39,3 +40,6 @@ if (form) {
     });
 }
 
+
+// Upload de factures
+initFacturaUpload();
