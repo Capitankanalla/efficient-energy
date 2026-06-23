@@ -4,7 +4,7 @@ export function initFacturaUpload() {
 
     if (!input || !buttons.length) return;
 
-    const currentSection = window.location.pathname.split("/")[1];
+    const currentSection = window.location.pathname.split("/")[1] || 'unknown';
 
     buttons.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -12,11 +12,31 @@ export function initFacturaUpload() {
         });
     });
 
-    input.addEventListener("change", () => {
+    input.addEventListener("change", async () => {
         const file = input.files[0];
         if (!file) return;
 
-        console.log("Fitxer:", file.name);
-        console.log("Secció:", currentSection);
+        const formData = new FormData();
+        formData.append('factura', file);
+        formData.append('section', currentSection);
+
+        try {
+            const response = await fetch('/api/uploadFactura', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                console.error('Error uploading factura:', data);
+                return;
+            }
+
+            console.log('Upload OK:', data);
+            console.log('Fitxer:', file.name);
+            console.log('Secció:', currentSection);
+        } catch (error) {
+            console.error('Error al fer upload:', error);
+        }
     });
 }

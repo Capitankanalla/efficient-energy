@@ -1,4 +1,5 @@
 import { openContentModal } from '../../js/modalSeccions.js'; // verifica el path si cal
+import { initFacturaUpload } from '../../js/facturaUpload.js';
 
 const sections = document.querySelectorAll('.section');
 window.currentLang = localStorage.getItem("lang") || "es";
@@ -28,3 +29,6 @@ document.querySelectorAll('.card').forEach(card => {
         openContentModal(card.dataset.id, card.dataset.section);
     });
 });
+
+// Inicialitza el binding per pujar factures (botó + input hidden)
+initFacturaUpload();
