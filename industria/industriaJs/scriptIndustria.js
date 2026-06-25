@@ -1,4 +1,5 @@
-//import { openContentModal } from '../../js/modalSeccions.js'; // revisa el path si cal
+import { openContentModal } from '../../js/modalSeccions.js';
+import { initFacturaUpload } from '../../js/facturaUpload.js';
 // Animació d'aparició en scroll per a seccions d'Indústria
 const sections = document.querySelectorAll('.section');
 window.currentLang = localStorage.getItem("lang") || "es";
@@ -27,4 +28,7 @@ document.querySelectorAll('.card').forEach(card => {
         openContentModal(card.dataset.id, card.dataset.section);
     });
 });
+
+// Inicialitza el binding per pujar factures (botó + input hidden)
+initFacturaUpload();
 
