@@ -38,7 +38,3 @@ if (form) {
         }, 1200);
     });
 }
-
-
-// Upload de factures
-initFacturaUpload();
