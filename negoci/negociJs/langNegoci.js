@@ -35,8 +35,8 @@ async function carregarIdiomaNegoci() {
         document.querySelector('[data-id="factura"] p').textContent = neg.cardFacturaText;
 
         // CALCULADORA
-        document.querySelector(".section-cta-final h2").textContent = ind.ctaTitle;
-        document.querySelector(".section-cta-final .section-lead").textContent = ind.ctaLead;
+        document.querySelector(".section-cta-final h2").textContent = neg.ctaTitle;
+        document.querySelector(".section-cta-final .section-lead").textContent = neg.ctaLead;
         document.querySelector(".section-calculadora h2").textContent = neg.calcTitle;
         document.querySelector(".section-calculadora .section-lead").textContent = neg.calcLead;
         document.querySelector(".calculadora-placeholder p").textContent = neg.calcPlaceholder;
