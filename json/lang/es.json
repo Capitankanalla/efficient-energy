@@ -47,6 +47,11 @@
     "negoci": "Negocio",
     "industria": "Industria"
   },
+  "calculator": {
+    "title": "UTILIZA NUESTRA CALCULADORA PARA GESTIONAR TUS RECURSOS",
+    "button": "Calcula tu tarifa",
+    "link": "./html/calculadora.html"
+  },
   "industria": {
     "heroTitle": "Eficiencia energética para la industria",
     "heroSubtitle": "Reducimos costes operativos mejorando el rendimiento energético de procesos e instalaciones.",
@@ -320,10 +325,10 @@
     "cardAutoconsumText": "Autoconsumo individual o colectivo: cómo funciona la generación propia y la compensación de excedentes en la factura.",
     "calcTitle": "Estimación de ahorro",
     "calcLead": [
-       "Entra en nuestra calculadora de ahorro y descubre cuánto te puedes ahorrar en\n",
-       "tu suministro. Recomendamos tener a mano una factura reciente para poder aportar\n",
-       "algunos datos necesarios para realizar los cálculos estimativos.\n",
-       ""
+      "Entra en nuestra calculadora de ahorro y descubre cuánto te puedes ahorrar en\n",
+      "tu suministro. Recomendamos tener a mano una factura reciente para poder aportar\n",
+      "algunos datos necesarios para realizar los cálculos estimativos.\n",
+      ""
     ],
     "calcPlaceholder": "Ve a la calculadora de ahorro.",
     "ctaFinalTitle": "¿Quieres que analicemos tu suministro?",

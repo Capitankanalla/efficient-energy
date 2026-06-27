@@ -52,6 +52,20 @@ function applyTranslations(data) {
     }
 
     // -----------------------------
+// CALCULATOR
+// -----------------------------
+if (data.calculator) {
+    const title = document.querySelector("#calculator-title");
+    const btn = document.querySelector("#cta-selector");
+
+    if (title) title.textContent = data.calculator.title;
+    if (btn) {
+        btn.textContent = data.calculator.button;
+        btn.href = data.calculator.link;
+    }
+}
+
+    // -----------------------------
     // WHY CONSULTANT
     // -----------------------------
     if (data.whyConsultant) {

@@ -47,6 +47,11 @@
     "negoci": "Business",
     "industria": "Industry"
   },
+  "calculator": {
+    "title": "USE OUR CALCULATOR TO MANAGE YOUR ENERGY RESOURCES",
+    "button": "Calculate your tariff",
+    "link": "./html/calculadora.html"
+  },
   "industria": {
     "heroTitle": "Energy efficiency for industry",
     "heroSubtitle": "We reduce operating costs by improving the energy performance of processes and installations.",

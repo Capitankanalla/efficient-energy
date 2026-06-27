@@ -47,6 +47,11 @@
     "negoci": "Negoci",
     "industria": "Indústria"
   },
+  "calculator": {
+    "title": "UTILITZA LA NOSTRA CALCULADORA PER GESTIONAR ELS TEUS RECURSOS",
+    "button": "Calcula la teva tarifa",
+    "link": "./html/calculadora.html"
+  },
   "industria": {
     "heroTitle": "Eficiència energètica per a la indústria",
     "heroSubtitle": "Reduïm costos operatius millorant el rendiment energètic de processos i instal·lacions.",
