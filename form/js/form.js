@@ -77,7 +77,7 @@ const closeThankyou = document.getElementById("closeThankyou");
 function showThankyouPopup() {
   thankyouPopup.classList.remove("hidden");
 
-  // Tancar automàticament als 6 segons
+  // Tancar automàticament als 10 segons
   setTimeout(() => {
     thankyouPopup.classList.add("hidden");
     window.location.href = "../index.html";
