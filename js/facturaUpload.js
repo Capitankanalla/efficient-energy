@@ -21,7 +21,7 @@ export function initFacturaUpload() {
         formData.append('section', currentSection);
 
         try {
-            const response = await fetch('/api/uploadFactura', {
+            const response = await fetch('./netlify/functions/uploadFactura', {
                 method: 'POST',
                 body: formData,
             });
