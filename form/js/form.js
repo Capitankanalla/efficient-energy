@@ -100,23 +100,33 @@ thankyouPopup.addEventListener("click", (e) => {
 
 // Esperem que HubSpot carregui i registri els seus events globals
 document.addEventListener("DOMContentLoaded", () => {
+    // HONEYPOT — bloqueig abans d'enviar
   document.getElementById("leadForm").addEventListener("submit", (e) => {
-    // HONEYPOT
     const hp1 = document.getElementById("hp_token").value.trim();
     const hp2 = document.getElementById("hp_extra").value.trim();
+
     if (hp1 !== "" || hp2 !== "") {
       e.preventDefault();
-      return;
+      return; // Bot detectat → no enviem res
     }
-
-    // HubSpot captura el submit normalment (no fem preventDefault)
-    // Nosaltres mostrem el feedback visualment
-    showThankyouPopup();
-
-    const form = document.getElementById("leadForm");
-    if (form) form.reset();
-    if (legalCheck) legalCheck.disabled = true;
-    if (submitBtn) submitBtn.disabled = true;
   });
-});
 
+  const interval = setInterval(() => {
+    // Quan HubSpot estigui llest, aquest event existirà
+    if (window.hsForms) {
+      clearInterval(interval);
+
+      window.addEventListener("hs-form-event:on-form-submit", () => {
+        showThankyouPopup();
+
+        const leadForm = document.getElementById("leadForm");
+        if (leadForm) leadForm.reset();
+
+        const legalCheck = document.getElementById("legalCheck");
+        const submitBtn = document.querySelector("button[type='submit']");
+        if (legalCheck) legalCheck.disabled = true;
+        if (submitBtn) submitBtn.disabled = true;
+      });
+    }
+  }, 100);
+});
