@@ -52,8 +52,32 @@ Prioritza disseny → contingut → funcionalitat
 
 [X] Preparar estructura multiidioma
 
-[ ] Crear backend per formularis
+[X] Crear backend per formularis
 
-[ ] Desplegar backend
+[X] Desplegar backend
 
-[ ] Connectar frontend + backend
+[X] Connectar frontend + backend
+
+✅ TODO ràpid (opció pujar factura i gestionar-la)
+FRONTEND
+☐ Popup amb form (nom, cognoms, email, tel)
+☐ Botó continuar → guardar dades
+☐ Input file (factura)
+☐ Crear FormData amb tot
+☐ fetch a /.netlify/functions/uploadFactura
+BACKEND
+☐ Rebre camps + fitxer
+☐ Validar (si falta algo → error)
+☐ Respondre:
+OK → { ok: true }
+KO → { error: "..." }
+UX (IMPORTANT)
+☐ Loading (“Enviant…”)
+☐ Success (“Factura rebuda”)
+☐ Error visible
+HUBSPOT (després)
+☐ Crear contacte amb email + tel
+☐ (opcional) guardar info factura
+🎯 OBJECTIU D’AVUI
+
+👉 veure un ok: true al navegador després del upload
