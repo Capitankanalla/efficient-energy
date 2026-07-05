@@ -200,3 +200,11 @@ body {
 .close-btn:hover {
     color: #000;
 }
+
+/* FORMULARI FACTURA (dins del #content-modal) */
+#content-modal form {
+    border-top: none;
+    padding-top: 0;
+    max-width: 100%;
+    gap: 12px;
+}
