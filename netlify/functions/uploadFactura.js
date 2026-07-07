@@ -3,7 +3,7 @@ const { getStore } = require('@netlify/blobs');
 const { Resend } = require('resend');
 const hubspot = require('@hubspot/api-client');
 
-const MAX_FILE_SIZE = 4 * 1024 * 1024; // 4MB — límit real de Netlify Functions
+const MAX_FILE_SIZE = 6 * 1024 * 1024; // 6MB — límit real de Netlify Functions
 const ALLOWED_MIME_TYPES = [
   'application/pdf',
   'image/jpeg',
@@ -143,29 +143,29 @@ exports.handler = async (event) => {
         // -------------------------
         // 2. EMAIL (Resend)
         // -------------------------
-        try {
-          const resend = new Resend(process.env.RESEND_API_KEY);
-          await resend.emails.send({
-            from:    process.env.MAIL_FROM || 'Factures <onboarding@resend.dev>',
-            to:      process.env.NOTIFY_EMAIL,
-            replyTo: email,
-            subject: `📄 Nova factura — ${name}`,
-            html: `
-              <p><b>Nom:</b> ${name}</p>
-              <p><b>Email:</b> ${email}</p>
-              <p><b>Telèfon:</b> ${phone}</p>
-              <p><b>Secció:</b> ${section}</p>
-              ${message ? `<p><b>Comentari:</b> ${message}</p>` : ''}
-              <p><b>Fitxer:</b> ${fileName}</p>
-              <p><b>ID:</b> ${id}</p>
-            `,
-            attachments: [{ filename: fileName, content: fileBuffer.toString('base64') }]
-          });
-          result.email = { ok: true };
-        } catch (err) {
-          console.error('[Resend] Error enviant el correu:', err);
-          result.email = { ok: false, error: 'Error enviant el correu' };
-        }
+        // try {
+        //   const resend = new Resend(process.env.RESEND_API_KEY);
+        //   await resend.emails.send({
+        //     from:    process.env.MAIL_FROM || 'Factures <onboarding@resend.dev>',
+        //     to:      process.env.NOTIFY_EMAIL,
+        //     replyTo: email,
+        //     subject: `📄 Nova factura — ${name}`,
+        //     html: `
+        //       <p><b>Nom:</b> ${name}</p>
+        //       <p><b>Email:</b> ${email}</p>
+        //       <p><b>Telèfon:</b> ${phone}</p>
+        //       <p><b>Secció:</b> ${section}</p>
+        //       ${message ? `<p><b>Comentari:</b> ${message}</p>` : ''}
+        //       <p><b>Fitxer:</b> ${fileName}</p>
+        //       <p><b>ID:</b> ${id}</p>
+        //     `,
+        //     attachments: [{ filename: fileName, content: fileBuffer.toString('base64') }]
+        //   });
+        //   result.email = { ok: true };
+        // } catch (err) {
+        //   console.error('[Resend] Error enviant el correu:', err);
+        //   result.email = { ok: false, error: 'Error enviant el correu' };
+        // }
 
         // -------------------------
         // 3. HUBSPOT
