@@ -229,7 +229,7 @@ export function initFacturaUpload() {
             const controller = new AbortController();
             const timeoutId  = setTimeout(() => controller.abort(), 30000);
 
-            const response = await fetch('/api/uploadFactura', {
+            const response = await fetch('/.netlify/functions/uploadFactura', {
                 method: 'POST',
                 body:   formData,
                 signal: controller.signal,

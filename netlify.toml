@@ -4,7 +4,4 @@
 
 [dev]
   functions = "netlify/functions"
-[[redirects]]
-  from = "/api/uploadFactura"
-  to = "/.netlify/functions/uploadFactura"
-  status = 200
+  
