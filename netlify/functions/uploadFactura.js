@@ -125,47 +125,47 @@ exports.handler = async (event) => {
         // -------------------------
         // 1. STORAGE (Netlify Blobs)
         // -------------------------
-        try {
-          const store = getStore('factures');
-          await store.set(id, fileBuffer, {
-            metadata: { email, name, phone, fileName, mimeType, section }
-          });
-          await store.set(`tracking-${id}.json`, JSON.stringify({
-            id, status: 'stored', email, name, phone, section,
-            createdAt: new Date().toISOString()
-          }));
-          result.blobs = { ok: true, id };
-        } catch (err) {
-          console.error('[Blobs] Error desant la factura:', err);
-          result.blobs = { ok: false, error: 'Error desant la factura' };
-        }
+        // try {
+        //   const store = getStore('factures');
+        //   await store.set(id, fileBuffer, {
+        //     metadata: { email, name, phone, fileName, mimeType, section }
+        //   });
+        //   await store.set(`tracking-${id}.json`, JSON.stringify({
+        //     id, status: 'stored', email, name, phone, section,
+        //     createdAt: new Date().toISOString()
+        //   }));
+        //   result.blobs = { ok: true, id };
+        // } catch (err) {
+        //   console.error('[Blobs] Error desant la factura:', err);
+        //   result.blobs = { ok: false, error: 'Error desant la factura' };
+        // }
 
         // -------------------------
         // 2. EMAIL (Resend)
         // -------------------------
-        // try {
-        //   const resend = new Resend(process.env.RESEND_API_KEY);
-        //   await resend.emails.send({
-        //     from:    process.env.MAIL_FROM || 'Factures <onboarding@resend.dev>',
-        //     to:      process.env.NOTIFY_EMAIL,
-        //     replyTo: email,
-        //     subject: `📄 Nova factura — ${name}`,
-        //     html: `
-        //       <p><b>Nom:</b> ${name}</p>
-        //       <p><b>Email:</b> ${email}</p>
-        //       <p><b>Telèfon:</b> ${phone}</p>
-        //       <p><b>Secció:</b> ${section}</p>
-        //       ${message ? `<p><b>Comentari:</b> ${message}</p>` : ''}
-        //       <p><b>Fitxer:</b> ${fileName}</p>
-        //       <p><b>ID:</b> ${id}</p>
-        //     `,
-        //     attachments: [{ filename: fileName, content: fileBuffer.toString('base64') }]
-        //   });
-        //   result.email = { ok: true };
-        // } catch (err) {
-        //   console.error('[Resend] Error enviant el correu:', err);
-        //   result.email = { ok: false, error: 'Error enviant el correu' };
-        // }
+        try {
+          const resend = new Resend(process.env.RESEND_API_KEY);
+          await resend.emails.send({
+            from:    process.env.MAIL_FROM || 'Factures <onboarding@resend.dev>',
+            to:      process.env.NOTIFY_EMAIL,
+            replyTo: email,
+            subject: `📄 Nova factura — ${name}`,
+            html: `
+              <p><b>Nom:</b> ${name}</p>
+              <p><b>Email:</b> ${email}</p>
+              <p><b>Telèfon:</b> ${phone}</p>
+              <p><b>Secció:</b> ${section}</p>
+              ${message ? `<p><b>Comentari:</b> ${message}</p>` : ''}
+              <p><b>Fitxer:</b> ${fileName}</p>
+              <p><b>ID:</b> ${id}</p>
+            `,
+            attachments: [{ filename: fileName, content: fileBuffer.toString('base64') }]
+          });
+          result.email = { ok: true };
+        } catch (err) {
+          console.error('[Resend] Error enviant el correu:', err);
+          result.email = { ok: false, error: 'Error enviant el correu' };
+        }
 
         // -------------------------
         // 3. HUBSPOT
@@ -205,13 +205,13 @@ exports.handler = async (event) => {
 
         // -------------------------
         // RESPONSE
-        // La factura es considera rebuda si Blobs ha funcionat.
+        // La factura es considera rebuda si resend ha funcionat.
         // Resend i HubSpot es reportem però no bloquegen la resposta.
         // -------------------------
-        const statusCode = result.blobs.ok ? 200 : 500;
+        const statusCode = result.email.ok ? 200 : 500;  //Canvi de result.blobs a result.email
         return safeResolve({
           statusCode,
-          body: JSON.stringify({ ok: result.blobs.ok, result })
+          body: JSON.stringify({ ok: result.email.ok, result })  
         });
 
       } catch (err) {
