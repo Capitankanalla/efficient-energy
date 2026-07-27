@@ -5,16 +5,16 @@ const MAX_SIZE = 4 * 1024 * 1024;
 const ALLOWED_TYPES = ['application/pdf', 'image/jpeg', 'image/png'];
 
 // ---------------------------------------------------------------------------
-// POPUP — reutilitza el #content-modal que ja existeix a industria/llar/negoci
+// POPUP LEAD — reutilitza el #content-modal existent
 // ---------------------------------------------------------------------------
 function openLeadModal() {
     return new Promise((resolve) => {
-        const modal     = document.getElementById('content-modal');
-        const titleEl   = document.getElementById('content-modal-title');
-        const bodyEl    = document.getElementById('content-modal-body');
-        const closeBtn  = document.getElementById('content-modal-close');
+        const modal    = document.getElementById('content-modal');
+        const titleEl  = document.getElementById('content-modal-title');
+        const bodyEl   = document.getElementById('content-modal-body');
+        const closeBtn = document.getElementById('content-modal-close');
 
-        const lang = window.currentLang || 'ca';
+        const lang = window.currentLang || 'es';
         titleEl.textContent = lang === 'ca' ? 'Afegeix la teva factura'
                             : lang === 'en' ? 'Upload your invoice'
                             :                 'Sube tu factura';
@@ -41,8 +41,7 @@ function openLeadModal() {
                         style="background:#eee;color:#333;padding:10px 16px;border:none;border-radius:6px;cursor:pointer;">
                         ${lang === 'ca' ? 'Cancel·lar' : lang === 'en' ? 'Cancel' : 'Cancelar'}
                     </button>
-                    <button type="submit"
-                        style="padding:10px 16px;">
+                    <button type="submit" style="padding:10px 16px;">
                         ${lang === 'ca' ? 'Continuar' : lang === 'en' ? 'Continue' : 'Continuar'}
                     </button>
                 </div>
@@ -59,14 +58,11 @@ function openLeadModal() {
             modal.classList.remove('open');
             bodyEl.innerHTML = '';
             titleEl.textContent = '';
-            // Tornem a connectar el listener de tancament original del modal
             resolve(result);
         };
 
-        cancelBtn.addEventListener('click',  () => close(null));
+        cancelBtn.addEventListener('click', () => close(null));
 
-        // Tancament clicant fora (el listener original de modalSeccions.js ja ho fa,
-        // però quan resolve null aquí ja no cal fer res més)
         const outsideClick = (e) => {
             if (e.target === modal) {
                 close(null);
@@ -103,6 +99,79 @@ function openLeadModal() {
 
         form.querySelector('input[name="name"]').focus();
     });
+}
+
+// ---------------------------------------------------------------------------
+// SPINNER al modal mentre s'envia
+// ---------------------------------------------------------------------------
+function showModalSpinner() {
+    const lang    = window.currentLang || 'es';
+    const modal   = document.getElementById('content-modal');
+    const titleEl = document.getElementById('content-modal-title');
+    const bodyEl  = document.getElementById('content-modal-body');
+
+    titleEl.textContent = lang === 'ca' ? 'Enviant factura...'
+                        : lang === 'en' ? 'Sending invoice...'
+                        :                 'Enviando factura...';
+    bodyEl.innerHTML = `
+        <div style="display:flex;flex-direction:column;align-items:center;padding:32px 0;gap:16px;">
+            <div style="width:48px;height:48px;border:4px solid #e0e0e0;border-top-color:#333;border-radius:50%;animation:spinFactura 0.8s linear infinite;"></div>
+            <p style="color:#555;margin:0;">
+                ${lang === 'ca' ? 'Si us plau, espera un moment...'
+                : lang === 'en' ? 'Please wait a moment...'
+                :                 'Por favor, espera un momento...'}
+            </p>
+        </div>
+        <style>@keyframes spinFactura { to { transform: rotate(360deg); } }</style>
+    `;
+    modal.classList.add('open');
+}
+
+// ---------------------------------------------------------------------------
+// FEEDBACK al modal un cop finalitzat l'enviament
+// ---------------------------------------------------------------------------
+function showModalFeedback(ok, errorMsg) {
+    const lang     = window.currentLang || 'es';
+    const modal    = document.getElementById('content-modal');
+    const titleEl  = document.getElementById('content-modal-title');
+    const bodyEl   = document.getElementById('content-modal-body');
+    const closeBtn = document.getElementById('content-modal-close');
+
+    titleEl.textContent = ok
+        ? (lang === 'ca' ? '✓ Factura enviada!'    : lang === 'en' ? '✓ Invoice received!'  : '✓ ¡Factura enviada!')
+        : (lang === 'ca' ? 'Error en l\'enviament' : lang === 'en' ? 'Upload error'          : 'Error en el envío');
+
+    const msgOk = lang === 'ca' ? 'Hem rebut la teva factura. En breu t\'enviarem l\'auditoria energètica.'
+                : lang === 'en' ? 'We have received your invoice. We will contact you soon with the energy audit.'
+                :                 'Hemos recibido tu factura. Pronto te enviaremos la auditoría energética.';
+
+    const msgErr = errorMsg
+        || (lang === 'ca' ? 'No s\'ha pogut enviar. Si us plau, torna-ho a intentar.'
+           : lang === 'en' ? 'Could not send the invoice. Please try again.'
+           :                 'No se ha podido enviar. Por favor, inténtalo de nuevo.');
+
+    const btnLabel = lang === 'ca' ? 'Tancar' : lang === 'en' ? 'Close' : 'Cerrar';
+
+    bodyEl.innerHTML = `
+        <div style="text-align:center;padding:24px 0 8px;">
+            <p style="font-size:2.5rem;margin:0;">${ok ? '✅' : '❌'}</p>
+            <p style="margin:16px 0 24px;color:${ok ? '#333' : '#c0392b'};">${ok ? msgOk : msgErr}</p>
+            <button id="feedbackCloseBtn"
+                style="padding:10px 28px;border:none;border-radius:6px;background:#111;color:#fff;cursor:pointer;font-size:15px;">
+                ${btnLabel}
+            </button>
+        </div>
+    `;
+
+    const tancar = () => {
+        modal.classList.remove('open');
+        bodyEl.innerHTML = '';
+        titleEl.textContent = '';
+    };
+
+    document.getElementById('feedbackCloseBtn').addEventListener('click', tancar);
+    closeBtn.addEventListener('click', tancar, { once: true });
+    modal.addEventListener('click', (e) => { if (e.target === modal) tancar(); }, { once: true });
 }
 
 // ---------------------------------------------------------------------------
@@ -150,7 +219,6 @@ async function compressImage(file, maxSizeBytes, maxDimension = 2000) {
 export function initFacturaUpload() {
     const input   = document.querySelector('[data-factura-input]');
     const buttons = document.querySelectorAll('[data-factura-btn]');
-    const status  = document.querySelector('[data-factura-status]');
 
     if (!input || !buttons.length) return;
 
@@ -161,12 +229,6 @@ export function initFacturaUpload() {
     function setUploading(value) {
         isUploading = value;
         buttons.forEach(btn => btn.disabled = value);
-    }
-
-    function showStatus(message, isError = false) {
-        if (!status) return;
-        status.textContent = message;
-        status.classList.toggle('error', isError);
     }
 
     buttons.forEach(btn => {
@@ -184,7 +246,7 @@ export function initFacturaUpload() {
         if (!file || !pendingData) return;
 
         if (!ALLOWED_TYPES.includes(file.type)) {
-            showStatus('Format no permès. Adjunta un PDF o imatge.', true);
+            showModalFeedback(false, null);
             input.value = '';
             return;
         }
@@ -194,7 +256,6 @@ export function initFacturaUpload() {
         const isImage = file.type === 'image/jpeg' || file.type === 'image/png';
 
         if (isImage) {
-            showStatus('Optimitzant la imatge...');
             try {
                 const compressed = await compressImage(file, MAX_SIZE);
                 if (compressed) {
@@ -207,7 +268,7 @@ export function initFacturaUpload() {
         }
 
         if (fileToUpload.size > MAX_SIZE) {
-            showStatus('El fitxer és massa gran, fins i tot comprimint-lo (màx. 4MB).', true);
+            showModalFeedback(false, 'El fitxer és massa gran (màx. 4MB).');
             input.value = '';
             return;
         }
@@ -223,7 +284,7 @@ export function initFacturaUpload() {
         formData.append('hp_extra', pendingData.hp_extra);
 
         setUploading(true);
-        showStatus('Pujant factura...');
+        showModalSpinner();
 
         try {
             const controller = new AbortController();
@@ -237,14 +298,11 @@ export function initFacturaUpload() {
             clearTimeout(timeoutId);
 
             const data = await response.json();
-            if (!response.ok) {
-                showStatus(data.error || 'Hi ha hagut un error pujant la factura.', true);
-                return;
-            }
-            showStatus('Factura rebuda correctament!');
+            showModalFeedback(response.ok && data.ok, data.error || null);
+
         } catch (error) {
             console.error('Error al fer upload:', error);
-            showStatus('Hi ha hagut un error de connexió.', true);
+            showModalFeedback(false, null);
         } finally {
             setUploading(false);
             input.value = '';
