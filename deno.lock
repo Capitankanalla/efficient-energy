@@ -12,11 +12,11 @@
     "packageJson": {
       "dependencies": [
         "npm:@hubspot/api-client@^13.5.0",
-        "npm:@netlify/blobs@^10.7.9",
+        "npm:@netlify/blobs@^10.1.0",
         "npm:busboy@^1.6.0",
         "npm:dotenv@^17.4.2",
         "npm:express@^5.2.1",
-        "npm:resend@^6.16.0"
+        "npm:nodemailer@^9.0.3"
       ]
     }
   }
