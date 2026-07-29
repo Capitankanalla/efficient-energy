@@ -38,8 +38,8 @@ async function carregarIdiomaNegoci() {
         document.querySelector(".section-cta-final h2").textContent = neg.ctaTitle;
         document.querySelector(".section-cta-final .section-lead").textContent = neg.ctaLead;
         document.querySelector(".section-calculadora h2").textContent = neg.calcTitle;
-        document.querySelector(".section-calculadora .section-lead").textContent = neg.calcLead;
         document.querySelector(".calculadora-placeholder p").textContent = neg.calcPlaceholder;
+        document.querySelector(".section-calculadora .cta").textContent = data.calculator.button;
 
         // CTA FINAL
         document.querySelector(".section-cta-final h2").textContent = neg.ctaFinalTitle;
