@@ -38,6 +38,7 @@ async function carregarIdiomaLlar() {
         document.querySelector(".section-calculadora h2").textContent = llar.calcTitle;
         document.querySelector(".section-calculadora .section-lead").textContent = llar.calcLead;
         document.querySelector(".calculadora-placeholder p").textContent = llar.calcPlaceholder;
+        document.querySelector(".section-calculadora .cta").textContent = data.calculator.button;
 
         // CTA FINAL
         document.querySelector(".section-cta-final h2").textContent = llar.ctaFinalTitle;
