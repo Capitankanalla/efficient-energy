@@ -49,6 +49,8 @@ async function carregarIdiomaIndustria() {
         document.querySelector(".section-calculadora h2").textContent = ind.calcTitle;
         document.querySelector(".section-calculadora .section-lead").textContent = ind.calcLead;
         document.querySelector(".calculadora-placeholder p").textContent = ind.calcPlaceholder;
+        document.querySelector(".section-calculadora .cta").textContent = data.calculator.button; 
+
     
 
     } catch (error) {
