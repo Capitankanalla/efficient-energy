@@ -141,9 +141,9 @@ function showModalFeedback(ok, errorMsg) {
         ? (lang === 'ca' ? '✓ Factura enviada!'    : lang === 'en' ? '✓ Invoice received!'  : '✓ ¡Factura enviada!')
         : (lang === 'ca' ? 'Error en l\'enviament' : lang === 'en' ? 'Upload error'          : 'Error en el envío');
 
-    const msgOk = lang === 'ca' ? 'Hem rebut la teva factura. En breu t\'enviarem l\'auditoria energètica.'
-                : lang === 'en' ? 'We have received your invoice. We will contact you soon with the energy audit.'
-                :                 'Hemos recibido tu factura. Pronto te enviaremos la auditoría energética.';
+    const msgOk = lang === 'ca' ? 'Hem rebut la teva factura. En breu ens posarem en contacte amb tú.'
+                : lang === 'en' ? 'We have received your invoice. We will contact you soon.'
+                :                 'Hemos recibido tu factura correctamente. En breve nos pondremos en contacto contigo.';
 
     const msgErr = errorMsg
         || (lang === 'ca' ? 'No s\'ha pogut enviar. Si us plau, torna-ho a intentar.'
