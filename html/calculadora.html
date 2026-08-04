@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Calculadora d'estalvi energètic</title>
+  <title>Calculadora d'estalvi</title>
   <link rel="stylesheet" href="../css/calculadora.css">
 </head>
 
@@ -17,16 +17,16 @@
   </header>
 
   <div class="calc">
-    <h2 data-i18n="titol">Calculadora d'estalvi energètic</h2>
+    <h2 data-i18n="titol">Calcula el teu estalvi</h2>
 
     <!-- DROPDOWN SEGMENT (només visible sense paràmetre URL) -->
     <div id="bloc-dropdown" class="ocult">
-      <label data-i18n="dropdown_segment">Quin tipus de subministrament tens?</label>
+      <label data-i18n="dropdown_segment">Quin tipus de subministrament vols analitzar</label>
       <select id="dropdown-segment" onchange="setSegmentDropdown(this.value)">
         <option value="">—</option>
         <option value="llar" data-i18n="dropdown_llar">Llar / habitatge</option>
-        <option value="comunitat" data-i18n="dropdown_comunitat">Comunitat de veïns</option>
-        <option value="negoci" data-i18n="dropdown_negoci">Negoci de no més de 15 kW</option>
+        <!-- <option value="comunitat" data-i18n="dropdown_comunitat">Comunitat de veïns</option> -->
+        <option value="negoci" data-i18n="dropdown_negoci">Negoci</option>
         <option value="industria" data-i18n="segment_industria">Indústria</option>
       </select>
     </div>
@@ -43,7 +43,7 @@
         <button type="button" class="toggle-btn active" id="btn-30" onclick="setTarifa('3.0TD')"
           data-i18n="tarifa_30">3.0TD — Més de 15 kW</button>
         <button type="button" class="toggle-btn" id="btn-61" onclick="setTarifa('6.1TD')" data-i18n="tarifa_61">6.1TD —
-          Alta tensió</button>
+        </button>
       </div>
     </div>
 
