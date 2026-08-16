@@ -1,321 +1,291 @@
 // ═══════════════════════════════════════════════════════════════════════════
-// CALCULADORA D'ESTALVI ENERGÈTIC
-// Segments: llar (<10kW · 2.0TD) | negoci (10-15kW · 2.0TD) | industria (>15kW · 3.0TD/6.1TD)
-// Punts d'entrada: ?segment=llar | negoci | industria | (buit = dropdown)
-// Idiomes: localStorage key "lang" → ca | es | en
+// CALCULADORA D'ESTALVI ENERGÈTIC — 2.0TD (Llar + Negoci)
+//
+// Fase actual: NOMÉS 2.0TD. Un cop validada la lògica i integrada al codi,
+// es replicarà el mateix model per a 3.0TD i 6.1TD (indústria), i només
+// llavors s'afegirà la capa d'idiomes.
+//
+// Fonts de dades reals: /json/20td.json (mai preus hardcodejats).
+// El client MAI veu preus ni comissions — només el % d'estalvi final.
 // ═══════════════════════════════════════════════════════════════════════════
 
-// ─── TEMPORADES (Península Ibèrica) ──────────────────────────────────────
-const TEMPORADES = {
-  1:  { nom_ca:'Alta',       nom_es:'Alta',       nom_en:'High',     periodes:['P1','P2','P6'] },
-  2:  { nom_ca:'Alta',       nom_es:'Alta',       nom_en:'High',     periodes:['P1','P2','P6'] },
-  3:  { nom_ca:'Mitja-alta', nom_es:'Media-alta', nom_en:'Mid-high', periodes:['P2','P3','P6'] },
-  4:  { nom_ca:'Baixa',      nom_es:'Baja',       nom_en:'Low',      periodes:['P4','P5','P6'] },
-  5:  { nom_ca:'Baixa',      nom_es:'Baja',       nom_en:'Low',      periodes:['P4','P5','P6'] },
-  6:  { nom_ca:'Mitja',      nom_es:'Media',      nom_en:'Mid',      periodes:['P3','P4','P6'] },
-  7:  { nom_ca:'Alta',       nom_es:'Alta',       nom_en:'High',     periodes:['P1','P2','P6'] },
-  8:  { nom_ca:'Mitja',      nom_es:'Media',      nom_en:'Mid',      periodes:['P3','P4','P6'] },
-  9:  { nom_ca:'Mitja',      nom_es:'Media',      nom_en:'Mid',      periodes:['P3','P4','P6'] },
-  10: { nom_ca:'Baixa',      nom_es:'Baja',       nom_en:'Low',      periodes:['P4','P5','P6'] },
-  11: { nom_ca:'Mitja-alta', nom_es:'Media-alta', nom_en:'Mid-high', periodes:['P2','P3','P6'] },
-  12: { nom_ca:'Alta',       nom_es:'Alta',       nom_en:'High',     periodes:['P1','P2','P6'] }
-};
-
-// ─── OFERTES (substitueix pels teus preus i comissions reals) ─────────────
-// El client MAI veu preus ni comissions — només el % d'estalvi final.
-// El sistema tria l'oferta de MÀXIMA COMISSIÓ disponible per al segment.
-const OFERTES = {
-  '2.0TD': [
-    {
-      id: 'A', comissio: 45,
-      energia:  { P1: 0.119, P2: 0.119, P3: 0.119 },
-      potencia: { P1: 0.095, P3: 0.040 }
-    },
-    {
-      id: 'B', comissio: 60,
-      energia:  { P1: 0.140, P2: 0.105, P3: 0.070 },
-      potencia: { P1: 0.090, P3: 0.038 }
-    }
-  ],
-  '3.0TD': [
-    {
-      id: 'C', comissio: 50,
-      energia:  { P1:0.170, P2:0.140, P3:0.110, P4:0.080, P5:0.060, P6:0.040 },
-      potencia: { P1:0.110, P2:0.085, P3:0.065, P4:0.045, P5:0.025, P6:0.005 }
-    },
-    {
-      id: 'D', comissio: 65,
-      energia:  { P1:0.165, P2:0.135, P3:0.105, P4:0.075, P5:0.055, P6:0.035 },
-      potencia: { P1:0.105, P2:0.080, P3:0.060, P4:0.040, P5:0.022, P6:0.004 }
-    }
-  ],
-  '6.1TD': [
-    {
-      id: 'E', comissio: 55,
-      energia:  { P1:0.160, P2:0.130, P3:0.100, P4:0.070, P5:0.050, P6:0.030 },
-      potencia: { P1:0.100, P2:0.078, P3:0.058, P4:0.038, P5:0.020, P6:0.003 }
-    },
-    {
-      id: 'F', comissio: 70,
-      energia:  { P1:0.155, P2:0.125, P3:0.095, P4:0.065, P5:0.045, P6:0.025 },
-      potencia: { P1:0.095, P2:0.073, P3:0.053, P4:0.033, P5:0.018, P6:0.002 }
-    }
-  ]
-};
+const RUTA_TARIFES_20TD = '../netlify/20TD.json'; 
+const LLINDAR_ESTALVI_MINIM = 10; // % — per sota d'això, no es mostra percentatge
 
 // ─── ESTAT GLOBAL ─────────────────────────────────────────────────────────
-let segmentActual = null;   // 'llar' | 'negoci' | 'comunitat' | 'industria'
-let tarifaActual  = '2.0TD';
-let t18n          = {};     // traduccions actives
-
-// ─── i18n ─────────────────────────────────────────────────────────────────
-async function carregarIdioma() {
-  const lang = localStorage.getItem('lang') || 'ca';
-  const url  = `/i18n/${lang}.json`;
-  try {
-    const res  = await fetch(url);
-    t18n = await res.json();
-  } catch(e) {
-    // fallback bàsic si fetch falla
-    t18n = { calcular:'Calcular', estalvi_label:'d\'estalvi estimat', cta_boto:'Sol·licitar auditoria' };
-  }
-  aplicarIdioma();
-}
-
-function t(clau) { return t18n[clau] || clau; }
-
-function aplicarIdioma() {
-  // data-i18n → textContent
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const clau = el.getAttribute('data-i18n');
-    if (t18n[clau]) el.textContent = t18n[clau];
-  });
-  // data-i18n-html → innerHTML
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const clau = el.getAttribute('data-i18n-html');
-    if (t18n[clau]) el.innerHTML = t18n[clau];
-  });
-  // Actualitzar badge segment si ja està actiu
-  if (segmentActual) actualitzarBadge();
-}
-
-function nomTemporada(t) {
-  const lang = localStorage.getItem('lang') || 'ca';
-  if (lang === 'es') return t.nom_es;
-  if (lang === 'en') return t.nom_en;
-  return t.nom_ca;
-}
+let tarifes20TD     = null;  // contingut del JSON, carregat una vegada
+let entradaSegment  = null;  // 'llar' | 'negoci'
+let periodesEnergia = 1;     // 1 | 3
 
 // ─── INICIALITZACIÓ ───────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
-  await carregarIdioma();
-
-  const params  = new URLSearchParams(window.location.search);
-  const segment = params.get('segment'); // 'llar' | 'negoci' | 'industria' | null
-
-  if (segment && ['llar','negoci','industria'].includes(segment)) {
-    setSegment(segment, false);
-  } else {
-    // Pàgina general → mostra dropdown
-    document.getElementById('bloc-dropdown').classList.remove('ocult');
-  }
+  await carregarTarifes20TD();
 });
 
-// ─── SEGMENT ──────────────────────────────────────────────────────────────
-function setSegmentDropdown(val) {
-  if (!val) return;
-  const seg = val === 'comunitat' ? 'negoci' : val;
-  setSegment(seg === 'industria' ? 'industria' : (val === 'negoci' ? 'negoci' : 'llar'), false);
+async function carregarTarifes20TD() {
+  try {
+    const res = await fetch(RUTA_TARIFES_20TD);
+    tarifes20TD = await res.json();
+  } catch (e) {
+    mostrarError('No s\u2019han pogut carregar les tarifes. Torna-ho a provar més tard.');
+    console.error('Error carregant 20td.json', e);
+  }
 }
 
-function setSegment(seg, mostrarBadge = true) {
-  segmentActual = seg;
-
-  // Amaga dropdown, mostra badge si ve de pàgina específica
-  document.getElementById('bloc-dropdown').classList.add('ocult');
-
-  if (mostrarBadge || window.location.search.includes('segment=')) {
-    document.getElementById('bloc-segment-badge').classList.remove('ocult');
-    actualitzarBadge();
-  }
-
-  // Blocs visibles
-  const es20 = (seg === 'llar' || seg === 'negoci');
-  document.getElementById('bloc-20').classList.toggle('ocult', !es20);
-  document.getElementById('bloc-30').classList.toggle('ocult', es20);
-  document.getElementById('bloc-tarifa-industrial').classList.toggle('ocult', es20);
-
-  if (!es20) {
-    tarifaActual = '3.0TD';
-    document.getElementById('btn-30').classList.add('active');
-    document.getElementById('btn-61').classList.remove('active');
-  } else {
-    tarifaActual = '2.0TD';
-  }
-
+// ─── NAVEGACIÓ ENTRE PASSOS ───────────────────────────────────────────────
+function anarA(idPas) {
+  document.querySelectorAll('.wizard-step').forEach(sec => sec.classList.add('ocult'));
+  document.getElementById(idPas).classList.remove('ocult');
   ocultarResultat();
-  updateTemporada();
+  actualitzarProgres(idPas);
 }
 
-function actualitzarBadge() {
-  const mapa = {
-    llar:      t('segment_llar'),
-    negoci:    t('segment_negoci'),
-    industria: t('segment_industria')
-  };
-  document.getElementById('segment-badge-text').textContent = mapa[segmentActual] || segmentActual;
+function tornarA(idPas) {
+  anarA(idPas);
 }
 
-// ─── TARIFA INDUSTRIAL ────────────────────────────────────────────────────
-function setTarifa(tar) {
-  tarifaActual = tar;
-  document.getElementById('btn-30').classList.toggle('active', tar === '3.0TD');
-  document.getElementById('btn-61').classList.toggle('active', tar === '6.1TD');
-  ocultarResultat();
+function actualitzarProgres(idPas) {
+  const mapa = { 'pas-segment': 1, 'pas-pot-coneguda': 2, 'pas-detall': 3, 'pas-simple': 3 };
+  const actual = mapa[idPas] || 1;
+  document.querySelectorAll('.progress-step').forEach(s => {
+    const n = parseInt(s.dataset.step, 10);
+    s.classList.toggle('active', n === actual);
+    s.classList.toggle('done', n < actual);
+  });
 }
 
-// ─── TEMPORADA ────────────────────────────────────────────────────────────
-function updateTemporada() {
-  const inici  = document.getElementById('data-inici').value;
-  const infoEl = document.getElementById('info-temporada');
+// ─── PAS 1: SEGMENT ───────────────────────────────────────────────────────
+function triarSegment(seg) {
+  entradaSegment = seg; // 'llar' | 'negoci'
+  document.querySelectorAll('.segment-card').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
 
-  if (!inici || tarifaActual === '2.0TD') {
-    infoEl.classList.add('ocult');
-    return;
+  const ajuda = document.getElementById('ajuda-import-potencia');
+  if (ajuda) {
+    ajuda.textContent = seg === 'negoci'
+      ? 'Aquest import ens ajuda a estimar la teva potència contractada.'
+      : 'Aquest import és opcional per a llars, però ens ajuda a validar millor l\u2019estimació.';
   }
 
-  const mes = new Date(inici).getMonth() + 1;
-  const tmp = TEMPORADES[mes];
-  infoEl.classList.remove('ocult');
-  infoEl.innerHTML = `<strong>${t('temporada')} ${nomTemporada(tmp)}</strong> — ${t('periodes_facturats')}: <strong>${tmp.periodes.join(', ')}</strong>`;
-  renderCampsEnergia30(tmp);
+  anarA('pas-pot-coneguda');
 }
 
-function renderCampsEnergia30(tmp) {
-  const cont = document.getElementById('camps-energia-30');
-  const cols = tmp.periodes.length;
-  cont.innerHTML = `<div style="display:grid;grid-template-columns:repeat(${cols},1fr);gap:8px;margin-top:6px">` +
-    tmp.periodes.map(p => `
-      <div>
-        <label>${p} (${t('kwh')})</label>
-        <input type="number" id="30-e-${p.toLowerCase()}" placeholder="0">
-      </div>`).join('') +
-    '</div>';
+// ─── PAS 2: SAPS LA POTÈNCIA? ─────────────────────────────────────────────
+function triarPotConeguda(valor) {
+  document.getElementById('btn-pot-si').classList.toggle('active', valor === true);
+  document.getElementById('btn-pot-no').classList.toggle('active', valor === false);
+  anarA(valor ? 'pas-detall' : 'pas-simple');
+}
+
+// ─── PAS 3A: PERÍODES D'ENERGIA (1 vs 3) ──────────────────────────────────
+function triarPeriodesEnergia(n) {
+  periodesEnergia = n;
+  document.getElementById('btn-periode-1').classList.toggle('active', n === 1);
+  document.getElementById('btn-periode-3').classList.toggle('active', n === 3);
+  document.getElementById('camps-energia-1preu').classList.toggle('ocult', n !== 1);
+  document.getElementById('camps-energia-3preus').classList.toggle('ocult', n !== 3);
 }
 
 // ─── UTILS ────────────────────────────────────────────────────────────────
+function val(id) {
+  const el = document.getElementById(id);
+  return el ? (parseFloat(el.value) || 0) : 0;
+}
+
+function diesEntre(idInici, idFi) {
+  const inici = document.getElementById(idInici).value;
+  const fi = document.getElementById(idFi).value;
+  if (!inici || !fi) return null;
+  const ms = new Date(fi) - new Date(inici);
+  return ms > 0 ? Math.round(ms / 86400000) : null;
+}
+
 function mostrarError(msg) {
   const el = document.getElementById('error-msg');
   el.textContent = msg;
   el.classList.remove('ocult');
 }
-function ocultarError() { document.getElementById('error-msg').classList.add('ocult'); }
+function ocultarError() {
+  document.getElementById('error-msg').classList.add('ocult');
+}
 function ocultarResultat() {
   document.getElementById('resultat').classList.add('ocult');
+  document.getElementById('resultat').classList.remove('condicions-bones');
   document.getElementById('bloc-cta').classList.add('ocult');
   ocultarError();
 }
 
-// ─── CÀLCUL ───────────────────────────────────────────────────────────────
-function calcular() {
+// Preu mitjà de potència (€/kW/any) d'un segment, fent la mitjana entre
+// tots els productes disponibles. Només serveix com a referència per
+// estimar la potència contractada quan el lead no la sap.
+function preuPotenciaMitjaAnual(segmentObj) {
+  let suma = 0, n = 0;
+  Object.values(segmentObj.productes).forEach(producte => {
+    const variant = producte['3_preus'] || producte['1_preu'];
+    if (variant && variant.potencia_kw_any) {
+      suma += (variant.potencia_kw_any.p1 + variant.potencia_kw_any.p2) / 2;
+      n++;
+    }
+  });
+  return n ? suma / n : 0;
+}
+
+// ─── RESOLUCIÓ DE SUBSEGMENT ──────────────────────────────────────────────
+// Via detallada: potència real coneguda (kW)
+function resolSubsegmentDetallat(potP1, potP3) {
+  if (entradaSegment === 'llar') return 'domestico';
+  const potRef = Math.max(potP1, potP3);
+  return potRef <= 10 ? 'negocio_menys_10kw' : 'negocio_mes_10kw';
+}
+
+// Via simplificada: s'estima la potència a partir de l'import pagat,
+// provant primer la hipòtesi "negoci petit" (menys de 10kW). Si amb el
+// seu propi preu de referència ja surt una potència estimada > 10kW,
+// vol dir que en realitat pertany al segment "negoci gran".
+function resolSubsegmentSimple(importPotencia, dies) {
+  if (entradaSegment === 'llar') return 'domestico';
+
+  const refMenys = preuPotenciaMitjaAnual(tarifes20TD.segments.negocio_menys_10kw);
+  const kwEstMenys = refMenys > 0 ? importPotencia / ((refMenys / 365) * dies) : 0;
+
+  if (kwEstMenys > 0 && kwEstMenys <= 10) return 'negocio_menys_10kw';
+  return 'negocio_mes_10kw';
+}
+
+// ─── VIA DETALLADA: CÀLCUL ────────────────────────────────────────────────
+function calcularDetallat() {
   ocultarResultat();
 
-  if (!segmentActual) {
-    mostrarError(t('error_consum'));
-    return;
-  }
+  const potP1 = val('d-pot-p1');
+  const potP3 = val('d-pot-p3');
+  const dies = diesEntre('d-data-inici', 'd-data-fi');
 
-  const inici = document.getElementById('data-inici').value;
-  const fi    = document.getElementById('data-fi').value;
-  let dies = 30;
-  if (inici && fi) {
-    const ms = new Date(fi) - new Date(inici);
-    if (ms > 0) dies = Math.round(ms / 86400000);
-  }
+  if (!dies) { mostrarError('Introdueix les dates de la factura.'); return; }
 
-  let costActual = 0, costNou = 0;
+  let consumTotal = 0, costActualEnergia = 0;
+  const consum = {}, preuActual = {};
 
-  // ── 2.0TD (llar / negoci) ──
-  if (tarifaActual === '2.0TD') {
-    const potP1 = parseFloat(document.getElementById('20-pot-p1').value) || 0;
-    const potP3 = parseFloat(document.getElementById('20-pot-p3').value) || 0;
-    const eP1   = parseFloat(document.getElementById('20-e-p1').value)   || 0;
-    const eP2   = parseFloat(document.getElementById('20-e-p2').value)   || 0;
-    const eP3   = parseFloat(document.getElementById('20-e-p3').value)   || 0;
-    const peP1  = parseFloat(document.getElementById('20-pe-p1').value)  || 0;
-    const peP2  = parseFloat(document.getElementById('20-pe-p2').value)  || 0;
-    const peP3  = parseFloat(document.getElementById('20-pe-p3').value)  || 0;
-    const ppP1  = parseFloat(document.getElementById('20-pp-p1').value)  || 0;
-    const ppP3  = parseFloat(document.getElementById('20-pp-p3').value)  || 0;
-
-    if (!eP1 && !eP2 && !eP3) { mostrarError(t('error_consum')); return; }
-    if (!peP1 && !peP2 && !peP3) { mostrarError(t('error_preus')); return; }
-
-    costActual = eP1*peP1 + eP2*peP2 + eP3*peP3
-               + potP1*ppP1*dies + potP3*ppP3*dies;
-
-    const oferta = OFERTES['2.0TD'].slice().sort((a,b) => b.comissio - a.comissio)[0];
-    costNou = eP1*oferta.energia.P1 + eP2*oferta.energia.P2 + eP3*oferta.energia.P3
-            + potP1*oferta.potencia.P1*dies + potP3*oferta.potencia.P3*dies;
-
-  // ── 3.0TD / 6.1TD (indústria) ──
+  if (periodesEnergia === 1) {
+    const e = val('d-e-unic');
+    const p = val('d-pe-unic');
+    if (!e || !p) { mostrarError('Omple els camps de consum i preu actuals.'); return; }
+    consumTotal = e;
+    costActualEnergia = e * p;
+    consum.p1 = e; consum.p2 = e; consum.p3 = e;
   } else {
-    if (!inici) { mostrarError(t('error_data')); return; }
-    const mes = new Date(inici).getMonth() + 1;
-    const tmp = TEMPORADES[mes];
-
-    const pots     = {};
-    const ppActual = {};
-    const peActual = {};
-    [1,2,3,4,5,6].forEach(i => {
-      pots['P'+i]     = parseFloat(document.getElementById('30-pot-p'+i).value) || 0;
-      ppActual['P'+i] = parseFloat(document.getElementById('30-pp-p'+i).value) || 0;
-      peActual['P'+i] = parseFloat(document.getElementById('30-pe-p'+i).value) || 0;
-    });
-
-    const eConsum = {};
-    tmp.periodes.forEach(p => {
-      const el = document.getElementById('30-e-' + p.toLowerCase());
-      eConsum[p] = el ? (parseFloat(el.value) || 0) : 0;
-    });
-
-    const totalConsum = Object.values(eConsum).reduce((a,b) => a+b, 0);
-    if (!totalConsum) { mostrarError(t('error_consum_temporada')); return; }
-
-    const oferta = OFERTES[tarifaActual].slice().sort((a,b) => b.comissio - a.comissio)[0];
-
-    tmp.periodes.forEach(p => {
-      costActual += eConsum[p] * peActual[p];
-      costNou    += eConsum[p] * oferta.energia[p];
-    });
-    [1,2,3,4,5,6].forEach(i => {
-      const p = 'P'+i;
-      costActual += pots[p] * ppActual[p] * dies;
-      costNou    += pots[p] * oferta.potencia[p] * dies;
-    });
+    consum.p1 = val('d-e-p1'); consum.p2 = val('d-e-p2'); consum.p3 = val('d-e-p3');
+    preuActual.p1 = val('d-pe-p1'); preuActual.p2 = val('d-pe-p2'); preuActual.p3 = val('d-pe-p3');
+    consumTotal = consum.p1 + consum.p2 + consum.p3;
+    if (!consumTotal || (!preuActual.p1 && !preuActual.p2 && !preuActual.p3)) {
+      mostrarError('Omple els camps de consum i preus actuals.'); return;
+    }
+    costActualEnergia = consum.p1 * preuActual.p1 + consum.p2 * preuActual.p2 + consum.p3 * preuActual.p3;
   }
 
-  if (costActual <= 0) { mostrarError(t('error_preus_generals')); return; }
+  const preuPotActualP1 = val('d-pp-p1');
+  const preuPotActualP3 = val('d-pp-p3');
+  const costActualPotencia = potP1 * preuPotActualP1 * dies + potP3 * preuPotActualP3 * dies;
+  const costActual = costActualEnergia + costActualPotencia;
 
-  const estalviAbs = costActual - costNou;
-  const estalviPct = Math.round((estalviAbs / costActual) * 100);
-  mostrarResultat(estalviPct, estalviAbs, dies);
+  if (costActual <= 0) { mostrarError('Omple els camps de consum i preus actuals.'); return; }
+
+  const subsegment = resolSubsegmentDetallat(potP1, potP3);
+  const variantKey = periodesEnergia === 1 ? '1_preu' : '3_preus';
+  const segmentObj = tarifes20TD.segments[subsegment];
+
+  let millor = null; // { nom, estalviPct, costNou }
+
+  Object.entries(segmentObj.productes).forEach(([nom, producte]) => {
+    const variant = producte[variantKey];
+    if (!variant) return; // aquest producte no ofereix aquesta modalitat
+
+    let costNouEnergia;
+    if (periodesEnergia === 1) {
+      costNouEnergia = consumTotal * variant.energia_con_descuento.p1;
+    } else {
+      costNouEnergia = consum.p1 * variant.energia_con_descuento.p1
+                      + consum.p2 * variant.energia_con_descuento.p2
+                      + consum.p3 * variant.energia_con_descuento.p3;
+    }
+    const costNouPotencia = potP1 * (variant.potencia_kw_any.p1 / 365) * dies
+                           + potP3 * (variant.potencia_kw_any.p2 / 365) * dies;
+    const costNou = costNouEnergia + costNouPotencia;
+    const estalviPct = ((costActual - costNou) / costActual) * 100;
+
+    if (!millor || estalviPct > millor.estalviPct) {
+      millor = { nom, estalviPct, costNou };
+    }
+  });
+
+  if (!millor) { mostrarError('No hi ha cap producte disponible per a aquest perfil.'); return; }
+
+  const estalviEur = costActual - millor.costNou;
+  mostrarResultat(millor.estalviPct, estalviEur, dies, false);
+}
+
+// ─── VIA SIMPLIFICADA: CÀLCUL ─────────────────────────────────────────────
+function calcularSimplificat() {
+  ocultarResultat();
+
+  const dies = diesEntre('s-data-inici', 's-data-fi');
+  if (!dies) { mostrarError('Introdueix les dates de la factura.'); return; }
+
+  const importEnergia = val('s-import-energia');
+  const importPotencia = val('s-import-potencia');
+
+  if (!importEnergia) { mostrarError('Introdueix almenys l\u2019import d\u2019energia.'); return; }
+  if (entradaSegment === 'negoci' && !importPotencia) {
+    mostrarError('Per a \u2018Negoci\u2019 necessitem l\u2019import de potència per acotar la teva tarifa.'); return;
+  }
+
+  const subsegment = resolSubsegmentSimple(importPotencia, dies);
+  const segmentObj = tarifes20TD.segments[subsegment];
+
+  // S'agafa el producte amb més % de descompte disponible al segment.
+  // El descompte és el mateix independentment de la variant (1/3 preus),
+  // així que no cal saber com paga el lead les seves franges.
+  let millorDescompte = 0;
+  Object.values(segmentObj.productes).forEach(producte => {
+    const variant = producte['3_preus'] || producte['1_preu'];
+    if (variant && variant.descuento_percent > millorDescompte) {
+      millorDescompte = variant.descuento_percent;
+    }
+  });
+
+  if (!millorDescompte) { mostrarError('No hi ha cap producte disponible per a aquest perfil.'); return; }
+
+  const estalviEur = importEnergia * (millorDescompte / 100);
+  mostrarResultat(millorDescompte, estalviEur, dies, true);
 }
 
 // ─── RESULTAT ─────────────────────────────────────────────────────────────
-function mostrarResultat(pct, estalviEur, dies) {
-  const anual = (estalviEur * (365 / dies)).toFixed(0);
+function mostrarResultat(pct, estalviEur, dies, esViaSimplificada) {
   const el = document.getElementById('resultat');
+  const pctArrodonit = Math.round(pct);
+
+  if (pctArrodonit < LLINDAR_ESTALVI_MINIM) {
+    el.classList.add('condicions-bones');
+    el.innerHTML = `
+      <strong>Les teves condicions ja són bones</strong>
+      <p style="margin-top:8px">Amb les dades disponibles, el marge d\u2019estalvi és reduït. Recomanem enviar-nos la teva factura perquè el nostre equip la revisi i validi si hi ha marge real de millora.</p>
+    `;
+    el.classList.remove('ocult');
+    document.getElementById('cta-text').textContent = 'T\u2019ajudem a confirmar-ho amb una auditoria gratuïta de la teva factura.';
+    document.getElementById('bloc-cta').classList.remove('ocult');
+    return;
+  }
+
+  const anual = (estalviEur * (365 / dies)).toFixed(0);
   el.innerHTML = `
-    <span class="estalvi-pct">${pct}%</span>
-    <span class="estalvi-label">${t('estalvi_label')}</span>
-    ${t('estalvi_factura')}: <strong>${estalviEur.toFixed(2)} €</strong><br>
-    ${t('estalvi_anual')}: <strong>${anual} €</strong>
+    <span class="estalvi-pct">${pctArrodonit}%</span>
+    <span class="estalvi-label">d'estalvi estimat</span>
+    Estalvi en aquesta factura: <strong>${estalviEur.toFixed(2)} €</strong><br>
+    Estalvi anual estimat: <strong>${anual} €</strong>
+    ${esViaSimplificada ? '<span class="estalvi-avis">Estimació orientativa sobre la part d\u2019energia. La potència es validarà amb l\u2019auditoria de la factura.</span>' : ''}
   `;
   el.classList.remove('ocult');
 
-  // CTA
-  document.getElementById('cta-text').innerHTML = t18n['cta_text'] || '';
+  document.getElementById('cta-text').textContent = 'T\u2019ajudem a confirmar-ho amb una auditoria gratuïta de la teva factura.';
   document.getElementById('bloc-cta').classList.remove('ocult');
 }
 
