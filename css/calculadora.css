@@ -427,3 +427,23 @@ button:active {
   color: #777;
   line-height: 1.4;
 }
+
+/* ── Checkbox (p. ex. Alta Tensió >450kW) ── */
+.checkbox-linia {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.checkbox-linia input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}

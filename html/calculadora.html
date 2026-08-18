@@ -43,7 +43,28 @@
       </div>
     </section>
 
-    <!-- ═══════════ PAS 2 — SAPS LA POTÈNCIA? ═══════════ -->
+    <!-- ═══════════ PAS 1B — NOMÉS "NEGOCI": ÉS ≥15kW? ═══════════ -->
+    <section id="pas-negoci-tipus" class="wizard-step ocult">
+      <button type="button" class="step-back" onclick="tornarA('pas-segment')">← Enrere</button>
+      <div class="seccio">El teu subministrament té una potència contractada igual o superior a 15 kW?</div>
+      <div class="toggle-group">
+        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('si')">Sí</button>
+        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('no')">No</button>
+        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('noho_se')">No ho sé</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ PAS 1C — NO HO SÉ → PERÍODES DE POTÈNCIA ═══════════ -->
+    <section id="pas-negoci-periodes" class="wizard-step ocult">
+      <button type="button" class="step-back" onclick="tornarA('pas-negoci-tipus')">← Enrere</button>
+      <div class="seccio">Quants períodes de potència has pagat aquest mes a la factura?</div>
+      <div class="toggle-group">
+        <button type="button" class="toggle-btn" onclick="triarPeriodesPotenciaNegoci(2)">2 períodes</button>
+        <button type="button" class="toggle-btn" onclick="triarPeriodesPotenciaNegoci(6)">6 períodes</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ PAS 2 — SAPS LA POTÈNCIA? (2.0TD) ═══════════ -->
     <section id="pas-pot-coneguda" class="wizard-step ocult">
       <button type="button" class="step-back" onclick="tornarA('pas-segment')">← Enrere</button>
       <div class="seccio">Saps quina potència tens contractada (kW)?</div>
@@ -53,7 +74,7 @@
       </div>
     </section>
 
-    <!-- ═══════════ PAS 3A — VIA DETALLADA (potència coneguda) ═══════════ -->
+    <!-- ═══════════ PAS 3A — VIA DETALLADA 2.0TD (potència coneguda) ═══════════ -->
     <section id="pas-detall" class="wizard-step ocult">
       <button type="button" class="step-back" onclick="tornarA('pas-pot-coneguda')">← Enrere</button>
 
@@ -71,11 +92,11 @@
 
       <div class="grid2" style="margin-top:12px">
         <div>
-          <label>data inici període</label>
+          <label>Data inici factura</label>
           <input type="date" id="d-data-inici">
         </div>
         <div>
-          <label>Data fi període</label>
+          <label>Data fi factura</label>
           <input type="date" id="d-data-fi">
         </div>
       </div>
@@ -120,7 +141,7 @@
       <button id="btn-calcular-detall" onclick="calcularDetallat()">Calcular estalvi</button>
     </section>
 
-    <!-- ═══════════ PAS 3B — VIA SIMPLIFICADA (potència NO coneguda) ═══════════ -->
+    <!-- ═══════════ PAS 3B — VIA SIMPLIFICADA 2.0TD (potència NO coneguda) ═══════════ -->
     <section id="pas-simple" class="wizard-step ocult">
       <button type="button" class="step-back" onclick="tornarA('pas-pot-coneguda')">← Enrere</button>
 
@@ -128,11 +149,11 @@
 
       <div class="grid2">
         <div>
-          <label>Data inici període</label>
+          <label>Data inici factura</label>
           <input type="date" id="s-data-inici">
         </div>
         <div>
-          <label>Data fi període</label>
+          <label>Data fi factura</label>
           <input type="date" id="s-data-fi">
         </div>
       </div>
@@ -151,6 +172,129 @@
       <p class="camp-ajuda" id="ajuda-import-potencia">Aquest import ens ajuda a estimar la teva potència contractada.</p>
 
       <button id="btn-calcular-simple" onclick="calcularSimplificat()">Calcular estalvi</button>
+    </section>
+
+    <!-- ═══════════ PAS INDÚSTRIA — ENTRADA (checkbox AT + saps la potència?) ═══════════ -->
+    <section id="pas-industria-entrada" class="wizard-step ocult">
+      <button type="button" class="step-back" onclick="tornarA('pas-negoci-tipus')">← Enrere</button>
+
+      <label class="checkbox-linia">
+        <input type="checkbox" id="chk-at-450">
+        La potència contractada és superior a 450 kW (Alta Tensió)?
+      </label>
+
+      <div class="seccio" style="margin-top:18px">Saps quina potència tens contractada (kW)?</div>
+      <div class="toggle-group">
+        <button type="button" class="toggle-btn" id="btn-industria-pot-si" onclick="triarPotConegudaIndustria(true)">Sí</button>
+        <button type="button" class="toggle-btn" id="btn-industria-pot-no" onclick="triarPotConegudaIndustria(false)">No</button>
+      </div>
+    </section>
+
+    <!-- ═══════════ PAS INDÚSTRIA — VIA DETALLADA (P1-P6) ═══════════ -->
+    <section id="pas-industria-detall" class="wizard-step ocult">
+      <button type="button" class="step-back" onclick="tornarA('pas-industria-entrada')">← Enrere</button>
+
+      <div class="seccio">Potència contractada per període (kW)</div>
+      <div class="grid6">
+        <div><label>P1</label><input type="number" id="i-pot-p1" step="0.1" placeholder="15"></div>
+        <div><label>P2</label><input type="number" id="i-pot-p2" step="0.1" placeholder="15"></div>
+        <div><label>P3</label><input type="number" id="i-pot-p3" step="0.1" placeholder="15"></div>
+        <div><label>P4</label><input type="number" id="i-pot-p4" step="0.1" placeholder="15"></div>
+        <div><label>P5</label><input type="number" id="i-pot-p5" step="0.1" placeholder="15"></div>
+        <div><label>P6</label><input type="number" id="i-pot-p6" step="0.1" placeholder="15"></div>
+      </div>
+
+      <div class="grid2" style="margin-top:12px">
+        <div>
+          <label>Data inici factura</label>
+          <input type="date" id="i-data-inici">
+        </div>
+        <div>
+          <label>Data fi factura</label>
+          <input type="date" id="i-data-fi">
+        </div>
+      </div>
+
+      <div class="seccio">La teva tarifa actual d'energia té...</div>
+      <div class="toggle-group">
+        <button type="button" class="toggle-btn active" id="btn-industria-periode-1" onclick="triarPeriodesEnergiaIndustria(1)">Un preu únic (24h)</button>
+        <button type="button" class="toggle-btn" id="btn-industria-periode-6" onclick="triarPeriodesEnergiaIndustria(6)">6 períodes (P1-P6)</button>
+      </div>
+
+      <!-- Camps per a 1 preu -->
+      <div id="camps-industria-energia-1preu">
+        <div class="seccio">Energia consumida</div>
+        <div class="grid2">
+          <div><label>Consum total (kWh)</label><input type="number" id="i-e-unic" placeholder="2500"></div>
+          <div><label>Preu actual (€/kWh)</label><input type="number" id="i-pe-unic" step="0.0001" placeholder="0.1500"></div>
+        </div>
+      </div>
+
+      <!-- Camps per a 6 preus -->
+      <div id="camps-industria-energia-6preus" class="ocult">
+        <div class="seccio">Energia consumida per període (kWh)</div>
+        <div class="grid6">
+          <div><label>P1</label><input type="number" id="i-e-p1" placeholder="0"></div>
+          <div><label>P2</label><input type="number" id="i-e-p2" placeholder="0"></div>
+          <div><label>P3</label><input type="number" id="i-e-p3" placeholder="0"></div>
+          <div><label>P4</label><input type="number" id="i-e-p4" placeholder="0"></div>
+          <div><label>P5</label><input type="number" id="i-e-p5" placeholder="0"></div>
+          <div><label>P6</label><input type="number" id="i-e-p6" placeholder="0"></div>
+        </div>
+        <div class="seccio">Preu actual — energia per període (€/kWh)</div>
+        <div class="grid6">
+          <div><label>P1</label><input type="number" id="i-pe-p1" step="0.0001" placeholder="0"></div>
+          <div><label>P2</label><input type="number" id="i-pe-p2" step="0.0001" placeholder="0"></div>
+          <div><label>P3</label><input type="number" id="i-pe-p3" step="0.0001" placeholder="0"></div>
+          <div><label>P4</label><input type="number" id="i-pe-p4" step="0.0001" placeholder="0"></div>
+          <div><label>P5</label><input type="number" id="i-pe-p5" step="0.0001" placeholder="0"></div>
+          <div><label>P6</label><input type="number" id="i-pe-p6" step="0.0001" placeholder="0"></div>
+        </div>
+      </div>
+
+      <div class="seccio">Preu actual — potència per període (€/kW·dia)</div>
+      <div class="grid6">
+        <div><label>P1</label><input type="number" id="i-pp-p1" step="0.0001" placeholder="0"></div>
+        <div><label>P2</label><input type="number" id="i-pp-p2" step="0.0001" placeholder="0"></div>
+        <div><label>P3</label><input type="number" id="i-pp-p3" step="0.0001" placeholder="0"></div>
+        <div><label>P4</label><input type="number" id="i-pp-p4" step="0.0001" placeholder="0"></div>
+        <div><label>P5</label><input type="number" id="i-pp-p5" step="0.0001" placeholder="0"></div>
+        <div><label>P6</label><input type="number" id="i-pp-p6" step="0.0001" placeholder="0"></div>
+      </div>
+
+      <button id="btn-calcular-industria-detall" onclick="calcularIndustriaDetallat()">Calcular estalvi</button>
+    </section>
+
+    <!-- ═══════════ PAS INDÚSTRIA — VIA SIMPLIFICADA (per import) ═══════════ -->
+    <section id="pas-industria-simple" class="wizard-step ocult">
+      <button type="button" class="step-back" onclick="tornarA('pas-industria-entrada')">← Enrere</button>
+
+      <p class="info-box">Sense problema — amb el que surt a la teva última factura ja en tenim prou per fer una primera estimació.</p>
+
+      <div class="grid2">
+        <div>
+          <label>Data inici factura</label>
+          <input type="date" id="is-data-inici">
+        </div>
+        <div>
+          <label>Data fi factura</label>
+          <input type="date" id="is-data-fi">
+        </div>
+      </div>
+
+      <div class="seccio">Imports que surten desglossats a la factura</div>
+      <div class="grid2">
+        <div>
+          <label>Import terme d'energia (€)</label>
+          <input type="number" id="is-import-energia" step="0.01" placeholder="450.30">
+        </div>
+        <div>
+          <label>Import terme de potència (€)</label>
+          <input type="number" id="is-import-potencia" step="0.01" placeholder="120.80">
+        </div>
+      </div>
+
+      <button id="btn-calcular-industria-simple" onclick="calcularIndustriaSimplificat()">Calcular estalvi</button>
     </section>
 
     <div id="error-msg" class="ocult error-box"></div>
