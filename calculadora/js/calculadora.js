@@ -9,9 +9,9 @@
 // El client MAI veu preus ni comissions — només el % d'estalvi final.
 // ═══════════════════════════════════════════════════════════════════════════
 
-const RUTA_TARIFES_20TD = './20TD.json';
-const RUTA_TARIFES_30TD = './30TD.json';
-const RUTA_TARIFES_61TD = './61TD.json';
+const RUTA_TARIFES_20TD = '../../netlify/20TD.json';
+const RUTA_TARIFES_30TD = '../../netlify/30TD.json';
+const RUTA_TARIFES_61TD = '../../netlify/61TD.json';
 const LLINDAR_ESTALVI_MINIM = 10;
 
 // ─── ESTAT GLOBAL ─────────────────────────────────────────────────────────
