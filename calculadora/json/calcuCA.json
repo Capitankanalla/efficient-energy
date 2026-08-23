@@ -6,5 +6,25 @@
   "llar": "Llar",
   "negoci": "Negoci",
   "si": "Sí",
-  "no": "No"
+  "no": "No",
+  
+  "errors": {
+    "carregarTarifes": "No s’han pogut carregar les tarifes. Torna-ho a provar més tard.",
+    "datesFactura": "Introdueix les dates de la factura.",
+    "campsConsumPreus": "Omple els camps de consum i preus actuals.",
+    "producteDisponible": "No hi ha cap producte disponible per a aquest perfil.",
+    "importEnergia": "Introdueix almenys l’import d’energia.",
+    "importPotenciaNegoci": "Per a ‘Negoci’ necessitem l’import de potència per acotar la teva tarifa."
+  },
+  "resultat": {
+    "condicionsBones": "Les teves condicions ja són bones",
+    "condicionsBonesText": "Amb les dades disponibles, el marge d’estalvi és reduït. Recomanem enviar-nos la teva factura perquè el nostre equip la revisi i validi si hi ha marge real de millora.",
+    "estalviEstimat": "d'estalvi estimat",
+    "estalviFactura": "Estalvi en aquesta factura:",
+    "estalviAnual": "Estalvi anual estimat:",
+    "estimacioOrientativa": "Estimació orientativa sobre la part d’energia. La potència es validarà amb l’auditoria de la factura."
+  },
+  "cta": {
+    "auditoria": "T’ajudem a confirmar-ho amb una auditoria gratuïta de la teva factura."
+  }
 }

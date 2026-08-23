@@ -6,5 +6,25 @@
   "llar": "Home",
   "negoci": "Business",
   "si": "Yes",
-  "no": "No"
+  "no": "No",
+
+  "errors": {
+    "carregarTarifes": "The rates could not be loaded. Please try again later.",
+    "datesFactura": "Enter the invoice dates.",
+    "campsConsumPreus": "Fill in the current consumption and price fields.",
+    "producteDisponible": "There is no product available for this profile.",
+    "importEnergia": "Enter at least the energy amount.",
+    "importPotenciaNegoci": "For ‘Business’, we need the power amount to determine your tariff."
+  },
+  "resultat": {
+    "condicionsBones": "Your current conditions are already good",
+    "condicionsBonesText": "Based on the available data, the potential for savings is limited. We recommend sending us your invoice so our team can review it and check whether there is any real opportunity for improvement.",
+    "estalviEstimat": "estimated savings",
+    "estalviFactura": "Savings on this invoice:",
+    "estalviAnual": "Estimated annual savings:",
+    "estimacioOrientativa": "Indicative estimate based on the energy component. The contracted power will be validated during the invoice audit."
+  },
+  "cta": {
+    "auditoria": "We can help confirm it with a free audit of your invoice."
+  }
 }

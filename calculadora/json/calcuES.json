@@ -6,5 +6,25 @@
   "llar": "Hogar",
   "negoci": "Negocio",
   "si": "Sí",
-  "no": "No"
+  "no": "No",
+
+  "errors": {
+    "carregarTarifes": "No se han podido cargar las tarifas. Vuelve a intentarlo más tarde.",
+    "datesFactura": "Introduce las fechas de la factura.",
+    "campsConsumPreus": "Rellena los campos de consumo y precios actuales.",
+    "producteDisponible": "No hay ningún producto disponible para este perfil.",
+    "importEnergia": "Introduce al menos el importe de energía.",
+    "importPotenciaNegoci": "Para ‘Negocio’ necesitamos el importe de potencia para acotar tu tarifa."
+  },
+  "resultat": {
+    "condicionsBones": "Tus condiciones ya son buenas",
+    "condicionsBonesText": "Con los datos disponibles, el margen de ahorro es reducido. Te recomendamos enviarnos tu factura para que nuestro equipo la revise y valide si existe un margen real de mejora.",
+    "estalviEstimat": "de ahorro estimado",
+    "estalviFactura": "Ahorro en esta factura:",
+    "estalviAnual": "Ahorro anual estimado:",
+    "estimacioOrientativa": "Estimación orientativa sobre la parte de energía. La potencia se validará con la auditoría de la factura."
+  },
+  "cta": {
+    "auditoria": "Te ayudamos a confirmarlo con una auditoría gratuita de tu factura."
+  }
 }
