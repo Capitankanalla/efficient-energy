@@ -50,7 +50,7 @@
   "calculator": {
     "title": "UTILIZA NUESTRA CALCULADORA PARA GESTIONAR TU SUMINISTRO",
     "button": "Calcula tu tarifa",
-    "link": "./html/calculadora.html"
+    "link": "./calculadora/html/calculadora.html"
   },
   "industria": {
     "heroTitle": "Eficiencia energética para la industria",

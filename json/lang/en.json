@@ -50,7 +50,7 @@
   "calculator": {
     "title": "USE OUR CALCULATOR TO MANAGE YOUR ENERGY RESOURCES",
     "button": "Calculate your tariff",
-    "link": "./html/calculadora.html"
+    "link": "./calculadora/html/calculadora.html"
   },
   "industria": {
     "heroTitle": "Energy efficiency for industry",
