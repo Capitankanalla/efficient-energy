@@ -48,7 +48,7 @@
     "industria": "Indústria"
   },
   "calculator": {
-    "title": "UTILITZA LA NOSTRA CALCULADORA PER GESTIONAR ELS TEUS RECURSOS",
+    "title": "UTILITZA LA NOSTRA CALCULADORA PER GESTIONAR EL TEU SUMINISTRAMENT",
     "button": "Calcula la teva tarifa",
     "link": "./html/calculadora.html"
   },

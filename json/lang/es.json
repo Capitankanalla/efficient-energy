@@ -48,7 +48,7 @@
     "industria": "Industria"
   },
   "calculator": {
-    "title": "UTILIZA NUESTRA CALCULADORA PARA GESTIONAR TUS RECURSOS",
+    "title": "UTILIZA NUESTRA CALCULADORA PARA GESTIONAR TU SUMINISTRO",
     "button": "Calcula tu tarifa",
     "link": "./html/calculadora.html"
   },
