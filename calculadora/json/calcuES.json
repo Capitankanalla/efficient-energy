@@ -1,30 +1,93 @@
 {
-  "calculadora_titol": "Calculadora de ahorro energético",
-  "calculadora_subtitol": "Responde unas pocas preguntas y estima tu ahorro. Sin compromiso.",
-  "enrere": "← Atrás",
-  "segment_titol": "¿Qué tipo de suministro quieres analizar?",
-  "llar": "Hogar",
-  "negoci": "Negocio",
-  "si": "Sí",
-  "no": "No",
-
+  "calculadora": {
+    "calculadora.titol": "Calculadora de ahorro energético",
+    "calculadora.subtitol": "Responde unas pocas preguntas y estima tu ahorro. Sin compromiso.",
+    "enrere": "← Atrás",
+    "segment": {
+      "titol": "¿Qué tipo de suministro quieres analizar?",
+      "llar": "Hogar",
+      "negoci": "Negocio"
+    },
+    "si": "Sí",
+    "no": "No",
+    "no_ho_se": "No lo sé",
+    "negoci": {
+      "potencia_15": "¿Tu suministro tiene una potencia contratada igual o superior a 15 kW?",
+      "periodes_potencia": "¿Cuántos períodos de potencia has pagado este mes en la factura?",
+      "periodes_2": "2 períodos",
+      "periodes_6": "6 períodos"
+    },
+    "potencia": {
+      "coneguda": "¿Sabes qué potencia tienes contratada (kW)?",
+      "contractada": "Potencia contratada",
+      "p1_punta": "P1 — Punta (kW)",
+      "p3_vall": "P3 — Valle (kW)",
+      "preu_actual": "Precio actual — potencia (€/kW·día)",
+      "preu_actual_per_periode": "Precio actual — potencia por período (€/kW·día)",
+      "p1_preu": "P1 (€/kW·día)",
+      "p2_preu": "P2 (€/kW·día)",
+      "p3_preu": "P3 (€/kW·día)",
+      "p4_preu": "P4 (€/kW·día)",
+      "p5_preu": "P5 (€/kW·día)",
+      "p6_preu": "P6 (€/kW·día)"
+    },
+    "factura": {
+      "data_inici": "Fecha inicio factura",
+      "data_fi": "Fecha fin factura",
+      "imports_desglossats": "Importes que aparecen desglosados en la factura",
+      "import_energia": "Importe término de energía (€)",
+      "import_potencia": "Importe término de potencia (€)"
+    },
+    "tarifa": {
+      "energia_te": "Tu tarifa actual de energía tiene...",
+      "preu_unic": "Un precio único (24h)",
+      "periodes_3": "3 períodos (punta/llano/valle)",
+      "periodes_6": "6 períodos (P1-P6)"
+    },
+    "energia": {
+      "consumida": "Energía consumida",
+      "consumida_per_periode": "Energía consumida por período (kWh)",
+      "consum_total": "Consumo total (kWh)",
+      "preu_actual": "Precio actual (€/kWh)",
+      "preu_actual_energia": "Precio actual — energía (€/kWh)",
+      "preu_actual_energia_per_periode": "Precio actual — energía por período (€/kWh)",
+      "p1_punta": "P1 Punta (kWh)",
+      "p2_llano": "P2 Llano (kWh)",
+      "p3_vall": "P3 Valle (kWh)",
+      "p1": "P1",
+      "p2": "P2",
+      "p3": "P3",
+      "p4": "P4",
+      "p5": "P5",
+      "p6": "P6"
+    },
+    "calcular_estalvi": "Calcular ahorro",
+    "simple": {
+      "info": "Sin problema — con lo que aparece en tu última factura ya tenemos suficiente para hacer una primera estimación.",
+      "ajuda_potencia": "Este importe nos ayuda a estimar tu potencia contratada."
+    },
+    "industria": {
+      "potencia_450": "¿La potencia contratada es superior a 450 kW (Alta Tensión)?",
+      "potencia_periode": "Potencia contratada por período (kW)"
+    },
+    "cta": {
+      "auditoria": "Te ayudamos a confirmarlo con una auditoría gratuita de tu factura."
+    }
+  },
   "errors": {
-    "carregarTarifes": "No se han podido cargar las tarifas. Vuelve a intentarlo más tarde.",
-    "datesFactura": "Introduce las fechas de la factura.",
-    "campsConsumPreus": "Rellena los campos de consumo y precios actuales.",
-    "producteDisponible": "No hay ningún producto disponible para este perfil.",
-    "importEnergia": "Introduce al menos el importe de energía.",
-    "importPotenciaNegoci": "Para ‘Negocio’ necesitamos el importe de potencia para acotar tu tarifa."
+    "tarifes": "No se han podido cargar las tarifas. Vuelve a intentarlo más tarde.",
+    "dates_factura": "Introduce las fechas de la factura.",
+    "consum_preus": "Rellena los campos de consumo y precios actuales.",
+    "producte": "No hay ningún producto disponible para este perfil.",
+    "import_energia": "Introduce al menos el importe de energía.",
+    "import_potencia_negoci": "Para ‘Negocio’ necesitamos el importe de potencia para acotar tu tarifa."
   },
   "resultat": {
-    "condicionsBones": "Tus condiciones ya son buenas",
-    "condicionsBonesText": "Con los datos disponibles, el margen de ahorro es reducido. Te recomendamos enviarnos tu factura para que nuestro equipo la revise y valide si existe un margen real de mejora.",
-    "estalviEstimat": "de ahorro estimado",
-    "estalviFactura": "Ahorro en esta factura:",
-    "estalviAnual": "Ahorro anual estimado:",
-    "estimacioOrientativa": "Estimación orientativa sobre la parte de energía. La potencia se validará con la auditoría de la factura."
-  },
-  "cta": {
-    "auditoria": "Te ayudamos a confirmarlo con una auditoría gratuita de tu factura."
+    "condicions_bones": "Tus condiciones ya son buenas",
+    "marge_reduit": "Con los datos disponibles, el margen de ahorro es reducido. Te recomendamos enviarnos tu factura para que nuestro equipo la revise y valide si existe un margen real de mejora.",
+    "estalvi_estimat": "de ahorro estimado",
+    "estalvi_factura": "Ahorro en esta factura:",
+    "estalvi_anual": "Ahorro anual estimado:",
+    "avis_potencia": "Estimación orientativa sobre la parte de energía. La potencia se validará con la auditoría de la factura."
   }
 }

@@ -14,12 +14,14 @@
   </header>
 
   <header class="form-header">
-    <a href="../../index.html" class="back-link" data-text="calculadora.enrere">← Enrere</a>
+    <a href="../../index.html" class="back-link" data-text="enrere">← Enrere</a>
   </header>
 
   <div class="calc">
     <h2 data-text="calculadora.titol">Calculadora d'estalvi energètic</h2>
-    <p class="calc-subtitol" data-text="calculadora.subtitol">Respon unes poques preguntes i estima el teu estalvi. Sense compromís.</p>
+    <p class="calc-subtitol" data-text="calculadora.subtitol">
+      Respon unes poques preguntes i estima el teu estalvi. Sense compromís.
+    </p>
 
     <!-- ═══════════ PROGRÉS ═══════════ -->
     <div class="progress-bar" id="progress-bar">
@@ -30,60 +32,106 @@
 
     <!-- ═══════════ PAS 1 — SEGMENT ═══════════ -->
     <section id="pas-segment" class="wizard-step">
-      <div class="seccio" data-text="calculadora.segment.titol">Quin tipus de subministrament vols analitzar?</div>
+      <div class="seccio" data-text="calculadora.segment.titol">
+        Quin tipus de subministrament vols analitzar?
+      </div>
+
       <div class="segment-cards">
         <button type="button" class="segment-card" onclick="triarSegment('llar')">
           <span class="segment-card-icon">🏠</span>
-          <span data-text="calculadora.segment.llar">Llar</span>
+          <span data-text="calculadora.llar">Llar</span>
         </button>
+
         <button type="button" class="segment-card" onclick="triarSegment('negoci')">
           <span class="segment-card-icon">🏢</span>
-          <span data-text="calculadora.segment.negoci">Negoci</span>
+          <span data-text="calculadora.negoci">Negoci</span>
         </button>
       </div>
     </section>
 
     <!-- ═══════════ PAS 1B — NOMÉS "NEGOCI": ÉS ≥15kW? ═══════════ -->
     <section id="pas-negoci-tipus" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-segment')" data-text="calculadora.enrere">← Enrere</button>
-      <div class="seccio" data-text="calculadora.negoci.potencia_15">El teu subministrament té una potència contractada igual o superior a 15 kW?</div>
+      <button type="button" class="step-back" onclick="tornarA('pas-segment')" data-text="enrere">
+        ← Enrere
+      </button>
+
+      <div class="seccio" data-text="calculadora.negoci.potencia_15">
+        El teu subministrament té una potència contractada igual o superior a 15 kW?
+      </div>
+
       <div class="toggle-group">
-        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('si')" data-text="calculadora.si">Sí</button>
-        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('no')" data-text="calculadora.no">No</button>
-        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('noho_se')" data-text="calculadora.no_ho_se">No ho sé</button>
+        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('si')" data-text="calculadora.si">
+          Sí
+        </button>
+
+        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('no')" data-text="calculadora.no">
+          No
+        </button>
+
+        <button type="button" class="toggle-btn" onclick="triarTipusNegoci('noho_se')" data-text="calculadora.no_ho_se">
+          No ho sé
+        </button>
       </div>
     </section>
 
     <!-- ═══════════ PAS 1C — NO HO SÉ → PERÍODES DE POTÈNCIA ═══════════ -->
     <section id="pas-negoci-periodes" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-negoci-tipus')" data-text="calculadora.enrere">← Enrere</button>
-      <div class="seccio" data-text="calculadora.negoci.periodes_potencia">Quants períodes de potència has pagat aquest mes a la factura?</div>
+      <button type="button" class="step-back" onclick="tornarA('pas-negoci-tipus')" data-text="enrere">
+        ← Enrere
+      </button>
+
+      <div class="seccio" data-text="calculadora.negoci.periodes_potencia">
+        Quants períodes de potència has pagat aquest mes a la factura?
+      </div>
+
       <div class="toggle-group">
-        <button type="button" class="toggle-btn" onclick="triarPeriodesPotenciaNegoci(2)" data-text="calculadora.periodes_2">2 períodes</button>
-        <button type="button" class="toggle-btn" onclick="triarPeriodesPotenciaNegoci(6)" data-text="calculadora.periodes_6">6 períodes</button>
+        <button type="button" class="toggle-btn" onclick="triarPeriodesPotenciaNegoci(2)" data-text="calculadora.negoci.periodes_2">
+          2 períodes
+        </button>
+
+        <button type="button" class="toggle-btn" onclick="triarPeriodesPotenciaNegoci(6)" data-text="calculadora.negoci.periodes_6">
+          6 períodes
+        </button>
       </div>
     </section>
 
     <!-- ═══════════ PAS 2 — SAPS LA POTÈNCIA? (2.0TD) ═══════════ -->
     <section id="pas-pot-coneguda" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-segment')" data-text="calculadora.enrere">← Enrere</button>
-      <div class="seccio" data-text="calculadora.potencia.coneguda">Saps quina potència tens contractada (kW)?</div>
+      <button type="button" class="step-back" onclick="tornarA('pas-segment')" data-text="enrere">
+        ← Enrere
+      </button>
+
+      <div class="seccio" data-text="calculadora.potencia.coneguda">
+        Saps quina potència tens contractada (kW)?
+      </div>
+
       <div class="toggle-group">
-        <button type="button" class="toggle-btn" id="btn-pot-si" onclick="triarPotConeguda(true)" data-text="calculadora.si">Sí</button>
-        <button type="button" class="toggle-btn" id="btn-pot-no" onclick="triarPotConeguda(false)" data-text="calculadora.no">No</button>
+        <button type="button" class="toggle-btn" id="btn-pot-si" onclick="triarPotConeguda(true)" data-text="calculadora.si">
+          Sí
+        </button>
+
+        <button type="button" class="toggle-btn" id="btn-pot-no" onclick="triarPotConeguda(false)" data-text="calculadora.no">
+          No
+        </button>
       </div>
     </section>
 
-    <!-- ═══════════ PAS 3A — VIA DETALLADA 2.0TD (potència coneguda) ═══════════ -->
+    <!-- ═══════════ PAS 3A — VIA DETALLADA 2.0TD ═══════════ -->
     <section id="pas-detall" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-pot-coneguda')" data-text="calculadora.enrere">← Enrere</button>
+      <button type="button" class="step-back" onclick="tornarA('pas-pot-coneguda')" data-text="enrere">
+        ← Enrere
+      </button>
 
-      <div class="seccio" data-text="calculadora.potencia.contractada">Potència contractada</div>
+      <div class="seccio" data-text="calculadora.potencia.contractada">
+        Potència contractada
+      </div>
+
       <div class="grid2">
         <div>
           <label data-text="calculadora.potencia.p1_punta">P1 — Punta (kW)</label>
           <input type="number" id="d-pot-p1" step="0.001" placeholder="3.450">
         </div>
+
         <div>
           <label data-text="calculadora.potencia.p3_vall">P3 — Vall (kW)</label>
           <input type="number" id="d-pot-p3" step="0.001" placeholder="3.450">
@@ -95,106 +143,201 @@
           <label data-text="calculadora.factura.data_inici">Data inici factura</label>
           <input type="date" id="d-data-inici">
         </div>
+
         <div>
           <label data-text="calculadora.factura.data_fi">Data fi factura</label>
           <input type="date" id="d-data-fi">
         </div>
       </div>
 
-      <div class="seccio" data-text="calculadora.tarifa.energia_te">La teva tarifa actual d'energia té...</div>
+      <div class="seccio" data-text="calculadora.tarifa.energia_te">
+        La teva tarifa actual d'energia té...
+      </div>
+
       <div class="toggle-group">
-        <button type="button" class="toggle-btn active" id="btn-periode-1" onclick="triarPeriodesEnergia(1)" data-text="calculadora.tarifa.preu_unic">Un preu únic (24h)</button>
-        <button type="button" class="toggle-btn" id="btn-periode-3" onclick="triarPeriodesEnergia(3)" data-text="calculadora.tarifa.periodes_3">3 períodes (punta/pla/vall)</button>
+        <button type="button" class="toggle-btn active" id="btn-periode-1"
+          onclick="triarPeriodesEnergia(1)" data-text="calculadora.tarifa.preu_unic">
+          Un preu únic (24h)
+        </button>
+
+        <button type="button" class="toggle-btn" id="btn-periode-3"
+          onclick="triarPeriodesEnergia(3)" data-text="calculadora.tarifa.periodes_3">
+          3 períodes (punta/pla/vall)
+        </button>
       </div>
 
       <!-- Camps per a 1 preu -->
       <div id="camps-energia-1preu">
-        <div class="seccio" data-text="calculadora.energia.consumida">Energia consumida</div>
+        <div class="seccio" data-text="calculadora.energia.consumida">
+          Energia consumida
+        </div>
+
         <div class="grid2">
-          <div><label data-text="calculadora.energia.consum_total">Consum total (kWh)</label><input type="number" id="d-e-unic" placeholder="250"></div>
-          <div><label data-text="calculadora.energia.preu_actual">Preu actual (€/kWh)</label><input type="number" id="d-pe-unic" step="0.0001" placeholder="0.1500"></div>
+          <div>
+            <label data-text="calculadora.energia.consum_total">Consum total (kWh)</label>
+            <input type="number" id="d-e-unic" placeholder="250">
+          </div>
+
+          <div>
+            <label data-text="calculadora.energia.preu_actual">Preu actual (€/kWh)</label>
+            <input type="number" id="d-pe-unic" step="0.0001" placeholder="0.1500">
+          </div>
         </div>
       </div>
 
       <!-- Camps per a 3 preus -->
       <div id="camps-energia-3preus" class="ocult">
-        <div class="seccio" data-text="calculadora.energia.consumida">Energia consumida</div>
-        <div class="grid3">
-          <div><label data-text="calculadora.energia.p1_punta">P1 Punta (kWh)</label><input type="number" id="d-e-p1" placeholder="80"></div>
-          <div><label data-text="calculadora.energia.p2_llano">P2 Llano (kWh)</label><input type="number" id="d-e-p2" placeholder="120"></div>
-          <div><label data-text="calculadora.energia.p3_vall">P3 Vall (kWh)</label><input type="number" id="d-e-p3" placeholder="50"></div>
+        <div class="seccio" data-text="calculadora.energia.consumida">
+          Energia consumida
         </div>
-        <div class="seccio" data-text="calculadora.energia.preu_actual_energia">Preu actual — energia (€/kWh)</div>
+
         <div class="grid3">
-          <div><label data-text="calculadora.energia.p1">P1</label><input type="number" id="d-pe-p1" step="0.0001" placeholder="0.1800"></div>
-          <div><label data-text="calculadora.energia.p2">P2</label><input type="number" id="d-pe-p2" step="0.0001" placeholder="0.1400"></div>
-          <div><label data-text="calculadora.energia.p3">P3</label><input type="number" id="d-pe-p3" step="0.0001" placeholder="0.0900"></div>
+          <div>
+            <label data-text="calculadora.energia.p1_punta">P1 Punta (kWh)</label>
+            <input type="number" id="d-e-p1" placeholder="80">
+          </div>
+
+          <div>
+            <label data-text="calculadora.energia.p2_llano">P2 Llano (kWh)</label>
+            <input type="number" id="d-e-p2" placeholder="120">
+          </div>
+
+          <div>
+            <label data-text="calculadora.energia.p3_vall">P3 Vall (kWh)</label>
+            <input type="number" id="d-e-p3" placeholder="50">
+          </div>
+        </div>
+
+        <div class="seccio" data-text="calculadora.energia.preu_actual_energia">
+          Preu actual — energia (€/kWh)
+        </div>
+
+        <div class="grid3">
+          <div>
+            <label data-text="calculadora.energia.p1">P1</label>
+            <input type="number" id="d-pe-p1" step="0.0001" placeholder="0.1800">
+          </div>
+
+          <div>
+            <label data-text="calculadora.energia.p2">P2</label>
+            <input type="number" id="d-pe-p2" step="0.0001" placeholder="0.1400">
+          </div>
+
+          <div>
+            <label data-text="calculadora.energia.p3">P3</label>
+            <input type="number" id="d-pe-p3" step="0.0001" placeholder="0.0900">
+          </div>
         </div>
       </div>
 
-      <div class="seccio" data-text="calculadora.potencia.preu_actual">Preu actual — potència (€/kW·dia)</div>
+      <div class="seccio" data-text="calculadora.potencia.preu_actual">
+        Preu actual — potència (€/kW·dia)
+      </div>
+
       <div class="grid2">
-        <div><label data-text="calculadora.potencia.p1_preu">P1 (€/kW·dia)</label><input type="number" id="d-pp-p1" step="0.0001" placeholder="0.1100"></div>
-        <div><label data-text="calculadora.potencia.p3_preu">P3 (€/kW·dia)</label><input type="number" id="d-pp-p3" step="0.0001" placeholder="0.0500"></div>
+        <div>
+          <label data-text="calculadora.potencia.p1_preu">P1 (€/kW·dia)</label>
+          <input type="number" id="d-pp-p1" step="0.0001" placeholder="0.1100">
+        </div>
+
+        <div>
+          <label data-text="calculadora.potencia.p3_preu">P3 (€/kW·dia)</label>
+          <input type="number" id="d-pp-p3" step="0.0001" placeholder="0.0500">
+        </div>
       </div>
 
-      <button id="btn-calcular-detall" onclick="calcularDetallat()" data-text="calculadora.calcular_estalvi">Calcular estalvi</button>
+      <button id="btn-calcular-detall" onclick="calcularDetallat()" data-text="calculadora.calcular_estalvi">
+        Calcular estalvi
+      </button>
     </section>
 
-    <!-- ═══════════ PAS 3B — VIA SIMPLIFICADA 2.0TD (potència NO coneguda) ═══════════ -->
+    <!-- ═══════════ PAS 3B — VIA SIMPLIFICADA 2.0TD ═══════════ -->
     <section id="pas-simple" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-pot-coneguda')" data-text="calculadora.enrere">← Enrere</button>
+      <button type="button" class="step-back" onclick="tornarA('pas-pot-coneguda')" data-text="enrere">
+        ← Enrere
+      </button>
 
-      <p class="info-box" data-text="calculadora.simple.info">Sense problema — amb el que surt a la teva última factura ja en tenim prou per fer una primera estimació.</p>
+      <p class="info-box" data-text="calculadora.simple.info">
+        Sense problema — amb el que surt a la teva última factura ja en tenim prou per fer una primera estimació.
+      </p>
 
       <div class="grid2">
         <div>
           <label data-text="calculadora.factura.data_inici">Data inici factura</label>
           <input type="date" id="s-data-inici">
         </div>
+
         <div>
           <label data-text="calculadora.factura.data_fi">Data fi factura</label>
           <input type="date" id="s-data-fi">
         </div>
       </div>
 
-      <div class="seccio" data-text="calculadora.factura.imports_desglossats">Imports que surten desglossats a la factura</div>
+      <div class="seccio" data-text="calculadora.factura.imports_desglossats">
+        Imports que surten desglossats a la factura
+      </div>
+
       <div class="grid2">
         <div>
           <label data-text="calculadora.factura.import_energia">Import terme d'energia (€)</label>
           <input type="number" id="s-import-energia" step="0.01" placeholder="45.30">
         </div>
+
         <div>
           <label data-text="calculadora.factura.import_potencia">Import terme de potència (€)</label>
           <input type="number" id="s-import-potencia" step="0.01" placeholder="12.80">
         </div>
       </div>
-      <p class="camp-ajuda" id="ajuda-import-potencia" data-text="calculadora.simple.ajuda_potencia">Aquest import ens ajuda a estimar la teva potència contractada.</p>
 
-      <button id="btn-calcular-simple" onclick="calcularSimplificat()" data-text="calculadora.calcular_estalvi">Calcular estalvi</button>
+      <p class="camp-ajuda" id="ajuda-import-potencia" data-text="calculadora.simple.ajuda_potencia">
+        Aquest import ens ajuda a estimar la teva potència contractada.
+      </p>
+
+      <button id="btn-calcular-simple" onclick="calcularSimplificat()" data-text="calculadora.calcular_estalvi">
+        Calcular estalvi
+      </button>
     </section>
 
-    <!-- ═══════════ PAS INDÚSTRIA — ENTRADA (checkbox AT + saps la potència?) ═══════════ -->
+    <!-- ═══════════ PAS INDÚSTRIA — ENTRADA ═══════════ -->
     <section id="pas-industria-entrada" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-negoci-tipus')" data-text="calculadora.enrere">← Enrere</button>
+      <button type="button" class="step-back" onclick="tornarA('pas-negoci-tipus')" data-text="enrere">
+        ← Enrere
+      </button>
 
       <label class="checkbox-linia">
         <input type="checkbox" id="chk-at-450">
-        <span data-text="calculadora.industria.potencia_450">La potència contractada és superior a 450 kW (Alta Tensió)?</span>
+        <span data-text="calculadora.industria.potencia_450">
+          La potència contractada és superior a 450 kW (Alta Tensió)?
+        </span>
       </label>
 
-      <div class="seccio" style="margin-top:18px" data-text="calculadora.potencia.coneguda">Saps quina potència tens contractada (kW)?</div>
+      <div class="seccio" style="margin-top:18px" data-text="calculadora.potencia.coneguda">
+        Saps quina potència tens contractada (kW)?
+      </div>
+
       <div class="toggle-group">
-        <button type="button" class="toggle-btn" id="btn-industria-pot-si" onclick="triarPotConegudaIndustria(true)" data-text="calculadora.si">Sí</button>
-        <button type="button" class="toggle-btn" id="btn-industria-pot-no" onclick="triarPotConegudaIndustria(false)" data-text="calculadora.no">No</button>
+        <button type="button" class="toggle-btn" id="btn-industria-pot-si"
+          onclick="triarPotConegudaIndustria(true)" data-text="calculadora.si">
+          Sí
+        </button>
+
+        <button type="button" class="toggle-btn" id="btn-industria-pot-no"
+          onclick="triarPotConegudaIndustria(false)" data-text="calculadora.no">
+          No
+        </button>
       </div>
     </section>
 
-    <!-- ═══════════ PAS INDÚSTRIA — VIA DETALLADA (P1-P6) ═══════════ -->
+    <!-- ═══════════ PAS INDÚSTRIA — VIA DETALLADA ═══════════ -->
     <section id="pas-industria-detall" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-industria-entrada')" data-text="calculadora.enrere">← Enrere</button>
+      <button type="button" class="step-back" onclick="tornarA('pas-industria-entrada')" data-text="enrere">
+        ← Enrere
+      </button>
 
-      <div class="seccio" data-text="calculadora.industria.potencia_periode">Potència contractada per període (kW)</div>
+      <div class="seccio" data-text="calculadora.industria.potencia_periode">
+        Potència contractada per període (kW)
+      </div>
+
       <div class="grid6">
         <div><label data-text="calculadora.energia.p1">P1</label><input type="number" id="i-pot-p1" step="0.1" placeholder="15"></div>
         <div><label data-text="calculadora.energia.p2">P2</label><input type="number" id="i-pot-p2" step="0.1" placeholder="15"></div>
@@ -209,30 +352,54 @@
           <label data-text="calculadora.factura.data_inici">Data inici factura</label>
           <input type="date" id="i-data-inici">
         </div>
+
         <div>
           <label data-text="calculadora.factura.data_fi">Data fi factura</label>
           <input type="date" id="i-data-fi">
         </div>
       </div>
 
-      <div class="seccio" data-text="calculadora.tarifa.energia_te">La teva tarifa actual d'energia té...</div>
+      <div class="seccio" data-text="calculadora.tarifa.energia_te">
+        La teva tarifa actual d'energia té...
+      </div>
+
       <div class="toggle-group">
-        <button type="button" class="toggle-btn active" id="btn-industria-periode-1" onclick="triarPeriodesEnergiaIndustria(1)" data-text="calculadora.tarifa.preu_unic">Un preu únic (24h)</button>
-        <button type="button" class="toggle-btn" id="btn-industria-periode-6" onclick="triarPeriodesEnergiaIndustria(6)" data-text="calculadora.tarifa.periodes_6">6 períodes (P1-P6)</button>
+        <button type="button" class="toggle-btn active" id="btn-industria-periode-1"
+          onclick="triarPeriodesEnergiaIndustria(1)" data-text="calculadora.tarifa.preu_unic">
+          Un preu únic (24h)
+        </button>
+
+        <button type="button" class="toggle-btn" id="btn-industria-periode-6"
+          onclick="triarPeriodesEnergiaIndustria(6)" data-text="calculadora.tarifa.periodes_6">
+          6 períodes (P1-P6)
+        </button>
       </div>
 
       <!-- Camps per a 1 preu -->
       <div id="camps-industria-energia-1preu">
-        <div class="seccio" data-text="calculadora.energia.consumida">Energia consumida</div>
+        <div class="seccio" data-text="calculadora.energia.consumida">
+          Energia consumida
+        </div>
+
         <div class="grid2">
-          <div><label data-text="calculadora.energia.consum_total">Consum total (kWh)</label><input type="number" id="i-e-unic" placeholder="2500"></div>
-          <div><label data-text="calculadora.energia.preu_actual">Preu actual (€/kWh)</label><input type="number" id="i-pe-unic" step="0.0001" placeholder="0.1500"></div>
+          <div>
+            <label data-text="calculadora.energia.consum_total">Consum total (kWh)</label>
+            <input type="number" id="i-e-unic" placeholder="2500">
+          </div>
+
+          <div>
+            <label data-text="calculadora.energia.preu_actual">Preu actual (€/kWh)</label>
+            <input type="number" id="i-pe-unic" step="0.0001" placeholder="0.1500">
+          </div>
         </div>
       </div>
 
       <!-- Camps per a 6 preus -->
       <div id="camps-industria-energia-6preus" class="ocult">
-        <div class="seccio" data-text="calculadora.energia.consumida_per_periode">Energia consumida per període (kWh)</div>
+        <div class="seccio" data-text="calculadora.energia.consumida_per_periode">
+          Energia consumida per període (kWh)
+        </div>
+
         <div class="grid6">
           <div><label data-text="calculadora.energia.p1">P1</label><input type="number" id="i-e-p1" placeholder="0"></div>
           <div><label data-text="calculadora.energia.p2">P2</label><input type="number" id="i-e-p2" placeholder="0"></div>
@@ -241,7 +408,11 @@
           <div><label data-text="calculadora.energia.p5">P5</label><input type="number" id="i-e-p5" placeholder="0"></div>
           <div><label data-text="calculadora.energia.p6">P6</label><input type="number" id="i-e-p6" placeholder="0"></div>
         </div>
-        <div class="seccio" data-text="calculadora.energia.preu_actual_energia_per_periode">Preu actual — energia per període (€/kWh)</div>
+
+        <div class="seccio" data-text="calculadora.energia.preu_actual_energia_per_periode">
+          Preu actual — energia per període (€/kWh)
+        </div>
+
         <div class="grid6">
           <div><label data-text="calculadora.energia.p1">P1</label><input type="number" id="i-pe-p1" step="0.0001" placeholder="0"></div>
           <div><label data-text="calculadora.energia.p2">P2</label><input type="number" id="i-pe-p2" step="0.0001" placeholder="0"></div>
@@ -252,7 +423,10 @@
         </div>
       </div>
 
-      <div class="seccio" data-text="calculadora.potencia.preu_actual_per_periode">Preu actual — potència per període (€/kW·dia)</div>
+      <div class="seccio" data-text="calculadora.potencia.preu_actual_per_periode">
+        Preu actual — potència per període (€/kW·dia)
+      </div>
+
       <div class="grid6">
         <div><label data-text="calculadora.potencia.p1">P1</label><input type="number" id="i-pp-p1" step="0.0001" placeholder="0"></div>
         <div><label data-text="calculadora.potencia.p2">P2</label><input type="number" id="i-pp-p2" step="0.0001" placeholder="0"></div>
@@ -262,39 +436,54 @@
         <div><label data-text="calculadora.potencia.p6">P6</label><input type="number" id="i-pp-p6" step="0.0001" placeholder="0"></div>
       </div>
 
-      <button id="btn-calcular-industria-detall" onclick="calcularIndustriaDetallat()" data-text="calculadora.calcular_estalvi">Calcular estalvi</button>
+      <button id="btn-calcular-industria-detall" onclick="calcularIndustriaDetallat()" data-text="calculadora.calcular_estalvi">
+        Calcular estalvi
+      </button>
     </section>
 
-    <!-- ═══════════ PAS INDÚSTRIA — VIA SIMPLIFICADA (per import) ═══════════ -->
+    <!-- ═══════════ PAS INDÚSTRIA — VIA SIMPLIFICADA ═══════════ -->
     <section id="pas-industria-simple" class="wizard-step ocult">
-      <button type="button" class="step-back" onclick="tornarA('pas-industria-entrada')" data-text="calculadora.enrere">← Enrere</button>
+      <button type="button" class="step-back" onclick="tornarA('pas-industria-entrada')" data-text="enrere">
+        ← Enrere
+      </button>
 
-      <p class="info-box" data-text="calculadora.simple.info">Sense problema — amb el que surt a la teva última factura ja en tenim prou per fer una primera estimació.</p>
+      <p class="info-box" data-text="calculadora.simple.info">
+        Sense problema — amb el que surt a la teva última factura ja en tenim prou per fer una primera estimació.
+      </p>
 
       <div class="grid2">
         <div>
           <label data-text="calculadora.factura.data_inici">Data inici factura</label>
           <input type="date" id="is-data-inici">
         </div>
+
         <div>
           <label data-text="calculadora.factura.data_fi">Data fi factura</label>
           <input type="date" id="is-data-fi">
         </div>
       </div>
 
-      <div class="seccio" data-text="calculadora.factura.imports_desglossats">Imports que surten desglossats a la factura</div>
+      <div class="seccio" data-text="calculadora.factura.imports_desglossats">
+        Imports que surten desglossats a la factura
+      </div>
+
       <div class="grid2">
         <div>
           <label data-text="calculadora.factura.import_energia">Import terme d'energia (€)</label>
           <input type="number" id="is-import-energia" step="0.01" placeholder="450.30">
         </div>
+
         <div>
           <label data-text="calculadora.factura.import_potencia">Import terme de potència (€)</label>
           <input type="number" id="is-import-potencia" step="0.01" placeholder="120.80">
         </div>
       </div>
 
-      <button id="btn-calcular-industria-simple" onclick="calcularIndustriaSimplificat()" data-text="calculadora.calcular_estalvi">Calcular estalvi</button>
+      <button id="btn-calcular-industria-simple"
+        onclick="calcularIndustriaSimplificat()"
+        data-text="calculadora.calcular_estalvi">
+        Calcular estalvi
+      </button>
     </section>
 
     <div id="error-msg" class="ocult error-box"></div>
@@ -303,11 +492,14 @@
 
     <div id="bloc-cta" class="ocult cta-box">
       <p id="cta-text"></p>
-      <button onclick="solicitarAuditoria()" data-text="calculadora.cta.auditoria">Sol·licitar auditoria gratuïta</button>
+
+      <button onclick="solicitarAuditoria()" data-text="calculadora.cta.auditoria">
+        Sol·licitar auditoria gratuïta
+      </button>
     </div>
   </div>
 
   <script src="../js/calculadora.js"></script>
 </body>
 
-</html>
+</html>   

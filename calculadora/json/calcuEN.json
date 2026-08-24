@@ -1,30 +1,93 @@
 {
-  "calculadora_titol": "Energy savings calculator",
-  "calculadora_subtitol": "Answer a few questions and estimate your savings. No commitment.",
-  "enrere": "← Back",
-  "segment_titol": "What type of supply do you want to analyse?",
-  "llar": "Home",
-  "negoci": "Business",
-  "si": "Yes",
-  "no": "No",
-
+  "calculadora": {
+    "titol": "Energy savings calculator",
+    "subtitol": "Answer a few questions and estimate your savings. No commitment.",
+    "enrere": "← Back",
+    "segment": {
+      "titol": "What type of supply do you want to analyse?",
+      "llar": "Home",
+      "negoci": "Business"
+    },
+    "si": "Yes",
+    "no": "No",
+    "no_ho_se": "I don't know",
+    "negoci": {
+      "potencia_15": "Does your supply have a contracted power equal to or greater than 15 kW?",
+      "periodes_potencia": "How many power periods have you paid this month on the invoice?",
+      "periodes_2": "2 periods",
+      "periodes_6": "6 periods"
+    },
+    "potencia": {
+      "coneguda": "Do you know your contracted power (kW)?",
+      "contractada": "Contracted power",
+      "p1_punta": "P1 — Peak (kW)",
+      "p3_vall": "P3 — Off-peak (kW)",
+      "preu_actual": "Current price — power (€/kW·day)",
+      "preu_actual_per_periode": "Current price — power per period (€/kW·day)",
+      "p1_preu": "P1 (€/kW·day)",
+      "p2_preu": "P2 (€/kW·day)",
+      "p3_preu": "P3 (€/kW·day)",
+      "p4_preu": "P4 (€/kW·day)",
+      "p5_preu": "P5 (€/kW·day)",
+      "p6_preu": "P6 (€/kW·day)"
+    },
+    "factura": {
+      "data_inici": "Invoice start date",
+      "data_fi": "Invoice end date",
+      "imports_desglossats": "Amounts shown separately on the invoice",
+      "import_energia": "Energy charge amount (€)",
+      "import_potencia": "Power charge amount (€)"
+    },
+    "tarifa": {
+      "energia_te": "Your current energy tariff has...",
+      "preu_unic": "A single price (24h)",
+      "periodes_3": "3 periods (peak/standard/off-peak)",
+      "periodes_6": "6 periods (P1-P6)"
+    },
+    "energia": {
+      "consumida": "Energy consumption",
+      "consumida_per_periode": "Energy consumption per period (kWh)",
+      "consum_total": "Total consumption (kWh)",
+      "preu_actual": "Current price (€/kWh)",
+      "preu_actual_energia": "Current price — energy (€/kWh)",
+      "preu_actual_energia_per_periode": "Current price — energy per period (€/kWh)",
+      "p1_punta": "P1 Peak (kWh)",
+      "p2_llano": "P2 Standard (kWh)",
+      "p3_vall": "P3 Off-peak (kWh)",
+      "p1": "P1",
+      "p2": "P2",
+      "p3": "P3",
+      "p4": "P4",
+      "p5": "P5",
+      "p6": "P6"
+    },
+    "calcular_estalvi": "Calculate savings",
+    "simple": {
+      "info": "No problem — what appears on your latest invoice is enough for us to make a first estimate.",
+      "ajuda_potencia": "This amount helps us estimate your contracted power."
+    },
+    "industria": {
+      "potencia_450": "Is your contracted power above 450 kW (High Voltage)?",
+      "potencia_periode": "Contracted power per period (kW)"
+    },
+    "cta": {
+      "auditoria": "We can help confirm it with a free audit of your invoice."
+    }
+  },
   "errors": {
-    "carregarTarifes": "The rates could not be loaded. Please try again later.",
-    "datesFactura": "Enter the invoice dates.",
-    "campsConsumPreus": "Fill in the current consumption and price fields.",
-    "producteDisponible": "There is no product available for this profile.",
-    "importEnergia": "Enter at least the energy amount.",
-    "importPotenciaNegoci": "For ‘Business’, we need the power amount to determine your tariff."
+    "tarifes": "The rates could not be loaded. Please try again later.",
+    "dates_factura": "Enter the invoice dates.",
+    "consum_preus": "Fill in the current consumption and price fields.",
+    "producte": "There is no product available for this profile.",
+    "import_energia": "Enter at least the energy amount.",
+    "import_potencia_negoci": "For ‘Business’, we need the power amount to determine your tariff."
   },
   "resultat": {
-    "condicionsBones": "Your current conditions are already good",
-    "condicionsBonesText": "Based on the available data, the potential for savings is limited. We recommend sending us your invoice so our team can review it and check whether there is any real opportunity for improvement.",
-    "estalviEstimat": "estimated savings",
-    "estalviFactura": "Savings on this invoice:",
-    "estalviAnual": "Estimated annual savings:",
-    "estimacioOrientativa": "Indicative estimate based on the energy component. The contracted power will be validated during the invoice audit."
-  },
-  "cta": {
-    "auditoria": "We can help confirm it with a free audit of your invoice."
+    "condicions_bones": "Your current conditions are already good",
+    "marge_reduit": "Based on the available data, the potential for savings is limited. We recommend sending us your invoice so our team can review it and check whether there is any real opportunity for improvement.",
+    "estalvi_estimat": "estimated savings",
+    "estalvi_factura": "Savings on this invoice:",
+    "estalvi_anual": "Estimated annual savings:",
+    "avis_potencia": "Indicative estimate based on the energy component. The contracted power will be validated during the invoice audit."
   }
 }

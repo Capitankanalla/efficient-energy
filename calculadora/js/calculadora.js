@@ -31,7 +31,7 @@ async function carregarTarifes20TD() {
     const res = await fetch(RUTA_TARIFES_20TD);
     tarifes20TD = await res.json();
   } catch (e) {
-    mostrarError('error_tarifes');
+    mostrarError('tarifes'); // CORREGIT: abans 'error_tarifes'
     console.error('Error carregant 20TD.json', e);
   }
 }
@@ -213,7 +213,7 @@ function calcularDetallat() {
   const potP3 = val('d-pot-p3');
   const dies = diesEntre('d-data-inici', 'd-data-fi');
 
-  if (!dies) { mostrarError('error_dates_factura'); return; }
+  if (!dies) { mostrarError('dates_factura'); return; } // CORREGIT
 
   let consumTotal = 0, costActualEnergia = 0;
   const consum = {}, preuActual = {};
@@ -221,7 +221,7 @@ function calcularDetallat() {
   if (periodesEnergia === 1) {
     const e = val('d-e-unic');
     const p = val('d-pe-unic');
-    if (!e || !p) { mostrarError('error_consum_preus'); return; }
+    if (!e || !p) { mostrarError('consum_preus'); return; } // CORREGIT
     consumTotal = e;
     costActualEnergia = e * p;
     consum.p1 = e; consum.p2 = e; consum.p3 = e;
@@ -230,7 +230,7 @@ function calcularDetallat() {
     preuActual.p1 = val('d-pe-p1'); preuActual.p2 = val('d-pe-p2'); preuActual.p3 = val('d-pe-p3');
     consumTotal = consum.p1 + consum.p2 + consum.p3;
     if (!consumTotal || (!preuActual.p1 && !preuActual.p2 && !preuActual.p3)) {
-      mostrarError('error_consum_preus'); return;
+      mostrarError('consum_preus'); return; // CORREGIT
     }
     costActualEnergia = consum.p1 * preuActual.p1 + consum.p2 * preuActual.p2 + consum.p3 * preuActual.p3;
   }
@@ -240,7 +240,7 @@ function calcularDetallat() {
   const costActualPotencia = potP1 * preuPotActualP1 * dies + potP3 * preuPotActualP3 * dies;
   const costActual = costActualEnergia + costActualPotencia;
 
-  if (costActual <= 0) { mostrarError('error_consum_preus'); return; }
+  if (costActual <= 0) { mostrarError('consum_preus'); return; } // CORREGIT
 
   const subsegment = resolSubsegmentDetallat(potP1, potP3);
   const variantKey = periodesEnergia === 1 ? '1_preu' : '3_preus';
@@ -270,7 +270,7 @@ function calcularDetallat() {
     }
   });
 
-  if (!millor) { mostrarError('error_producte'); return; }
+  if (!millor) { mostrarError('producte'); return; } // CORREGIT
 
   const estalviEur = costActual - millor.costNou;
   mostrarResultat(millor.estalviPct, estalviEur, dies, false);
@@ -281,14 +281,14 @@ function calcularSimplificat() {
   ocultarResultat();
 
   const dies = diesEntre('s-data-inici', 's-data-fi');
-  if (!dies) { mostrarError('error_dates_factura'); return; }
+  if (!dies) { mostrarError('dates_factura'); return; } // CORREGIT
 
   const importEnergia = val('s-import-energia');
   const importPotencia = val('s-import-potencia');
 
-  if (!importEnergia) { mostrarError('error_import_energia'); return; }
+  if (!importEnergia) { mostrarError('import_energia'); return; } // CORREGIT
   if (entradaSegment === 'negoci' && !importPotencia) {
-    mostrarError('error_import_potencia_negoci'); return;
+    mostrarError('import_potencia_negoci'); return; // CORREGIT
   }
 
   const subsegment = resolSubsegmentSimple(importPotencia, dies);
@@ -302,7 +302,7 @@ function calcularSimplificat() {
     }
   });
 
-  if (!millorDescompte) { mostrarError('error_producte'); return; }
+  if (!millorDescompte) { mostrarError('producte'); return; } // CORREGIT
 
   const estalviEur = importEnergia * (millorDescompte / 100);
   mostrarResultat(millorDescompte, estalviEur, dies, true);
@@ -313,7 +313,7 @@ async function calcularIndustriaDetallat() {
   ocultarResultat();
 
   const dies = diesEntre('i-data-inici', 'i-data-fi');
-  if (!dies) { mostrarError('error_dates_factura'); return; }
+  if (!dies) { mostrarError('dates_factura'); return; } // CORREGIT
 
   const PERIODES = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
   const potPeriode = {};
@@ -329,7 +329,7 @@ async function calcularIndustriaDetallat() {
   if (periodesEnergiaIndustria === 1) {
     const e = val('i-e-unic');
     const p = val('i-pe-unic');
-    if (!e || !p) { mostrarError('error_consum_preus'); return; }
+    if (!e || !p) { mostrarError('consum_preus'); return; } // CORREGIT
     consumTotal = e;
     costActualEnergia = e * p;
     PERIODES.forEach(pk => { consum[pk] = e; });
@@ -340,20 +340,20 @@ async function calcularIndustriaDetallat() {
     });
     consumTotal = PERIODES.reduce((s, p) => s + consum[p], 0);
     const hiHaPreus = PERIODES.some(p => preuActual[p] > 0);
-    if (!consumTotal || !hiHaPreus) { mostrarError('error_consum_preus'); return; }
+    if (!consumTotal || !hiHaPreus) { mostrarError('consum_preus'); return; } // CORREGIT
     costActualEnergia = PERIODES.reduce((s, p) => s + consum[p] * preuActual[p], 0);
   }
 
   const costActualPotencia = PERIODES.reduce((s, p) => s + potPeriode[p] * preuPotActual[p] * dies, 0);
   const costActual = costActualEnergia + costActualPotencia;
 
-  if (costActual <= 0) { mostrarError('error_consum_preus'); return; }
+  if (costActual <= 0) { mostrarError('consum_preus'); return; } // CORREGIT
 
   let tarifesObj;
   try {
     tarifesObj = await obtenirTarifesIndustria();
   } catch (e) {
-    mostrarError('error_tarifes');
+    mostrarError('tarifes'); // CORREGIT
     console.error('Error carregant tarifes indústria', e);
     return;
   }
@@ -382,7 +382,7 @@ async function calcularIndustriaDetallat() {
     }
   });
 
-  if (!millor) { mostrarError('error_producte'); return; }
+  if (!millor) { mostrarError('producte'); return; } // CORREGIT
 
   const estalviEur = costActual - millor.costNou;
   mostrarResultat(millor.estalviPct, estalviEur, dies, false);
@@ -393,16 +393,16 @@ async function calcularIndustriaSimplificat() {
   ocultarResultat();
 
   const dies = diesEntre('is-data-inici', 'is-data-fi');
-  if (!dies) { mostrarError('error_dates_factura'); return; }
+  if (!dies) { mostrarError('dates_factura'); return; } // CORREGIT
 
   const importEnergia = val('is-import-energia');
-  if (!importEnergia) { mostrarError('error_import_energia'); return; }
+  if (!importEnergia) { mostrarError('import_energia'); return; } // CORREGIT
 
   let tarifesObj;
   try {
     tarifesObj = await obtenirTarifesIndustria();
   } catch (e) {
-    mostrarError('error_tarifes');
+    mostrarError('tarifes'); // CORREGIT
     console.error('Error carregant tarifes indústria', e);
     return;
   }
@@ -417,7 +417,7 @@ async function calcularIndustriaSimplificat() {
     }
   });
 
-  if (!millorDescompte) { mostrarError('error_producte'); return; }
+  if (!millorDescompte) { mostrarError('producte'); return; } // CORREGIT
 
   const estalviEur = importEnergia * (millorDescompte / 100);
   mostrarResultat(millorDescompte, estalviEur, dies, true);
@@ -432,10 +432,10 @@ function mostrarResultat(pct, estalviEur, dies, esViaSimplificada) {
     el.classList.add('condicions-bones');
     el.innerHTML = `
       <strong data-text="resultat.condicions_bones">Les teves condicions ja són bones</strong>
-      <p style="margin-top:8px" data-text="resultat.marge_reduit">Amb les dades disponibles, el marge d’estalvi és reduït. Recomanem enviar-nos la teva factura perquè el nostre equip la revisi i validi si hi ha marge real de millora.</p>
+      <p style="margin-top:8px" data-text="resultat.marge_reduit">Amb les dades disponibles, el marge d'estalvi és reduït. Recomanem enviar-nos la teva factura perquè el nostre equip la revisi i validi si hi ha marge real de millora.</p>
     `;
     el.classList.remove('ocult');
-    document.getElementById('cta-text').dataset.text = 'cta.auditoria';
+    document.getElementById('cta-text').dataset.text = 'calculadora.cta.auditoria';
     document.getElementById('bloc-cta').classList.remove('ocult');
     return;
   }
@@ -446,15 +446,15 @@ function mostrarResultat(pct, estalviEur, dies, esViaSimplificada) {
     <span class="estalvi-label" data-text="resultat.estalvi_estimat">d'estalvi estimat</span>
     <span data-text="resultat.estalvi_factura">Estalvi en aquesta factura:</span> <strong>${estalviEur.toFixed(2)} €</strong><br>
     <span data-text="resultat.estalvi_anual">Estalvi anual estimat:</span> <strong>${anual} €</strong>
-    ${esViaSimplificada ? '<span class="estalvi-avis" data-text="resultat.avís_potencia">Estimació orientativa sobre la part d’energia. La potència es validarà amb l’auditoria de la factura.</span>' : ''}
+    ${esViaSimplificada ? '<span class="estalvi-avis" data-text="resultat.avis_potencia">Estimació orientativa sobre la part d´energia. La potència es validarà amb l´auditoria de la factura.</span>' : ''}
   `;
   el.classList.remove('ocult');
 
-  document.getElementById('cta-text').dataset.text = 'cta.auditoria';
+  document.getElementById('cta-text').dataset.text = 'calculadora.cta.auditoria';
   document.getElementById('bloc-cta').classList.remove('ocult');
 }
 
 // ─── CTA ──────────────────────────────────────────────────────────────────
 function solicitarAuditoria() {
   // Mantén aquí l'enllaç existent al formulari de leads.
-}
+}   
