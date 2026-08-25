@@ -13,6 +13,11 @@ const RUTA_TARIFES_20TD = '../../netlify/20TD.json';
 const RUTA_TARIFES_30TD = '../../netlify/30TD.json';
 const RUTA_TARIFES_61TD = '../../netlify/61TD.json';
 const LLINDAR_ESTALVI_MINIM = 10;
+const TRADUCCIONS_CALCULADORA = {
+  ca: '../json/calcuCA.json',
+  es: '../json/calcuES.json',
+  en: '../json/calcuEN.json'
+};
 
 // ─── ESTAT GLOBAL ─────────────────────────────────────────────────────────
 let tarifes20TD = null;
@@ -20,10 +25,120 @@ let tarifesIndustria = {};
 let entradaSegment = null;
 let periodesEnergia = 1;
 let periodesEnergiaIndustria = 1;
+let calcTranslations = null;
+
+function getNestedTranslation(obj, path) {
+  if (!obj || !path) return undefined;
+
+  const directCandidates = [
+    path,
+    path.replace(/^calculadora\./, ''),
+    path.replace(/^resultat\./, ''),
+    path.replace(/^errors\./, '')
+  ];
+
+  for (const candidate of directCandidates) {
+    let current = obj;
+    let ok = true;
+
+    for (const part of candidate.split('.')) {
+      if (current && Object.prototype.hasOwnProperty.call(current, part)) {
+        current = current[part];
+      } else {
+        ok = false;
+        break;
+      }
+    }
+
+    if (ok && current !== undefined && current !== null && typeof current !== 'object') {
+      return current;
+    }
+  }
+
+  if (obj.calculadora && typeof obj.calculadora === 'object') {
+    const flatCandidates = [
+      path,
+      path.replace(/^calculadora\./, ''),
+      `calculadora.${path.replace(/^calculadora\./, '')}`
+    ];
+
+    for (const candidate of flatCandidates) {
+      const value = obj.calculadora[candidate];
+      if (value !== undefined && value !== null && typeof value !== 'object') {
+        return value;
+      }
+    }
+  }
+
+  if (obj.resultat && typeof obj.resultat === 'object') {
+    const candidate = path.replace(/^resultat\./, '');
+    const value = obj.resultat[candidate];
+    if (value !== undefined && value !== null && typeof value !== 'object') {
+      return value;
+    }
+  }
+
+  if (obj.errors && typeof obj.errors === 'object') {
+    const candidate = path.replace(/^errors\./, '');
+    const value = obj.errors[candidate];
+    if (value !== undefined && value !== null && typeof value !== 'object') {
+      return value;
+    }
+  }
+
+  return undefined;
+}
+
+function t(key, fallback = '') {
+  const value = getNestedTranslation(calcTranslations, key);
+
+  if (value === undefined || value === null) return fallback;
+  if (typeof value === 'string' || typeof value === 'number') return String(value);
+  return fallback;
+}
+
+function applyTranslationsToDom() {
+  document.querySelectorAll('[data-text]').forEach(el => {
+    const key = el.dataset.text;
+    const value = t(key);
+    if (!value) return;
+
+    if (el.tagName.toLowerCase() === 'title') {
+      document.title = value;
+      return;
+    }
+
+    if (el.tagName.toLowerCase() === 'button' || el.tagName.toLowerCase() === 'a') {
+      el.textContent = value;
+      return;
+    }
+
+    el.textContent = value;
+  });
+
+  const titulPagina = t('calculadora.titol', document.title);
+  if (titulPagina) document.title = titulPagina;
+}
+
+async function carregarIdiomaCalculadora() {
+  const rawLang = localStorage.getItem('lang') || window.currentLang || 'ca';
+  const lang = ['ca', 'es', 'en'].includes(rawLang) ? rawLang : 'ca';
+  const ruta = TRADUCCIONS_CALCULADORA[lang] || TRADUCCIONS_CALCULADORA.ca;
+
+  try {
+    const res = await fetch(ruta);
+    calcTranslations = await res.json();
+    applyTranslationsToDom();
+  } catch (error) {
+    console.error('Error carregant l’idioma de la calculadora:', error);
+    calcTranslations = null;
+  }
+}
 
 // ─── INICIALITZACIÓ ───────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
   await carregarTarifes20TD();
+  await carregarIdiomaCalculadora();
 });
 
 async function carregarTarifes20TD() {
@@ -57,6 +172,7 @@ function anarA(idPas) {
   document.getElementById(idPas).classList.remove('ocult');
   ocultarResultat();
   actualitzarProgres(idPas);
+  applyTranslationsToDom();
 }
 
 function tornarA(idPas) {
@@ -160,7 +276,7 @@ function diesEntre(idInici, idFi) {
 
 function mostrarError(clau) {
   const el = document.getElementById('error-msg');
-  el.dataset.text = clau;
+  el.textContent = t(`errors.${clau}`, clau);
   el.classList.remove('ocult');
 }
 
@@ -431,11 +547,14 @@ function mostrarResultat(pct, estalviEur, dies, esViaSimplificada) {
   if (pctArrodonit < LLINDAR_ESTALVI_MINIM) {
     el.classList.add('condicions-bones');
     el.innerHTML = `
-      <strong data-text="resultat.condicions_bones">Les teves condicions ja són bones</strong>
-      <p style="margin-top:8px" data-text="resultat.marge_reduit">Amb les dades disponibles, el marge d'estalvi és reduït. Recomanem enviar-nos la teva factura perquè el nostre equip la revisi i validi si hi ha marge real de millora.</p>
+      <strong>${t('resultat.condicions_bones', 'Les teves condicions ja són bones')}</strong>
+      <p style="margin-top:8px">${t('resultat.marge_reduit', 'Amb les dades disponibles, el marge d\'estalvi és reduït. Recomanem enviar-nos la teva factura perquè el nostre equip la revisi i validi si hi ha marge real de millora.')}</p>
     `;
     el.classList.remove('ocult');
-    document.getElementById('cta-text').dataset.text = 'calculadora.cta.auditoria';
+
+    const ctaText = document.getElementById('cta-text');
+    const ctaTraduit = t('calculadora.cta.auditoria', 'Sol·licitar auditoria gratuïta');
+    if (ctaText) ctaText.textContent = String(ctaTraduit);
     document.getElementById('bloc-cta').classList.remove('ocult');
     return;
   }
@@ -443,14 +562,16 @@ function mostrarResultat(pct, estalviEur, dies, esViaSimplificada) {
   const anual = (estalviEur * (365 / dies)).toFixed(0);
   el.innerHTML = `
     <span class="estalvi-pct">${pctArrodonit}%</span>
-    <span class="estalvi-label" data-text="resultat.estalvi_estimat">d'estalvi estimat</span>
-    <span data-text="resultat.estalvi_factura">Estalvi en aquesta factura:</span> <strong>${estalviEur.toFixed(2)} €</strong><br>
-    <span data-text="resultat.estalvi_anual">Estalvi anual estimat:</span> <strong>${anual} €</strong>
-    ${esViaSimplificada ? '<span class="estalvi-avis" data-text="resultat.avis_potencia">Estimació orientativa sobre la part d´energia. La potència es validarà amb l´auditoria de la factura.</span>' : ''}
+    <span class="estalvi-label">${t('resultat.estalvi_estimat', "d'estalvi estimat")}</span>
+    <span>${t('resultat.estalvi_factura', 'Estalvi en aquesta factura:')}</span> <strong>${estalviEur.toFixed(2)} €</strong><br>
+    <span>${t('resultat.estalvi_anual', 'Estalvi anual estimat:')}</span> <strong>${anual} €</strong>
+    ${esViaSimplificada ? `<span class="estalvi-avis">${t('resultat.avis_potencia', 'Estimació orientativa sobre la part d\'energia. La potència es validarà amb l\'auditoria de la factura.')}</span>` : ''}
   `;
   el.classList.remove('ocult');
 
-  document.getElementById('cta-text').dataset.text = 'calculadora.cta.auditoria';
+  const ctaText = document.getElementById('cta-text');
+  const ctaTraduit = t('calculadora.cta.auditoria', 'Sol·licitar auditoria gratuïta');
+  if (ctaText) ctaText.textContent = String(ctaTraduit);
   document.getElementById('bloc-cta').classList.remove('ocult');
 }
 
