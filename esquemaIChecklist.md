@@ -58,26 +58,26 @@ Prioritza disseny → contingut → funcionalitat
 
 [X] Connectar frontend + backend
 
-✅ TODO ràpid (opció pujar factura i gestionar-la)
+[X] TODO ràpid (opció pujar factura i gestionar-la)
 FRONTEND
-☐ Popup amb form (nom, cognoms, email, tel)
-☐ Botó continuar → guardar dades
-☐ Input file (factura)
-☐ Crear FormData amb tot
-☐ fetch a /.netlify/functions/uploadFactura
+[X] Popup amb form (nom, cognoms, email, tel)
+[X] Botó continuar → guardar dades
+[X] Input file (factura)
+[X] Crear FormData amb tot
+[X] fetch a /.netlify/functions/uploadFactura
 BACKEND
-☐ Rebre camps + fitxer
-☐ Validar (si falta algo → error)
-☐ Respondre:
+[X] Rebre camps + fitxer
+[X] Validar (si falta algo → error)
+[X] Respondre:
 OK → { ok: true }
 KO → { error: "..." }
 UX (IMPORTANT)
-☐ Loading (“Enviant…”)
-☐ Success (“Factura rebuda”)
-☐ Error visible
+[X] Loading (“Enviant…”)
+[X] Success (“Factura rebuda”)
+[X] Error visible
 HUBSPOT (després)
-☐ Crear contacte amb email + tel
-☐ (opcional) guardar info factura
-🎯 OBJECTIU D’AVUI
+[X] Crear contacte amb email + tel
+[X] (opcional) guardar info factura
+[X] OBJECTIU D’AVUI
 
 👉 veure un ok: true al navegador després del upload

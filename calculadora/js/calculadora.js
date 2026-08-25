@@ -577,5 +577,6 @@ function mostrarResultat(pct, estalviEur, dies, esViaSimplificada) {
 
 // ─── CTA ──────────────────────────────────────────────────────────────────
 function solicitarAuditoria() {
-  // Mantén aquí l'enllaç existent al formulari de leads.
-}   
+  const formUrl = '../../form/form.html?source=calculadora';
+  window.location.href = formUrl;
+}
