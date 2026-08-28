@@ -23,7 +23,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.55);
     /* ajusta entre 0.15 i 0.35 */
     z-index: 0;
 }
@@ -41,13 +41,13 @@ body {
 
 .hero p {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 25px;
     line-height: 1.5;
 }
 
 .cta {
-    background: #0077ff;
+    background: #005acc;
     color: white;
     padding: 14px 28px;
     border-radius: 6px;
