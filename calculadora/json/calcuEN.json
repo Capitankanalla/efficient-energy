@@ -8,6 +8,17 @@
       "llar": "Home",
       "negoci": "Business"
     },
+
+    "instruccions": {
+    "titol": "How to use the calculator?",
+    "pas1_titol": "Choose your supply type",
+    "pas1_desc": "Select whether it is for your Home or Business to load the appropriate rates.",
+    "pas2_titol": "Enter the data",
+    "pas2_desc": "If you have your bill handy, enter the consumption or amounts. If you don't know the power, we'll help you estimate it.",
+    "pas3_titol": "Discover your savings",
+    "pas3_desc": "We will calculate your estimated savings percentage and offer you an audit option with no obligation.",
+    "consell": "Tip: You can find your energy consumption in kWh and power term on the second page of your last bill."
+  },
     "si": "Yes",
     "no": "No",
     "no_ho_se": "I don't know",

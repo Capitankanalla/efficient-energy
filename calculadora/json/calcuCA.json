@@ -8,6 +8,17 @@
       "llar": "Llar",
       "negoci": "Negoci"
     },
+
+    "instruccions": {
+    "titol": "Com utilitzar la calculadora?",
+    "pas1_titol": "Tria el teu subministrament",
+    "pas1_desc": "Selecciona si és per a la teva Llar o Negoci per carregar les tarifes adequades.",
+    "pas2_titol": "Introdueix les dades",
+    "pas2_desc": "Si tens la factura a mà, introdueix el consum o els imports. Si no saps la potència, t'ajudarem a estimar-la.",
+    "pas3_titol": "Descobreix el teu estalvi",
+    "pas3_desc": "Calcularem el teu percentatge d'estalvi estimat i t'oferirem una opció d'auditoria sense compromís.",
+    "consell": "Consell: Pots trobar el consum en kWh i el terme de potència a la segona pàgina de la teva darrera factura."
+  },
     "si": "Sí",
     "no": "No",
     "no_ho_se": "No ho sé",
