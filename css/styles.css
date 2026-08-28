@@ -51,7 +51,9 @@ body {
     color: white;
     padding: 14px 28px;
     border-radius: 6px;
-    display: inline-block;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
     font-weight: 600;
     text-decoration: none;
     transition: background 0.2s ease;
