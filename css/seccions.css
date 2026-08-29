@@ -192,7 +192,9 @@
     display: flex;
     gap: 2rem;
     align-items: center;
+    width: max-content;
     animation: scroll 20s linear infinite;
+    padding-right: 2rem;    /*Garanteix que totes les imatges tenen la mateixa separació */
 }
 
 .carousel-track img {
@@ -214,6 +216,3 @@
     100% { transform: translateX(-50%); }
 }
 
-/* .carousel-container:hover .carousel-track {
-    animation-play-state: paused;
-} */

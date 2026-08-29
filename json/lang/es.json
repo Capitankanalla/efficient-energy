@@ -2,7 +2,7 @@
   "whyConsultant": {
     "title": "¿Por qué tener un consultor energético?",
     "subtitle": "Consultor energético",
-    "shortText": "El sector energético vive una evolución constante, con cambios legislativos y variaciones en los mercados de electricidad y gas que pueden afectar directamente tus costes.",
+    "shortText": "El sector energético cambia constantemente. Los precios, la normativa y las condiciones del mercado afectan directamente a los costes de tu empresa.",
     "button": "Leer más",
     "modalImage": "data/assessors.avif",
     "fullTextFile": "consultorEs.html"
@@ -11,7 +11,7 @@
     "title": "Cómo trabajamos",
     "image": "data/analisis.avif",
     "steps": [
-      "Analizamos el tipo de contratación más adecuado según el perfil de consumo de tu pyme.",
+      "Analizamos el tipo de contratación más adecuado según tu perfil de consumo.",
       "Estudiamos detalladamente las diferentes opciones de contratación.",
       "Revisamos mensualmente la facturación y gestionamos reclamaciones si es necesario.",
       "Hacemos un seguimiento continuado de tu gestión energética.",
@@ -26,19 +26,23 @@
       "data/logos/FVHlogo2.png",
       "data/logos/logo-gubern.png",
       "data/logos/logoCryogas.png",
-      "data/logos/logoInnoenvas1.png"
+      "data/logos/logoInnoenvas1.png",
+      "data/logos/ECdMLogo.png",
+      "data/logos/francadentLogo.png"
     ],
     "quotes": [
       "“Tu asesoramiento me da estabilidad y tranquilidad, y eso para mí tiene mucho valor.” C.T.",
       "“Lo que más valoro de tu gestión es que siempre estás ahí.” R.I.",
       "“Este último año ha sido muy estable y por eso quiero renovar contigo.” L.P.",
       "“12 meses después: ‘Haz lo que consideres, ya sabes que confío en ti.’” F.G.",
-      "“Es realmente difícil encontrar a professionls com tú.“R.V."
+      "“Es realmente difícil encontrar a professionles como tú.“R.V.",
+      "“Ya sabes que tienes mi total confianza.“N.L.",
+      "“Menos mal que estás cuando te necesito.“ I.A."
     ]
   },
   "hero": {
     "title": "Optimizamos el consumo energético de tu empresa",
-    "subtitle": "Asesoramiento independiente para reducir costes y mejorar la eficiencia con datos y tecnología.",
+    "subtitle": "Asesoramiento personalizado para reducir costes y mejorar la eficiencia con datos reales.",
     "cta": "Solicita una auditoría inicial"
   },
   "selector": {
@@ -122,8 +126,7 @@
         "— Media tensión (MT): 380–400 V.\n",
         "— Alta tensión (AT): 1 kV a 30 kV.\n",
         "Depende de la tipología del negocio.\n",
-        "",
-        "(haz clic fuera del cuadro o en la X superior para salir)"
+        ""
       ]
     },
     "calendari": {
@@ -147,30 +150,26 @@
         "En junio tenemos P3, P4 y P6. Y en septiembre P4, P5 y P6. El período P6 es común durante todo el año.\n",
         "Y en algunas comercializadoras es habitual llamarlos punta, llano o valle en lugar de P1, P2 y P6.",
         "HORAS DE LOS PERÍODOS (HORARIO PENINSULAR)\n",
-        "P1: 08:00 a 09:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
-        "P2: 08:00 a 09:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
-        "P3: 08:00 a 09:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
-        "P4: 08:00 a 09:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
-        "P5: 08:00 a 09:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
+        "P1 a P5: 08:00 a 09:00, de 14:00 a 18:00 y de 22:00 a 00:00.\n",
         "P6: Fines de semana y festivos (todo el día).\n",
         "TEMPORADAS ENERGÉTICAS (ENERGÍA CONSUMIDA)\n",
         "La temporada determina el precio aplicado a los períodos P1 a P6.\n",
         "Hay 4 temporadas: alta, media-alta, media y baja.\n",
         "MESES POR TEMPORADA\n",
-        "Temporada alta: enero, febrero, julio, diciembre.\n",
-        "Temporada media-alta: marzo, junio, octubre.\n",
-        "Temporada media: abril, mayo, noviembre.\n",
-        "Temporada baja: agosto, septiembre.\n",
+        "Temporada alta: enero, febrero, julio, diciembre. En factura: p1, p2 y p6.\n",
+        "Temporada media-alta: marzo, junio, octubre. En factura: P2, P3 y P6.\n",
+        "Temporada media: abril, mayo, noviembre.En factura: P3, P4 y P6.\n",
+        "Temporada baja: agosto, septiembre. En factura: P4, P5 y P6.\n",
         "¿CÓMO SE APLICA ESTO?\n",
         "Pues en las tarifas 3.0TD y 6.1TD, los períodos P1 a P6 se aplican igual, pero con precios específicos.\n",
         "El período P6 es especialmente relevante en MT y AT por su tarifa reducida.\n",
-        "Las empresas pueden optimizar costes desplazando consumo a P5 y P6.\n",
+        "¨Las empresas pueden optimizar costes desplazando consumo a P5 y P6.¨\n.",
+        "Esto solía ser cierto pero el elevado incremento en P6 ha generado también un incremento en la demanda que ha hecho encarecer los precios de este período.",
         "RESUMEN\n",
-        "PC: 6 períodos fijos cada mes.\n",
-        "Energía: o consumo. 4 temporadas que varían según el mes.\n",
+        "Potencia Contratada: Parte fija de la factura, 6 períodos cada mes.\n",
+        "Energía: o consumo. 4 temporadas que varían según el mes pero que en factura solo se cobran 3.\n",
         "Cada período tiene horas concretas y un precio diferente.\n",
-        "",
-        "(haz clic fuera del cuadro o en la X superior para salir)"
+        ""
       ]
     },
     "reactiva": {
@@ -191,12 +190,11 @@
         "o en una temporada de menor producción, nuestra FV seguirá produciendo para nuestro autoconsumo, pero parte de esa producción no se consumirá.\n",
         "En esta situación, nuestra FV genera excedentes.\n",
         "Y los excedentes son la energía PRODUCIDA PERO NO CONSUMIDA que retorna a la red\n",
-        "y se remunera según las condiciones del mercado eléctrico con las limitaciones reguladas.\n",
+        "y se remunera según las condiciones del mercado eléctrico con las limitaciones regulatorias.\n",
         "Las instalaciones fotovoltaicas normalmente se dimensionan principalmente para cubrir el consumo\n",
         "propio, y sobredimensionarlas solo para generar excedentes suele ser poco rentable\n",
         "y está condicionado por limitaciones técnicas y regulatorias, como la capacidad de los puntos de conexión.\n",
-        "",
-        "(haz clic fuera del cuadro o en la X superior para salir)"
+        ""
       ]
     }
   },
@@ -209,9 +207,10 @@
     "introLead": "El suministro de un negocio tiene particularidades propias, diferentes al hogar o la industria. Los distinguimos por los siguientes puntos:",
     "introItems": [
       "Tarifa: Las tarifas habituales para negocios son la 2.0TD y la 3.0TD.",
-      "Potencia contratada: La capacidad máxima de consumo simultáneo. En la 2.0TD hasta 15 kW, en la 3.0TD por encima.",
-      "Períodos de energía: Distribuidos en 3 períodos (punta, llano y valle) para la 2.0TD y 6 para la 3.0TD.",
-      "Temporadas: Para garantizar la estabilidad del sistema, la demanda se gestiona en 4 temporadas al año: alta, media-alta, media y baja. (Solo para 3.0TD).",
+      "Potencia contratada: La capacidad máxima de consumo simultáneo. En la tarifa 2.0TD hasta 15 kW, en la 3.0TD a partir de 15 Kw.",
+      "Períodos de energía: Distribuidos en 3 períodos (punta, llano y valle) para la 2.0TD",
+      "Temporadas: y 6 períodos para la tarifa 3.0TD. Para garantizar la estabilidad del sistema, la demanda se gestiona en 4 temporadas al año: alta, media-alta, media y baja.",
+      "Sin embargo en factura los períodos son 3 de energía, como en la tarifa 2.0TD y suelen verse como P1, P2 y P6 o ¨Punta, llano y valle¨",
       "Lectura de factura: Entender los términos fijos y variables para detectar oportunidades de ahorro."
     ],
     "cardsTitle": "Características del suministro",
@@ -310,9 +309,9 @@
     "introTitle": "Qué hay que saber del suministro",
     "introLead": "El suministro de un hogar es el más común pero también el menos conocido. Entender cómo funciona te permite tomar decisiones y ahorrar sin esfuerzo.",
     "introItems": [
-      "Tarifa: Los hogares siempre están en la tarifa 2.0TD, la única tarifa residencial.",
+      "Tarifa: Los hogares suelen estár en la tarifa 2.0TD.",
       "Potencia contratada: La capacidad máxima de consumo simultáneo. La mayoría de hogares trabajan entre 3,45 kW y 10 kW, aunque pueden existir potencias superiores.",
-      "Períodos de energía: La 2.0TD tiene 3 períodos horarios con horarios fijados por normativa. El precio de cada hora lo determina el OMIE, el operador del mercado eléctrico ibérico.",
+      "Períodos de energía: La 2.0TD tiene 3 períodos horarios con horarios fijados por normativa. El precio de cada hora lo determina OMIE, el operador del mercado eléctrico ibérico.",
       "Discriminación horaria: Desde junio de 2021, todos los suministros residenciales tienen discriminación horaria automática. No es opcional — todos pagan diferente en punta, llano y valle.",
       "Autoconsumo: Puede ser individual o colectivo (comunidades de propietarios). La compensación de excedentes depende del tipo de instalación y de las condiciones del contrato."
     ],
