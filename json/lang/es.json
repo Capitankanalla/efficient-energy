@@ -13,10 +13,10 @@
     "steps": [
       "Analizamos el tipo de contratación más adecuado según tu perfil de consumo.",
       "Estudiamos detalladamente las diferentes opciones de contratación.",
-      "Revisamos mensualmente la facturación y gestionamos reclamaciones si es necesario.",
+      "Revisamos la facturación y gestionamos reclamaciones si es necesario.",
       "Hacemos un seguimiento continuado de tu gestión energética.",
       "Elaboramos informes para establecer mejoras y optimizar la facturación.",
-      "Gestionamos un cambio de comercializadora si es necesario."
+      "Gestionamos el cambio de comercializadora si es necesario."
     ]
   },
   "clients": {
@@ -63,6 +63,13 @@
     "backLink": "← Volver",
     "introTitle": "Qué hay que saber del suministro",
     "introLead": "Todo suministro tiene sus particularidades, el industrial es diferente al hogar o la oficina. Los distinguimos por los siguientes puntos:",
+    "introItems": [
+      "Tarifa: Hace referencia a las tarifas de acceso a la red eléctrica y las industriales son la 3.0TD y 6.1TD.",
+      "Potencia contratada: Es la capacidad de trabajo simultáneo de una instalación. En las tarifas 3.0 y 6.1 son potencias superiores a los 15 kW y a los 450 kW respectivamente.",
+      "Períodos de energía: Actualmente se distribuyen en 6 períodos, P1 a P6.",
+      "Temporadas: Para garantizar la estabilidad del sistema, la demanda se gestiona en 4 temporadas al año: alta, media-alta, media y baja.",
+      "Energía reactiva: Es una energía desaprovechada por algunos aparatos eléctricos y que penaliza, como suelen ser los picos de potencia generados por los motores de las cámaras frigoríficas o ascensores."
+    ],
     "calcTitle": "Estimación de ahorro",
     "calcLead": [
       "Entra en nuestra calculadora de ahorro y descubre cuánto te puedes ahorrar en\n",
@@ -74,13 +81,6 @@
     "ctaFinalTitle": "¿Quieres que analicemos tu suministro?",
     "ctaFinalLead": "Envíanos tu factura o solicita un estudio detallado.",
     "ctaFinalBtn": "Solicita estudio industrial",
-    "introItems": [
-      "Tarifa: Hace referencia a las tarifas de acceso a la red eléctrica y las industriales son la 3.0TD y 6.1TD.",
-      "Potencia contratada: Es la capacidad de trabajo simultáneo de una instalación. En las tarifas 3.0 y 6.1 son potencias superiores a los 15 kW y a los 450 kW respectivamente.",
-      "Períodos de energía: Actualmente se distribuyen en 6 períodos, P1 a P6.",
-      "Temporadas: Para garantizar la estabilidad del sistema, la demanda se gestiona en 4 temporadas al año: alta, media-alta, media y baja.",
-      "Energía reactiva: Es una energía desaprovechada por algunos aparatos eléctricos y que penaliza, como suelen ser los picos de potencia generados por los motores de las cámaras frigoríficas o ascensores."
-    ],
     "cardsTitle": "Características del suministro",
     "cardEnergiaTitle": "Potencias contratadas",
     "cardEnergiaText": "La capacidad de trabajo simultáneo de una instalación, clave para evitar penalizaciones.",
@@ -163,7 +163,7 @@
         "¿CÓMO SE APLICA ESTO?\n",
         "Pues en las tarifas 3.0TD y 6.1TD, los períodos P1 a P6 se aplican igual, pero con precios específicos.\n",
         "El período P6 es especialmente relevante en MT y AT por su tarifa reducida.\n",
-        "¨Las empresas pueden optimizar costes desplazando consumo a P5 y P6.¨\n.",
+        "¨Las empresas pueden optimizar costes desplazando consumo a P5 y P6.¨\n",
         "Esto solía ser cierto pero el elevado incremento en P6 ha generado también un incremento en la demanda que ha hecho encarecer los precios de este período.",
         "RESUMEN\n",
         "Potencia Contratada: Parte fija de la factura, 6 períodos cada mes.\n",

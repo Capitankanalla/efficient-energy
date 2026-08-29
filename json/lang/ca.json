@@ -11,12 +11,12 @@
     "title": "Com treballem",
     "image": "data/analisis.avif",
     "steps": [
-      "Analitzem el tipus de contractació més adequat segons el perfil de consum de la teva pime.",
+      "Analitzem el tipus de contractació més adequat segons el teu perfil de consum.",
       "Estudiem detalladament les diferents opcions de contractació.",
-      "Revisem mensualment la facturació i gestionem reclamacions si cal.",
+      "Revisem la facturació i gestionem reclamacions si cal.",
       "Fem un seguiment continuat de la teva gestió energètica.",
       "Elaborem informes per establir millores i optimitzar la facturació.",
-      "Gestionem un canvi de comercialitzadora, si és necessari."
+      "Gestionem el canvi de comercialitzadora, si és necessari."
     ]
   },
   "clients": {
@@ -43,7 +43,7 @@
   },
   "hero": {
     "title": "Optimitzem el consum energètic de la teva empresa",
-    "subtitle": "Assessorament independent per reduir costos i millorar l’eficiència amb dades i tecnologia.",
+    "subtitle": "Assessorament independent per reduir costos i millorar l’eficiència amb dades reals.",
     "cta": "Sol·licita una auditoria inicial"
   },
   "selector": {
@@ -69,8 +69,7 @@
       "Potència contractada: És la capacitat de treball simultani d'una instal·lació. En les tarifes 3.0 i 6.1 són potències superiors als 15 kW i als 450 kW respectivament.",
       "Períodes d'energia: Actualment es distribueixen en 6 períodes, P1 a P6.",
       "Temporades: Per garantir l'estabilitat del sistema, la demanda es gestiona en 4 temporades a l'any: alta, mitja-alta, mitja i baixa.",
-      "Energia reactiva: És una energia desaprofitada per alguns aparells elèctrics i que penalitza, com solen ser els pics de potència generats pels motors de les cambres frigorífiques o ascensors.",
-      "Més informació clicant als botons de la seguent secció."
+      "Energia reactiva: És una energia desaprofitada per alguns aparells elèctrics i que penalitza, com solen ser els pics de potència generats pels motors de les cambres frigorífiques o ascensors."
     ],
     "cardsTitle": "Característiques del subministrament",
     "cardEnergiaTitle": "Potència i energia",
