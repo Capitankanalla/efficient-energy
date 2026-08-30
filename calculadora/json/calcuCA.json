@@ -1,7 +1,7 @@
 {
   "calculadora": {
     "titol": "Calculadora d'estalvi energètic",
-    "subtitol": "Respon unes poques preguntes i estima el teu estalvi. Sense compromís.",
+    "subtitol": "Necessitarem algunes dades tècniques que trobaràs a la teva factura. Els càlculs són només estimacions basades en les dades disponibles. Estimacions sense compromís.",
     "enrere": "← Enrere",
     "segment": {
       "titol": "Quin tipus de subministrament vols analitzar?",
@@ -10,13 +10,13 @@
     },
 
     "instruccions": {
-    "titol": "Com utilitzar la calculadora?",
+    "titol": "Com utilitzar la calculadora?\n RECORDA TENIR A MÀ UNA FACTURA RECENT",
     "pas1_titol": "Tria el teu subministrament",
-    "pas1_desc": "Selecciona si és per a la teva Llar o Negoci per carregar les tarifes adequades.",
+    "pas1_desc": "Selecciona si és per a la teva Llar o Negoci. D’aquesta manera, podrem fer els càlculs amb més precisió.",
     "pas2_titol": "Introdueix les dades",
-    "pas2_desc": "Si tens la factura a mà, introdueix el consum o els imports. Si no saps la potència, t'ajudarem a estimar-la.",
+    "pas2_desc": "Introdueix el consum d’energia, la potència contractada i els imports pagats per aquests conceptes.\n Si no els coneixes, només amb els imports pagats per tots dos conceptes en tenim prou per estimar l’estalvi.",
     "pas3_titol": "Descobreix el teu estalvi",
-    "pas3_desc": "Calcularem el teu percentatge d'estalvi estimat i t'oferirem una opció d'auditoria sense compromís.",
+    "pas3_desc": "Calcularem el teu percentatge d’estalvi estimat. Tingues en compte que els resultats es basen en les dades disponibles actualment i no inclouen impostos ni altres càrrecs, com ara serveis associats, etc..",
     "consell": "Consell: Pots trobar el consum en kWh i el terme de potència a la segona pàgina de la teva darrera factura."
   },
     "si": "Sí",

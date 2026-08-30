@@ -1,7 +1,7 @@
 {
   "calculadora": {
     "calculadora.titol": "Calculadora de ahorro energético",
-    "calculadora.subtitol": "Responde unas pocas preguntas y estima tu ahorro. Sin compromiso.",
+    "calculadora.subtitol": "Necesitaremos algunos datos técnicos que encontraràs en tu factura. Los càlculos solo són estimaciones en base a los datos disponibles. Estimaciones sin compromiso.",
     "enrere": "← Atrás",
     "segment": {
       "titol": "¿Qué tipo de suministro quieres analizar?",
@@ -10,13 +10,13 @@
     },
     
     "instruccions": {
-      "titol": "¿Cómo usar la calculadora?",
+      "titol": "¿Cómo usar la calculadora?\nRECUERDA TENER A MANO UNA FACTURA RECIENTE",
       "pas1_titol": "Elige tu suministro",
-      "pas1_desc": "Selecciona si es para tu Hogar o Negocio para cargar las tarifas adecuadas.",
-      "pas2_titol": "Introduce los datos",
-      "pas2_desc": "Con la factura a mano, introduce el consumo o los importes. Si no sabes la potencia, te ayudaremos a estimarla.",
+      "pas1_desc": "Selecciona si es para tu Hogar o Negocio, con ello podemos hacer los cálculos con mayor precisión.",
+      "pas2_titol": "Introduce los datos.",
+      "pas2_desc": "Introduce el consumo de energía, la potencia contratada y los importes pagados por estos conceptos. Si no los conoces, solo con los importes pagados por ambos conceptos tenemos suficiente para estimar el ahorro",
       "pas3_titol": "Descubre tu ahorro",
-      "pas3_desc": "Calcularemos tu porcentaje de ahorro estimado y te ofreceremos una opción de auditoría sin compromiso.",
+      "pas3_desc": "Calcularemos tu porcentaje de ahorro estimado. Ten en cuenta que los resultados son segúlos datos disponibles actualmente y sin impuestos ni otros cargos como servcios asociados, etc.",
       "consell": "Consejo: Puedes encontrar el consumo en kWh y el término de potencia en la segunda página de tu última factura."
     },
 

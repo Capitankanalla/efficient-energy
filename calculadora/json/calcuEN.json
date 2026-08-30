@@ -1,7 +1,7 @@
 {
   "calculadora": {
     "titol": "Energy savings calculator",
-    "subtitol": "Answer a few questions and estimate your savings. No commitment.",
+    "subtitol": "We’ll need some technical details that you can find on your bill. The calculations are just estimates based on the information available. No obligation at all.",
     "enrere": "← Back",
     "segment": {
       "titol": "What type of supply do you want to analyse?",
@@ -10,13 +10,13 @@
     },
 
     "instruccions": {
-    "titol": "How to use the calculator?",
+    "titol": "How to use the calculator?\n REMEMBER TO HAVE A RECENT BILL HANDY",
     "pas1_titol": "Choose your supply type",
-    "pas1_desc": "Select whether it is for your Home or Business to load the appropriate rates.",
+    "pas1_desc": "Select whether it’s for your Home or Business. This will help us make more accurate calculations.",
     "pas2_titol": "Enter the data",
-    "pas2_desc": "If you have your bill handy, enter the consumption or amounts. If you don't know the power, we'll help you estimate it.",
+    "pas2_desc": "Enter your energy consumption, contracted power, and the amounts you’ve paid for each.\n If you don’t know these figures, we can still estimate your savings using just the amounts you’ve paid for both.",
     "pas3_titol": "Discover your savings",
-    "pas3_desc": "We will calculate your estimated savings percentage and offer you an audit option with no obligation.",
+    "pas3_desc": "We’ll calculate your estimated savings percentage. Please keep in mind that the results are based on the information currently available and do not include taxes or other charges, such as associated services, etc..",
     "consell": "Tip: You can find your energy consumption in kWh and power term on the second page of your last bill."
   },
     "si": "Yes",
