@@ -82,7 +82,8 @@
       "potencia_periode": "Potència contractada per període (kW)"
     },
     "cta": {
-      "auditoria": "Si, vull una auditoria gratuïta sense compromís."
+      "auditoria": "Si, vull una auditoria gratuïta sense compromís.",
+      "boton": "Sol.licitar auditoría gratuita"
     }
   },
   "errors": {

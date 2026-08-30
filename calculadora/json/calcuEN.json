@@ -82,7 +82,8 @@
       "potencia_periode": "Contracted power per period (kW)"
     },
     "cta": {
-      "auditoria": "Yes, I want a free, no-obligation audit."
+      "auditoria": "Yes, I want a free, no-obligation audit.",
+      "boton": "Request free audit"
     }
   },
   "errors": {
