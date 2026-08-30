@@ -17,7 +17,7 @@
     "pas2_desc": "Introdueix el consum d’energia, la potència contractada i els imports pagats per aquests conceptes.\n Si no els coneixes, només amb els imports pagats per tots dos conceptes en tenim prou per estimar l’estalvi.",
     "pas3_titol": "Descobreix el teu estalvi",
     "pas3_desc": "Calcularem el teu percentatge d’estalvi estimat. Tingues en compte que els resultats es basen en les dades disponibles actualment i no inclouen impostos ni altres càrrecs, com ara serveis associats, etc..",
-    "consell": "Consell: Pots trobar el consum en kWh i el terme de potència a la segona pàgina de la teva darrera factura."
+    "consell": "Consell: Pots trobar el consum total o per període i el terme de potència a la segona pàgina de la teva darrera factura."
   },
     "si": "Sí",
     "no": "No",

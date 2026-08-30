@@ -17,7 +17,7 @@
       "pas2_desc": "Introduce el consumo de energía, la potencia contratada y los importes pagados por estos conceptos. Si no los conoces, solo con los importes pagados por ambos conceptos tenemos suficiente para estimar el ahorro",
       "pas3_titol": "Descubre tu ahorro",
       "pas3_desc": "Calcularemos tu porcentaje de ahorro estimado. Ten en cuenta que los resultados son segúlos datos disponibles actualmente y sin impuestos ni otros cargos como servcios asociados, etc.",
-      "consell": "Consejo: Puedes encontrar el consumo en kWh y el término de potencia en la segunda página de tu última factura."
+      "consell": "Consejo: Puedes encontrar el consumo total o por periodo y el término de potencia en la segunda página de tu última factura."
     },
 
     "si": "Sí",

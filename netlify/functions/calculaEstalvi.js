@@ -96,8 +96,8 @@ function calcular2TD(dades) {
       + dades.consumP3 * dades.preuEnergiaP3;
   }
 
-  const costActualPotencia = dades.potP1 * dades.preuPotActualP1 * dies
-    + dades.potP3 * dades.preuPotActualP3 * dies;
+  const costActualPotencia = dades.potP1 * (dades.preuPotActualP1 / 30) * dies
+    + dades.potP3 * (dades.preuPotActualP3 / 30) * dies;
   const costActual = costActualEnergia + costActualPotencia;
   if (costActual <= 0) return { error: 'consum_preus' };
 
@@ -155,7 +155,7 @@ function calcularIndustria(dades) {
     costActualEnergia = PERIODES_INDUSTRIA.reduce((total, periode) => total + consum[periode] * dades[`preuEnergia${periode}`], 0);
   }
 
-  const costActualPotencia = PERIODES_INDUSTRIA.reduce((total, periode) => total + dades[`pot${periode}`] * dades[`preuPot${periode}`] * dies, 0);
+  const costActualPotencia = PERIODES_INDUSTRIA.reduce((total, periode) => total + dades[`pot${periode}`] * (dades[`preuPot${periode}`] / 30) * dies, 0);
   const costActual = costActualEnergia + costActualPotencia;
   if (costActual <= 0) return { error: 'consum_preus' };
 
