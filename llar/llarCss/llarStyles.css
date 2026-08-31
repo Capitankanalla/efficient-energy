@@ -21,7 +21,7 @@ body {
 /* HERO LLAR */
 .hero-llar {
     position: relative;
-    background: url('../../data/llar1.avif') center / cover no-repeat;
+    background: url('../../data/llar.webp') center / cover no-repeat;
     padding: 80px 20px;
     text-align: center;
     color: white;

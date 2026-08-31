@@ -21,7 +21,7 @@ body {
 /* Canvia .hero-industria per .hero-negoci i la imatge */
 .hero-negoci {
     position: relative;
-    background: url('../../data/tienda1.avif') center / cover no-repeat;
+    background: url('../../data/tienda.webp') center / cover no-repeat;
     padding: 80px 20px;
     text-align: center;
     color: white;

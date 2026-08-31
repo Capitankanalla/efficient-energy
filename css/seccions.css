@@ -69,11 +69,13 @@
     flex: 1;
 }
 
-/* Imatge */
+/* Imatge Why consultor*/
 .wc-image img {
     width: 100%;
     max-width: 420px;
+    height: auto;
     border-radius: 10px;
+    aspect-ratio: 420/280;
     display: block;
 }
 
@@ -134,6 +136,8 @@
 
 .hww-left img {
     width: 100%;
+    height: auto;
+    aspect-ratio: 455/300;
     border-radius: 12px;
     display: block;
 }

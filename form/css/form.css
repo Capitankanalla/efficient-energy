@@ -195,10 +195,10 @@ button:hover {
 .info-image img {
     background: transparent;
     width: 100%;
+    height: auto;
     border-radius: 8px;
      display: block; 
     opacity: 0.9;
-    align-items: center;
 }
 
 /* =========================
