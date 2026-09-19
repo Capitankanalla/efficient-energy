@@ -1,21 +1,28 @@
-import { openLegalModal } from './modal.js';
-
 // Carregar footer.html i després injectar dades
-fetch('./html/footer.html')
-    .then(res => res.text())
+fetch('/html/footer.html')
+    .then(res => {
+        if (!res.ok) throw new Error(`Footer no trobat: ${res.status}`);
+        return res.text();
+    })
     .then(html => {
         document.body.insertAdjacentHTML('beforeend', html);
         window.carregarFooterJSON();
         // Any automàtic
         const any = document.getElementById('any');
         if (any) any.textContent = new Date().getFullYear();
+    })
+    .catch(error => {
+        console.error('Error carregant footer:', error);
     });
 
 function carregarFooterJSON() {
     const lang = window.currentLang || "ca";
     const langFile = lang.charAt(0).toUpperCase() + lang.slice(1);
-    fetch(`./json/lang/footer${langFile}.json`)
-        .then(res => res.json())
+    fetch(`/json/lang/footer${langFile}.json`)
+        .then(res => {
+            if (!res.ok) throw new Error(`JSON del footer no trobat: ${res.status}`);
+            return res.json();
+        })
         .then(data => {
 
             // Logo
@@ -51,7 +58,33 @@ function carregarFooterJSON() {
                 span.dataset.legal = item.id;
 
                 // Obrir modal en clicar
-                span.addEventListener("click", () => openLegalModal(item.id));
+                span.addEventListener("click", async () => {
+                    try {
+                        const response = await fetch('/json/legals.json');
+                        const legalData = await response.json();
+                        const lang = localStorage.getItem('lang') || window.currentLang || 'ca';
+                        const info = legalData[lang]?.[item.id] ?? legalData[item.id];
+
+                        if (!info) return;
+
+                        const titleEl = document.getElementById('modal-title');
+                        const bodyEl = document.getElementById('modal-body');
+                        const modalEl = document.getElementById('legal-modal');
+
+                        if (titleEl) titleEl.textContent = info.titol;
+                        if (bodyEl) {
+                            bodyEl.innerHTML = '';
+                            info.contingut.forEach(paragraf => {
+                                const p = document.createElement('p');
+                                p.textContent = paragraf;
+                                bodyEl.appendChild(p);
+                            });
+                        }
+                        if (modalEl) modalEl.classList.add('open');
+                    } catch (error) {
+                        console.error('Error carregant legal modal:', error);
+                    }
+                });
 
                 li.appendChild(span);
                 legalList.appendChild(li);

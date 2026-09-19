@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Solicita una auditoría energética gratuita y empieza a ahorrar en tu factura.">
     <title data-lang="pageTitle">Auditoría energética</title>
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <link rel="stylesheet" href="./css/form.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/form/css/form.css">
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     </header>
 
     <header class="form-header">
-        <a href="../index.html" class="back-link" data-lang="backLink">← Volver</a>
+        <a href="/index.html" class="back-link" data-lang="backLink">← Volver</a>
     </header>
 
     <main class="form-wrapper" role="main">
@@ -98,7 +100,7 @@
             </div>
 
             <div class="info-image">
-                <img src="./data/logoefficient.webp" alt="logoefficient" width="216" height="193" >
+                <img src="/form/data/logoefficient.webp" alt="logoefficient" width="216" height="193" >
             </div>
 
         </aside>
@@ -122,8 +124,20 @@
             <p data-lang="thankyouMsg">Hemos recibido tu solicitud. Te contactaremos en 24h.</p>
         </div>
     </div>
-    <script src="./js/translations.js" defer></script>
-    <script src="./js/form.js" defer></script>
+    <div id="legal-modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <script>
+        window.currentLang = localStorage.getItem("lang") || "es";
+    </script>
+    <script src="/form/js/translations.js" defer></script>
+    <script src="/form/js/form.js" defer></script>
+    <script src="/js/modal.js" type="module"></script>
+    <script type="module" src="/js/footer.js"></script>
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer
         src="https://js-eu1.hs-scripts.com/148566673.js"></script>

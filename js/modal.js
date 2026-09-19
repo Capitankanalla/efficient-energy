@@ -1,6 +1,6 @@
 // Obrir modal amb contingut legal
 export function openLegalModal(id) {
-    fetch('./json/legals.json')
+    fetch('/json/legals.json')
         .then(res => res.json())
         .then(data => {
             const lang = localStorage.getItem("lang") || window.currentLang || "ca";
@@ -25,10 +25,21 @@ export function openLegalModal(id) {
 
 // Tancar modal
 export function closeLegalModal() {
-    document.getElementById("legal-modal").classList.remove("open");
+    const modal = document.getElementById("legal-modal");
+    if (modal) modal.classList.remove("open");
 }
+
 // Assignar tancament al botó X i clicant fora
-document.addEventListener("click", e => {
-    if (e.target.id === "modal-close") closeLegalModal();
-    if (e.target.id === "legal-modal") closeLegalModal();
-});
+const modalCloseHandler = (e) => {
+    const modal = document.getElementById("legal-modal");
+    if (!modal) return;
+
+    const clickedClose = e.target.id === "modal-close" || e.target.closest("#modal-close");
+    const clickedOutside = e.target.id === "legal-modal" || e.target === modal;
+
+    if (clickedClose || clickedOutside) {
+        closeLegalModal();
+    }
+};
+
+document.addEventListener("click", modalCloseHandler);
