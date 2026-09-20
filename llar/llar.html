@@ -9,6 +9,8 @@
     <title>Subministrament llar - Efficient Energy</title>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="stylesheet" href="./llarCss/llarStyles.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/modal.css">
 </head>
 
 <body>
@@ -26,68 +28,70 @@
     </header>
     <main id="main-content">
 
-    <!-- SECCIÓ INTRODUCTÒRIA -->
-    <section class="section section-intro">
-        <h2>Que cal saber del subministrament</h2>
-        <p class="section-lead">
-            El subministrament d'una llar és el més comú però també el menys conegut.
-            Entendre com funciona et permet prendre decisions i estalviar sense esforç.
-        </p>
-        <ul>
-            <li>Tarifa: Les llars estan habitualmet a la tarifa 2.0TD, l'única tarifa residencial.</li>
-            <li>Potència contractada: La capacitat màxima de consum simultani, normalment entre 3,45 kW i 10 kW a les cases.</li>
-            <li>Períodes d'energia: 3 períodes (punta, pla i vall) que determinen el preu de l'energia.</li>
-            <li>Autoconsum: Si tens plaques fotovoltaiques, pots compensar excedents a la factura. Complicat en comunitats de propietaris.</li>
-        </ul>
-    </section>
+        <!-- SECCIÓ INTRODUCTÒRIA -->
+        <section class="section section-intro">
+            <h2>Que cal saber del subministrament</h2>
+            <p class="section-lead">
+                El subministrament d'una llar és el més comú però també el menys conegut.
+                Entendre com funciona et permet prendre decisions i estalviar sense esforç.
+            </p>
+            <ul>
+                <li>Tarifa: Les llars estan habitualmet a la tarifa 2.0TD, l'única tarifa residencial.</li>
+                <li>Potència contractada: La capacitat màxima de consum simultani, normalment entre 3,45 kW i 10 kW a
+                    les cases.</li>
+                <li>Períodes d'energia: 3 períodes (punta, pla i vall) que determinen el preu de l'energia.</li>
+                <li>Autoconsum: Si tens plaques fotovoltaiques, pots compensar excedents a la factura. Complicat en
+                    comunitats de propietaris.</li>
+            </ul>
+        </section>
 
-    <!-- BLOC: CARACTERÍSTIQUES DEL SUBMINISTRAMENT -->
-    <section class="section section-caracteristiques">
-        <h2>Característiques del subministrament</h2>
-        <div class="cards-grid">
-            <article class="card" data-id="tarifa" data-section="llar">
-                <h3>Tarifa 2.0TD</h3>
-                <p>L'única tarifa residencial: com funciona, quins períodes té i com afecta la teva factura.</p>
-            </article>
+        <!-- BLOC: CARACTERÍSTIQUES DEL SUBMINISTRAMENT -->
+        <section class="section section-caracteristiques">
+            <h2>Característiques del subministrament</h2>
+            <div class="cards-grid">
+                <article class="card" data-id="tarifa" data-section="llar">
+                    <h3>Tarifa 2.0TD</h3>
+                    <p>L'única tarifa residencial: com funciona, quins períodes té i com afecta la teva factura.</p>
+                </article>
 
-            <article class="card" data-id="discriminacio" data-section="llar">
-                <h3>Períodes i horaris</h3>
-                <p>Quan és més barat consumir energia i com aprofitar les hores vall per estalviar.</p>
-            </article>
+                <article class="card" data-id="discriminacio" data-section="llar">
+                    <h3>Períodes i horaris</h3>
+                    <p>Quan és més barat consumir energia i com aprofitar les hores vall per estalviar.</p>
+                </article>
 
-            <article class="card" data-id="autoconsum" data-section="llar">
-                <h3>Autoconsum</h3>
-                <p>Plaques fotovoltaiques, compensació d'excedents i com reduir la factura amb energia pròpia.</p>
-            </article>
-        </div>
-    </section>
+                <article class="card" data-id="autoconsum" data-section="llar">
+                    <h3>Autoconsum</h3>
+                    <p>Plaques fotovoltaiques, compensació d'excedents i com reduir la factura amb energia pròpia.</p>
+                </article>
+            </div>
+        </section>
 
-    <!-- BLOC: CALCULADORA / ESTALVI (ESPAI RESERVAT) -->
-    <section class="section section-calculadora">
-        <h2>Estimació d'estalvi</h2>
-        <p class="section-lead">
-            Aquí reservem espai per a la futura calculadora d'estalvi adaptada al subministrament de llar.
-        </p>
-        <div class="calculadora-placeholder">
-            <p>Ves a la calculadora d'estalvi</p>
-             <a href="../calculadora/html/calculadora.html" class="cta">
-                Càlcula la teva tarifa 
-            </a>
-        </div>
-    </section>
+        <!-- BLOC: CALCULADORA / ESTALVI (ESPAI RESERVAT) -->
+        <section class="section section-calculadora">
+            <h2>Estimació d'estalvi</h2>
+            <p class="section-lead">
+                Aquí reservem espai per a la futura calculadora d'estalvi adaptada al subministrament de llar.
+            </p>
+            <div class="calculadora-placeholder">
+                <p>Ves a la calculadora d'estalvi</p>
+                <a href="../calculadora/html/calculadora.html" class="cta">
+                    Càlcula la teva tarifa
+                </a>
+            </div>
+        </section>
 
-    <!-- BLOC: CTA + AFEGIR FACTURA -->
-    <section class="section section-cta-final">
-        <h2>Vols que analitzem el teu subministrament?</h2>
-        <p class="section-lead">
-            Envia'ns la teva factura o sol·licita un estudi detallat de la teva llar.
-        </p>
-        <div class="cta-group">
-            <a href="../form/form.html" class="cta cta-llar">Sol·licita estudi de llar</a>
-            <button class="cta-secundari" data-factura-btn>Afegir factura</button>
-            <input type="file" data-factura-input hidden>
-        </div>
-    </section>
+        <!-- BLOC: CTA + AFEGIR FACTURA -->
+        <section class="section section-cta-final">
+            <h2>Vols que analitzem el teu subministrament?</h2>
+            <p class="section-lead">
+                Envia'ns la teva factura o sol·licita un estudi detallat de la teva llar.
+            </p>
+            <div class="cta-group">
+                <a href="../form/form.html" class="cta cta-llar">Sol·licita estudi de llar</a>
+                <button class="cta-secundari" data-factura-btn>Afegir factura</button>
+                <input type="file" data-factura-input hidden>
+            </div>
+        </section>
     </main>
 
     <!-- MODAL GLOBAL -->
@@ -99,8 +103,19 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
+    <div id="legal-modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <script type="module" src="./llarJs/scriptLlar.js"></script>
     <script src="./llarJs/langLlar.js"></script>
+    <script src="/js/modal.js" type="module"></script>
+    <script type="module" src="/js/footer.js"></script>
 </body>
 
 </html>
