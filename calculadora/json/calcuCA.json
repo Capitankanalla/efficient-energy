@@ -1,7 +1,7 @@
 {
   "calculadora": {
     "titol": "Calculadora d'estalvi energètic",
-    "subtitol": "Necessitarem algunes dades tècniques que trobaràs a la teva factura. Els càlculs són només estimacions basades en les dades disponibles. Estimacions sense compromís.",
+    "subtitol": "Necessitarem algunes dades tècniques i NO PERSONALS que trobaràs a la teva factura. Els càlculs són només estimacions basades en les dades disponibles i sense compromís.",
     "enrere": "← Enrere",
     "segment": {
       "titol": "Quin tipus de subministrament vols analitzar?",
