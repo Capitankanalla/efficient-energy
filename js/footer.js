@@ -37,6 +37,9 @@ function carregarFooterJSON() {
             if (frase) frase.textContent = data.frase;
 
             // Contacte
+            const contacteTitol = document.getElementById("footer-contacte-titol");
+            if (contacteTitol) contacteTitol.textContent = data.contacte;
+
             document.getElementById("footer-empresa").textContent = data.empresa;
             document.getElementById("footer-adreca").textContent = data.adreca;
             document.getElementById("footer-email").textContent = data.email;
