@@ -6,6 +6,7 @@
     "email": "info@efficientenergy.com",
     "telefon": "+34 644 549 730",
     "logo": "/data/logoefficient.webp",
+    "drets": "All rights reserved.",
     "legal": [
         { "id": "privacitat", "text": "Privacy Policy" },
         { "id": "cookies", "text": "Cookie Policy" },

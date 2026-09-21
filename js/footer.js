@@ -48,6 +48,8 @@ function carregarFooterJSON() {
             // Copyright
             const copy = document.getElementById("footer-copy-empresa");
             if (copy) copy.textContent = data.empresa;
+            const drets = document.getElementById("drets");
+            if (drets) drets.textContent = data.drets;
 
             // Bloc legal
             const legalList = document.getElementById("footer-legal");
