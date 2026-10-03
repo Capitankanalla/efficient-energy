@@ -7,6 +7,13 @@
     "telefon": "+34 644 549 730",
     "logo": "/data/logoefficient.webp",
     "drets": "Tots els drets reservats.",
+    "cookiesBanner": {
+        "title": "Les teves preferències de cookies",
+        "message": "Les cookies necessàries estan sempre actives. Pots acceptar o rebutjar les cookies opcionals.",
+        "accept": "Acceptar",
+        "reject": "Rebutjar",
+        "preferences": "Preferències de cookies"
+    },
     "legal": [
         { "id": "privacitat", "text": "Política de privacitat" },
         { "id": "cookies", "text": "Política de cookies" },

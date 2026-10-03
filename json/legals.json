@@ -15,11 +15,11 @@
     "cookies": {
       "titol": "Política de cookies",
       "contingut": [
-        "Aquest lloc web utilitza cookies pròpies i de tercers amb finalitats tècniques i analítiques.",
+        "Aquest lloc web pot utilitzar cookies pròpies i de tercers amb finalitats tècniques i analítiques.",
         "Les cookies són fitxers que milloren l'experiència de navegació i permeten obtenir estadístiques d'ús.",
         "Tipus: tècniques (necessàries) i analítiques (estadístiques).",
         "Pots configurar o eliminar les cookies des del navegador.",
-        "En continuar navegant, acceptes l'ús de cookies."
+        "Les cookies tècniques són necessàries; les analítiques opcionals només s'utilitzen amb el teu consentiment. Pots acceptar-les o rebutjar-les mitjançant el banner i canviar la decisió des de «Preferències de cookies» al peu de pàgina."
       ]
     },
     "avis": {
@@ -51,11 +51,11 @@
     "cookies": {
       "titol": "Política de cookies",
       "contingut": [
-        "Este sitio web utiliza cookies propias y de terceros con fines técnicos y analíticos.",
+        "Este sitio web puede utilizar cookies propias y de terceros con fines técnicos y analíticos.",
         "Las cookies son archivos que mejoran la experiencia de navegación y permiten obtener estadísticas de uso.",
         "Tipos: técnicas (necesarias) y analíticas (estadísticas).",
         "Puedes configurar o eliminar las cookies desde el navegador.",
-        "Al continuar navegando, aceptas el uso de cookies."
+        "Las cookies técnicas son necesarias; las analíticas opcionales solo se utilizan con tu consentimiento. Puedes aceptarlas o rechazarlas mediante el banner y cambiar la decisión desde «Preferencias de cookies» en el pie de página."
       ]
     },
     "avis": {
@@ -87,11 +87,11 @@
     "cookies": {
       "titol": "Cookie policy",
       "contingut": [
-        "This website uses its own and third-party cookies for technical and analytical purposes.",
+        "This website may use its own and third-party cookies for technical and analytical purposes.",
         "Cookies are files that improve the browsing experience and allow usage statistics to be gathered.",
         "Types: technical (necessary) and analytical (statistics).",
         "You can configure or delete cookies from your browser.",
-        "By continuing to browse, you accept the use of cookies."
+        "Technical cookies are necessary; optional analytics cookies are used only with your consent. You can accept or reject them using the banner and change your choice from “Cookie preferences” in the footer."
       ]
     },
     "avis": {

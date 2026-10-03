@@ -1,4 +1,6 @@
 // Carregar footer.html i després injectar dades
+const COOKIE_CONSENT_KEY = 'cookieConsent';
+
 fetch('/html/footer.html')
     .then(res => {
         if (!res.ok) throw new Error(`Footer no trobat: ${res.status}`);
@@ -51,6 +53,36 @@ function carregarFooterJSON() {
             const drets = document.getElementById("drets");
             if (drets) drets.textContent = data.drets;
 
+            const cookieTitle = document.getElementById("cookie-banner-title");
+            const cookieMessage = document.getElementById("cookie-banner-message");
+            const cookieAccept = document.getElementById("cookie-accept");
+            const cookieReject = document.getElementById("cookie-reject");
+            const cookiePreferences = document.getElementById("cookie-preferences");
+            const cookieBanner = document.getElementById("cookie-banner");
+
+            if (data.cookiesBanner && cookieTitle && cookieMessage && cookieAccept &&
+                cookieReject && cookiePreferences && cookieBanner) {
+                cookieTitle.textContent = data.cookiesBanner.title;
+                cookieMessage.textContent = data.cookiesBanner.message;
+                cookieAccept.textContent = data.cookiesBanner.accept;
+                cookieReject.textContent = data.cookiesBanner.reject;
+                cookiePreferences.textContent = data.cookiesBanner.preferences;
+
+                const saveConsent = consent => {
+                    localStorage.setItem(COOKIE_CONSENT_KEY, consent);
+                    cookieBanner.hidden = true;
+                };
+
+                cookieAccept.onclick = () => saveConsent("accepted");
+                cookieReject.onclick = () => saveConsent("rejected");
+                cookiePreferences.onclick = () => {
+                    cookieBanner.hidden = false;
+                };
+
+                const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+                cookieBanner.hidden = consent === "accepted" || consent === "rejected";
+            }
+
             // Bloc legal
             const legalList = document.getElementById("footer-legal");
             legalList.innerHTML = "";
@@ -99,4 +131,3 @@ function carregarFooterJSON() {
 }
 
 window.carregarFooterJSON = carregarFooterJSON;
-

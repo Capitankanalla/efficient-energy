@@ -7,6 +7,13 @@
     "telefon": "+34 644 549 730",
     "logo": "/data/logoefficient.webp",
     "drets": "All rights reserved.",
+    "cookiesBanner": {
+        "title": "Your cookie preferences",
+        "message": "Necessary cookies are always active. You can accept or reject optional cookies.",
+        "accept": "Accept",
+        "reject": "Reject",
+        "preferences": "Cookie preferences"
+    },
     "legal": [
         { "id": "privacitat", "text": "Privacy Policy" },
         { "id": "cookies", "text": "Cookie Policy" },
